@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="head">
+
+    <div class="head__body">
+
+        <div class="head__content">
+            <h1 class="head__title">Cryptocurrency trading signals
+                <br>on Telegram with 25,29% yield and
+                <br>86% success rate for Bitstamp exchange</h1>
+            <h2 class="head__subtitle">Uniting crypto-enthusiasts in our community to share our success, crypto trading
+                analytics and to study trading in the world</h2>
+            <form class="form" id="index-form">
+                <label class="form__label" for="email">
+                    <input class="form__input" name="email" type="text" placeholder="Enter your email" required>
+                </label>
+                <button class="form__button">Subscribe</button>
+            </form>
+        </div>
+
+        <div class="head__video-block">
+
+        </div>
+
+        <div class="head__social-block">
+            <a class="social head__social" href="/"><i class="fab fa-twitter"></i></a>
+            <a class="social head__social" href="/"><i class="fab fa-telegram-plane"></i></a>
+            <a class="social head__social" href="/"><i class="fab fa-instagram"></i></a>
+            <a class="social head__social" href="/"><i class="far fa-envelope"></i></a>
+        </div>
+
+    </div>
+
+    <div class="head__currency">
+        <div class="currency-item">
+            <img class="currency-item__img" src="../static/img/bitcoin.png" alt="currency">
+            <div>
+                <p class="currency-item__title">Bitcoin <b class="currency-item__title_bold">BTC</b></p>
+                <p class="currency-item__date">{{ data.BTC.date }}</p>
+            </div>
+            <div class="currency-item__price-block">
+                <p class="currency-item__percent {{'currency-item__percent_negative' if data.BTC.negative}}">
+                    {{ data.BTC.percent }}%</p>
+                <p class="currency-item__price">${{ data.BTC.price }}</p>
+            </div>
+        </div>
+
+        <div class="currency-item">
+            <img class="currency-item__img" src="../static/img/ethereum.png" alt="currency">
+            <div>
+                <p class="currency-item__title">Ethereum <b class="currency-item__title_bold">ETH</b></p>
+                <p class="currency-item__date">{{ data.ETH.date }}</p>
+            </div>
+            <div class="currency-item__price-block">
+                <p class="currency-item__percent {{'currency-item__percent_negative' if data.BTC.negative}}">
+                    {{ data.ETH.percent }}%</p>
+                <p class="currency-item__price">${{ data.ETH.price }}</p>
+            </div>
+        </div>
+
+        <div class="currency-item">
+            <img class="currency-item__img" src="../static/img/ripple.png" alt="currency">
+            <div>
+                <p class="currency-item__title">Ripple <b class="currency-item__title_bold">XRP</b></p>
+                <p class="currency-item__date">{{ data.XRP.date }}</p>
+            </div>
+            <div class="currency-item__price-block">
+                <p class="currency-item__percent {{'currency-item__percent_negative' if data.BTC.negative}}">
+                    {{ data.XRP.percent }}%</p>
+                <p class="currency-item__price">${{ data.XRP.price }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="index-bar-block container">
+    <div class="bar index-bar-block__bar">
+        <div class="bar__item">
+            <p class="bar__title">Have more questions?</p>
+            <p class="bar__text">Go to the FAQ page, there is a lot of useful information.</p>
+            <div class="button-border bar__button"><a href="/" class="button">FAQ</a></div>
+        </div>
+        <div class="bar__item">
+            <p class="bar__title">How much can I earn?</p>
+            <p class="bar__text">Go to the next page, there you will learn how to make money using signals</p>
+            <div class="button-border bar__button"><a href="/" class="button">Statistics</a></div>
+        </div>
+    </div>
+
+    <div class="block-content index-bar-block__content">
+        <div class="block-content__wrapper">
+            <div class="text-block">
+                <h3 class="text-block__title">What are <b class="text-block__title_bold">Crypto Trading Signals?</b>
+                </h3>
+                <p class="text-block__text"><b class="text-block__text-bold">Crypto trading signals</b> allow the
+                    beginners to become part of
+                    profitable trading by minimizing the risks based on the lack of experience in market analysis. In
+                    other words,
+                    earn on market volatility without being a pro yourself. The most delicate part of the analysis –
+                    optimal timing for opening and closing the trades – will be done by experienced traders. You will
+                    only need to use the received signal and take the indicated actions before the trend swaps its
+                    direction.</p>
+                <p class="text-block__text text-block__text_full"><b class="text-block__text-bold">Crypto trading
+                    signals</b> allow the beginners to become
+                    part of profitable
+                    trading by minimizing the risks based on the lack of experience in market analysis. In other words,
+                    earn on market volatility without being a pro yourself. The most delicate part of the analysis –
+                    optimal timing for opening and closing the trades – will be done by experienced traders. You will
+                    only need to use the received signal and take the indicated actions before the trend swaps its
+                    direction. Crypto trading signals allow the beginners to become part of profitable
+                    trading by minimizing the risks based on the lack of experience in market analysis. In other words,
+                    earn on market volatility without being a pro yourself. The most delicate part of the analysis –
+                    optimal timing for opening and closing the trades – will be done by experienced traders. You will
+                    only need to use the received signal and take the indicated actions before the trend swaps its
+                    direction.</p>
+                <button class="text-block__read-more-btn">Read More</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="quote">
+    <img class="quote__abstract" src="../static/img/abstract.svg" alt="">
+    <div class="quote__body">
+        <h3 class="quote__title">The bird in the hand is worth two in the bush.</h3>
+        <p class="quote__text">Still, everyone can choose own balance between risk and profit.</p>
+    </div>
+</div>
+
+
+<div class="index-bar-block container">
+    <div class="bar index-bar-block__bar">
+        <div class="bar__item">
+            <p class="bar__title">How can I join?</p>
+            <p class="bar__text">You can join our community via Telegram Bot or click the link below for subscription
+                plans.</p>
+            <div class="button-border bar__button"><a href="/" class="button">Subscription</a></div>
+        </div>
+    </div>
+
+    <div class="block-content index-bar-block__content">
+        <div class="block-content__wrapper">
+            <div class="text-block">
+                <h3 class="text-block__title">Trading <b class="text-block__title_bold">success</b> with the signals
+                </h3>
+                <p class="text-block__text">Do not expect that by starting to get crypto signals online all your deals
+                    will become successful. Even market gurus with all their instruments and connections in the IFI’s
+                    can make mistakes or become victims of market anomalies and lose their money.
+                    <br>Successful trader is the one with more profit deals than loss ones. So, if 6 from 10 deals are
+                    profitable – this is a success. This means that on average you will be getting profit.</p>
+                <button class="text-block__read-more-btn">Read More</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

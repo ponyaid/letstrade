@@ -1,0 +1,10 @@
+*.pyc
+*.pyo
+.idea
+.logs/*.log
+migrations
+src
+node_modules
+package-lock.json
+*.env
+venv
