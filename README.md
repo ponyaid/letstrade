@@ -1,6 +1,6 @@
 # lets.trade
 
-Flask application deployed by [link](https://lets.trade)
+Flask application deployed by [link](https://lets.trade).
 
 ## Installation 
 
@@ -11,12 +11,12 @@ You must also install [virtualenv](https://packaging.python.org/key_projects/#vi
 git clone https://github.com/ponyaid/letstrade.git
 cd letstrade
 virtualenv venv && source venv/bin/activate
-pip -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Database
 
-You must have postgres installed. You must also create a database and add the environment variables
+You must have postgres installed. You must also create a database and add the environment variables.
 
 ## Environment variables
 For the application to work, you must add the following environment variables:
