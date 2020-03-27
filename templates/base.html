@@ -7,8 +7,8 @@
     <meta property="og:description" content="Lets.Trade"/>
     <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml">
     <link rel="icon" href="favicon-48x48.png" sizes="48x48" type="image/png">
-<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"-->
-<!--          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
+    <!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"-->
+    <!--          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
     <link rel="stylesheet" type="text/css" href="../static/css/style.bundle.css">
     <title>Lets.Trade</title>
 </head>
@@ -41,22 +41,33 @@
     {% endblock content %}
 
     <footer class="footer">
-        <span class="footer__logo"></span>
-        <div class="footer__social-block">
-            <a class="social footer__social" href="/"><i class="fab fa-twitter"></i></a>
-            <a class="social footer__social" href="/"><i class="fab fa-telegram-plane"></i></a>
-            <a class="social footer__social" href="/"><i class="fab fa-instagram"></i></a>
-            <a class="social footer__social" href="/"><i class="far fa-envelope"></i></a>
+        <div class="footer__body">
+            <div class="footer__head">
+                <span class="logo"></span>
+                <div class="footer__social-block">
+                    <a class="social footer__social" href="/"><i class="fab fa-twitter"></i></a>
+                    <a class="social footer__social" href="/"><i class="fab fa-telegram-plane"></i></a>
+                    <a class="social footer__social" href="/"><i class="fab fa-instagram"></i></a>
+                    <a class="social footer__social" href="/"><i class="far fa-envelope"></i></a>
+                </div>
+            </div>
+            <ul class="nav footer__nav">
+                <li class="nav__item-wrapper"><a href="/" class="nav__item footer__item">Statistics</a></li>
+                <li class="nav__item-wrapper"><a href="/" class="nav__item footer__item">Subscriptions</a></li>
+                <li class="nav__item-wrapper"><a href="/" class="nav__item footer__item">Dream Team</a></li>
+                <li class="nav__item-wrapper"><a href="/guides" class="nav__item footer__item">Guides</a></li>
+                <li class="nav__item-wrapper"><a href="/faq" class="nav__item footer__item">FAQ</a></li>
+                <li class="nav__item-wrapper"><a href="/" class="nav__item footer__item">What are Crypto Signals?</a>
+                </li>
+            </ul>
         </div>
-        <ul class="nav footer__nav">
-            <li class="nav__item-wrapper"><a href="/" class="nav__item footer__item">Statistics</a></li>
-            <li class="nav__item-wrapper"><a href="/" class="nav__item footer__item">Subscriptions</a></li>
-            <li class="nav__item-wrapper"><a href="/" class="nav__item footer__item">Dream Team</a></li>
-            <li class="nav__item-wrapper"><a href="/guides" class="nav__item footer__item">Guides</a></li>
-            <li class="nav__item-wrapper"><a href="/faq" class="nav__item footer__item">FAQ</a></li>
-            <li class="nav__item-wrapper"><a href="/" class="nav__item footer__item">What are Crypto Signals?</a></li>
-        </ul>
-        <p class="footer__copyright">© Lat’s Trade, LLC. 2019, All Rights Reserved</p>
+        <div class="footer__copyright">
+            <p class="footer__copyright-text">© Lat’s Trade, LLC. 2019, All Rights Reserved</p>
+            <div class="footer__copyright-links">
+                <a class="footer__copyright-text footer__copyright-text_link" href="">Terms of Service</a>
+                <a class="footer__copyright-text footer__copyright-text_link" href="">Privacy Policy</a>
+            </div>
+        </div>
     </footer>
 
 </div>

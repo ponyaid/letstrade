@@ -1,5 +1,4 @@
 from flask import Flask
-import flask_cors
 from flask_security import SQLAlchemyUserDatastore, Security
 
 from config import Config
@@ -8,14 +7,8 @@ from .admin import admin, ExtendedLoginForm
 from .models import *
 
 
-class FlaskApp(Flask):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        flask_cors.CORS(self)
-
-
 def create_app(config=Config):
-    app = FlaskApp(__name__, template_folder='../templates', static_folder='../static')
+    app = Flask(__name__, template_folder='../templates', static_folder='../static')
     app.config.from_object(config)
     config.init_app(app)
     db.init_app(app)

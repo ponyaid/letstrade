@@ -18,8 +18,8 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SECURITY_PASSWORD_HASH = 'sha512_crypt'
     SECURITY_PASSWORD_SALT = 'salt'
-    ADMIN_EMAIL = os.environ.get('ADMIN_EMAIL', 'example@example.com')
-    ADMIN_PASSWORD = os.environ.get('ADMIN_PASSWORD', 'password')
+    ADMIN_EMAIL = os.environ.get('ADMIN_EMAIL')
+    ADMIN_PASSWORD = os.environ.get('ADMIN_PASSWORD')
 
     @staticmethod
     def init_app(app):

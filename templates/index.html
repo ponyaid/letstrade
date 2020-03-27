@@ -42,7 +42,7 @@
             </div>
             <div class="currency-item__price-block">
                 <p class="currency-item__percent {{'currency-item__percent_negative' if data.BTC.negative}}">
-                    {{ data.BTC.percent }}%</p>
+                    ${{ data.BTC.difference }} ({{ data.BTC.percent }}%)</p>
                 <p class="currency-item__price">${{ data.BTC.price }}</p>
             </div>
         </div>
@@ -55,7 +55,7 @@
             </div>
             <div class="currency-item__price-block">
                 <p class="currency-item__percent {{'currency-item__percent_negative' if data.BTC.negative}}">
-                    {{ data.ETH.percent }}%</p>
+                    ${{ data.ETH.difference }} ({{ data.ETH.percent }}%)</p>
                 <p class="currency-item__price">${{ data.ETH.price }}</p>
             </div>
         </div>
@@ -68,7 +68,7 @@
             </div>
             <div class="currency-item__price-block">
                 <p class="currency-item__percent {{'currency-item__percent_negative' if data.BTC.negative}}">
-                    {{ data.XRP.percent }}%</p>
+                    ${{ data.XRP.difference }} ({{ data.XRP.percent }}%)</p>
                 <p class="currency-item__price">${{ data.XRP.price }}</p>
             </div>
         </div>
@@ -76,51 +76,64 @@
 </div>
 
 
-<div class="index-bar-block container">
-    <div class="bar index-bar-block__bar">
-        <div class="bar__item">
-            <p class="bar__title">Have more questions?</p>
-            <p class="bar__text">Go to the FAQ page, there is a lot of useful information.</p>
-            <div class="button-border bar__button"><a href="/" class="button">FAQ</a></div>
-        </div>
-        <div class="bar__item">
-            <p class="bar__title">How much can I earn?</p>
-            <p class="bar__text">Go to the next page, there you will learn how to make money using signals</p>
-            <div class="button-border bar__button"><a href="/" class="button">Statistics</a></div>
-        </div>
-    </div>
+<!--<div class="index-bar-block container">-->
+<!--    <div class="bar index-bar-block__bar">-->
+<!--        <div class="bar__item">-->
+<!--            <p class="bar__title">Have more questions?</p>-->
+<!--            <p class="bar__text">Go to the FAQ page, there is a lot of useful information.</p>-->
+<!--            <div class="button-border bar__button"><a href="/" class="button">FAQ</a></div>-->
+<!--        </div>-->
+<!--        <div class="bar__item">-->
+<!--            <p class="bar__title">How much can I earn?</p>-->
+<!--            <p class="bar__text">Go to the next page, there you will learn how to make money using signals</p>-->
+<!--            <div class="button-border bar__button"><a href="/" class="button">Statistics</a></div>-->
+<!--        </div>-->
+<!--    </div>-->
 
-    <div class="block-content index-bar-block__content">
-        <div class="block-content__wrapper">
-            <div class="text-block">
-                <h3 class="text-block__title">What are <b class="text-block__title_bold">Crypto Trading Signals?</b>
-                </h3>
-                <p class="text-block__text"><b class="text-block__text-bold">Crypto trading signals</b> allow the
-                    beginners to become part of
-                    profitable trading by minimizing the risks based on the lack of experience in market analysis. In
-                    other words,
-                    earn on market volatility without being a pro yourself. The most delicate part of the analysis –
-                    optimal timing for opening and closing the trades – will be done by experienced traders. You will
-                    only need to use the received signal and take the indicated actions before the trend swaps its
-                    direction.</p>
-                <p class="text-block__text text-block__text_full"><b class="text-block__text-bold">Crypto trading
-                    signals</b> allow the beginners to become
-                    part of profitable
-                    trading by minimizing the risks based on the lack of experience in market analysis. In other words,
-                    earn on market volatility without being a pro yourself. The most delicate part of the analysis –
-                    optimal timing for opening and closing the trades – will be done by experienced traders. You will
-                    only need to use the received signal and take the indicated actions before the trend swaps its
-                    direction. Crypto trading signals allow the beginners to become part of profitable
-                    trading by minimizing the risks based on the lack of experience in market analysis. In other words,
-                    earn on market volatility without being a pro yourself. The most delicate part of the analysis –
-                    optimal timing for opening and closing the trades – will be done by experienced traders. You will
-                    only need to use the received signal and take the indicated actions before the trend swaps its
-                    direction.</p>
-                <button class="text-block__read-more-btn">Read More</button>
-            </div>
-        </div>
+<!--    <div class="block-content index-bar-block__content">-->
+<!--        <div class="block-content__wrapper">-->
+<!--            <div class="text-block">-->
+<!--                <h3 class="text-block__title">What are <b class="text-block__title_bold">Crypto Trading Signals?</b>-->
+<!--                </h3>-->
+<!--                <p class="text-block__text"><b class="text-block__text-bold">Crypto trading signals</b> allow the-->
+<!--                    beginners to become part of-->
+<!--                    profitable trading by minimizing the risks based on the lack of experience in market analysis. In-->
+<!--                    other words,-->
+<!--                    earn on market volatility without being a pro yourself. The most delicate part of the analysis –-->
+<!--                    optimal timing for opening and closing the trades – will be done by experienced traders. You will-->
+<!--                    only need to use the received signal and take the indicated actions before the trend swaps its-->
+<!--                    direction.</p>-->
+<!--                <p class="text-block__text text-block__text_full"><b class="text-block__text-bold">Crypto trading-->
+<!--                    signals</b> allow the beginners to become-->
+<!--                    part of profitable-->
+<!--                    trading by minimizing the risks based on the lack of experience in market analysis. In other words,-->
+<!--                    earn on market volatility without being a pro yourself. The most delicate part of the analysis –-->
+<!--                    optimal timing for opening and closing the trades – will be done by experienced traders. You will-->
+<!--                    only need to use the received signal and take the indicated actions before the trend swaps its-->
+<!--                    direction. Crypto trading signals allow the beginners to become part of profitable-->
+<!--                    trading by minimizing the risks based on the lack of experience in market analysis. In other words,-->
+<!--                    earn on market volatility without being a pro yourself. The most delicate part of the analysis –-->
+<!--                    optimal timing for opening and closing the trades – will be done by experienced traders. You will-->
+<!--                    only need to use the received signal and take the indicated actions before the trend swaps its-->
+<!--                    direction.</p>-->
+<!--                <button class="text-block__read-more-btn">Read More</button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<div class="chart-wrapper">
+    <h3 class="chart-wrapper__title">Our <b class="chart-wrapper__title_bold">2019</b> growing
+        streak</h3>
+    <p class="chart-wrapper__subtitle">We have reached 25,29% of profit just in 12 months by minimizing the risks for
+        the main deposit. </p>
+
+    <div class="chart">
+        <div class="ct-chart"></div>
     </div>
 </div>
+
 
 <div class="quote">
     <img class="quote__abstract" src="../static/img/abstract.svg" alt="">
@@ -131,30 +144,183 @@
 </div>
 
 
-<div class="index-bar-block container">
-    <div class="bar index-bar-block__bar">
-        <div class="bar__item">
-            <p class="bar__title">How can I join?</p>
-            <p class="bar__text">You can join our community via Telegram Bot or click the link below for subscription
-                plans.</p>
-            <div class="button-border bar__button"><a href="/" class="button">Subscription</a></div>
-        </div>
-    </div>
+<!--<div class="index-bar-block container">-->
+<!--    <div class="bar index-bar-block__bar">-->
+<!--        <div class="bar__item">-->
+<!--            <p class="bar__title">How can I join?</p>-->
+<!--            <p class="bar__text">You can join our community via Telegram Bot or click the link below for subscription-->
+<!--                plans.</p>-->
+<!--            <div class="button-border bar__button"><a href="/" class="button">Subscription</a></div>-->
+<!--        </div>-->
+<!--    </div>-->
 
-    <div class="block-content index-bar-block__content">
-        <div class="block-content__wrapper">
-            <div class="text-block">
-                <h3 class="text-block__title">Trading <b class="text-block__title_bold">success</b> with the signals
-                </h3>
-                <p class="text-block__text">Do not expect that by starting to get crypto signals online all your deals
-                    will become successful. Even market gurus with all their instruments and connections in the IFI’s
-                    can make mistakes or become victims of market anomalies and lose their money.
-                    <br>Successful trader is the one with more profit deals than loss ones. So, if 6 from 10 deals are
-                    profitable – this is a success. This means that on average you will be getting profit.</p>
-                <button class="text-block__read-more-btn">Read More</button>
+<!--    <div class="block-content index-bar-block__content">-->
+<!--        <div class="block-content__wrapper">-->
+<!--            <div class="text-block">-->
+<!--                <h3 class="text-block__title">Trading <b class="text-block__title_bold">success</b> with the signals-->
+<!--                </h3>-->
+<!--                <p class="text-block__text">Do not expect that by starting to get crypto signals online all your deals-->
+<!--                    will become successful. Even market gurus with all their instruments and connections in the IFI’s-->
+<!--                    can make mistakes or become victims of market anomalies and lose their money.-->
+<!--                    <br>Successful trader is the one with more profit deals than loss ones. So, if 6 from 10 deals are-->
+<!--                    profitable – this is a success. This means that on average you will be getting profit.</p>-->
+<!--                <button class="text-block__read-more-btn">Read More</button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<div class="offers">
+    <h3 class="offers__title">Here are the options <b class="offers__title_bold">to join the community</b> and start
+        receiving your crypto signals</h3>
+
+    <div class="offers__body">
+
+        <div class="benefits">
+            <p class="benefits__title">Included in the package</p>
+            <ul class="benefits__list">
+                <li class="benefits__item">Daily market analytics</li>
+                <li class="benefits__item">Strict risk management strategy</li>
+                <li class="benefits__item">Up to 20 crypto trading signals for Bitcoin (BTC), Ethereum (ETH) and Ripple
+                    (XRP)
+                </li>
+                <li class="benefits__item">Detailed and easy to use guides that will help you better navigate the world
+                    of cryptocurrencies
+                </li>
+                <li class="benefits__item">Long term investment portfolio that can make the next big impact in the
+                    blockchain market witch can lead over 100,000% in revenue
+                </li>
+            </ul>
+        </div>
+
+        <div class="packages">
+            <div class="package">
+                <div class="package-details">
+                    <div class="package-details__body">
+                        <p class="package-details__title">1 month</p>
+                        <p class="package-details__subtitle">We accept only:</p>
+                        <ul class="package-details__list">
+                            <li>Bitcoin</li>
+                            <li>Ethereum</li>
+                            <li>Ripple</li>
+                        </ul>
+                        <div class="package-details__cost-wrapper">
+                            <p class="package-details__cost">$246 <s class="package-details__cost_strike">$330</s></p>
+                            <small class="package-details__cost_small">$82 per month</small>
+                        </div>
+                    </div>
+                    <a class="package-details__button" href="">Acquire via Telegram</a>
+                </div>
+                <div class="package-column">
+                    <p class="package-column__title">1 month</p>
+                    <span class="package-column__icon"></span>
+                    <span class="package-column__icon"></span>
+                    <span class="package-column__icon"></span>
+                    <span class="package-column__icon"></span>
+                    <span class="package-column__icon"></span>
+                </div>
+            </div>
+            <div class="package package_active">
+                <div class="package-details">
+                    <div class="package-details__body">
+                        <p class="package-details__title">3 month</p>
+                        <p class="package-details__subtitle">We accept only:</p>
+                        <ul class="package-details__list">
+                            <li>Bitcoin</li>
+                            <li>Ethereum</li>
+                            <li>Ripple</li>
+                        </ul>
+                        <div class="package-details__cost-wrapper">
+                            <p class="package-details__cost">$246 <s class="package-details__cost_strike">$330</s></p>
+                            <small class="package-details__cost_small">$82 per month</small>
+                        </div>
+                    </div>
+                    <a class="package-details__button" href="">Acquire via Telegram</a>
+                </div>
+                <div class="package-column">
+                    <p class="package-column__title">3 month</p>
+                    <span class="package-column__icon"></span>
+                    <span class="package-column__icon"></span>
+                    <span class="package-column__icon"></span>
+                    <span class="package-column__icon"></span>
+                    <span class="package-column__icon"></span>
+                </div>
+            </div>
+            <div class="package">
+                <div class="package-details">
+                    <div class="package-details__body">
+                        <p class="package-details__title">6 month</p>
+                        <p class="package-details__subtitle">We accept only:</p>
+                        <ul class="package-details__list">
+                            <li>Bitcoin</li>
+                            <li>Ethereum</li>
+                            <li>Ripple</li>
+                        </ul>
+                        <div class="package-details__cost-wrapper">
+                            <p class="package-details__cost">$246 <s class="package-details__cost_strike">$330</s></p>
+                            <small class="package-details__cost_small">$82 per month</small>
+                        </div>
+                    </div>
+                    <a class="package-details__button" href="">Acquire via Telegram</a>
+                </div>
+                <div class="package-column">
+                    <p class="package-column__title">6 month</p>
+                    <span class="package-column__icon"></span>
+                    <span class="package-column__icon"></span>
+                    <span class="package-column__icon"></span>
+                    <span class="package-column__icon"></span>
+                    <span class="package-column__icon"></span>
+                </div>
+            </div>
+            <div class="package">
+                <div class="package-details">
+                    <div class="package-details__body">
+                        <p class="package-details__title">12 month</p>
+                        <p class="package-details__subtitle">We accept only:</p>
+                        <ul class="package-details__list">
+                            <li>Bitcoin</li>
+                            <li>Ethereum</li>
+                            <li>Ripple</li>
+                        </ul>
+                        <div class="package-details__cost-wrapper">
+                            <p class="package-details__cost">$246 <s class="package-details__cost_strike">$330</s></p>
+                            <small class="package-details__cost_small">$82 per month</small>
+                        </div>
+                    </div>
+                    <a class="package-details__button" href="">Acquire via Telegram</a>
+                </div>
+                <div class="package-column">
+                    <p class="package-column__title">12 month</p>
+                    <span class="package-column__icon"></span>
+                    <span class="package-column__icon"></span>
+                    <span class="package-column__icon"></span>
+                    <span class="package-column__icon"></span>
+                    <span class="package-column__icon"></span>
+                </div>
             </div>
         </div>
     </div>
+
+    <p class="offers__subtitle">This is a limited offers only for our first 500 clients</p>
+
 </div>
+
+
+<div class="referral-wrapper">
+    <div class="referral">
+        <p class="referral__text">Spread the deal with the referral link that you will get via Bob bot and get
+            <b class="referral__text_bold">%10 crypto back</b></p>
+        <a class="referral__button" href="">Receive</a>
+    </div>
+</div>
+
+
+<svg aria-hidden="true" focusable="false">
+    <linearGradient id="my-cool-gradient" y2="100%" x2="0">
+        <stop offset="0%" stop-color="#43c056"/>
+        <stop offset="100%" stop-color="#1c2124"/>
+    </linearGradient>
+</svg>
 
 {% endblock content %}

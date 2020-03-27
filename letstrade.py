@@ -5,10 +5,9 @@ from flask import request, render_template, abort, session, redirect, Response
 
 from app import create_app
 from config import Config
-from app.utils import currency_request
+from app.utils import currency_request, format_currency
 from app.models import *
 from app.database import db
-
 
 app = create_app(Config)
 
@@ -35,29 +34,16 @@ def index_form():
 
 @app.route('/', methods=['GET'])
 def index():
-
     if request.method == 'GET':
-        currency_data = currency_request('BTC', 'ETH', 'XRP')
-        if currency_data:
+        currency_data = dict()
+        btc_data = currency_request('btc')
+        eth_data = currency_request('eth')
+        xrp_data = currency_request('xrp')
+        if btc_data and eth_data and xrp_data:
             currency_data = {
-                'BTC': {
-                    'price': '% .2f' % currency_data['BTC']['quote']['USD']['price'],
-                    'percent': '% .2f' % currency_data['BTC']['quote']['USD']['percent_change_24h'],
-                    'negative': True if currency_data['BTC']['quote']['USD']['percent_change_24h'] < 0 else False,
-                    'date': datetime.now().strftime('%b %d, %Y, %H:%M:%S')
-                },
-                'ETH': {
-                    'price': '% .2f' % currency_data['ETH']['quote']['USD']['price'],
-                    'percent': '% .2f' % currency_data['ETH']['quote']['USD']['percent_change_24h'],
-                    'negative': True if currency_data['ETH']['quote']['USD']['percent_change_24h'] < 0 else False,
-                    'date': datetime.now().strftime('%b %d, %Y, %H:%M:%S')
-                },
-                'XRP': {
-                    'price': '% .2f' % currency_data['XRP']['quote']['USD']['price'],
-                    'percent': '% .2f' % currency_data['XRP']['quote']['USD']['percent_change_24h'],
-                    'negative': True if currency_data['XRP']['quote']['USD']['percent_change_24h'] < 0 else False,
-                    'date': datetime.now().strftime('%b %d, %Y, %H:%M:%S')
-                },
+                'BTC': format_currency(btc_data),
+                'ETH': format_currency(eth_data),
+                'XRP': format_currency(xrp_data),
             }
         return render_template('index.html', data=currency_data)
     abort(405)

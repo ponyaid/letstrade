@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
+    "chartist-webpack": "^0.9.5-0",
     "jquery": "^3.4.1"
   }
 }
