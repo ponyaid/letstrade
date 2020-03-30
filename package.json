@@ -30,6 +30,7 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "@fortawesome/fontawesome-free": "^5.12.1",
     "chartist-webpack": "^0.9.5-0",
     "jquery": "^3.4.1"

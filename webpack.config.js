@@ -84,6 +84,10 @@ module.exports = {
             {
                 from: './src/img',
                 to: './img'
+            },
+            {
+                from: './src/video',
+                to: './video'
             }
         ])
     ]
