@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="5px" viewBox="0 0 8 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>ic-arrpw-ex</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#80EC68" offset="0%"></stop>
+            <stop stop-color="#159E49" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Statistics" transform="translate(-1309.000000, -188.000000)" stroke="url(#linearGradient-1)">
+            <g id="Group-10" transform="translate(1240.000000, 169.000000)">
+                <polyline id="ic-arrpw-ex" points="70 20 73 23 76 20"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

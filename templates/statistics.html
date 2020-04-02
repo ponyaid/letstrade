@@ -1,0 +1,462 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="statistics">
+    <div class="statistics__head">
+        <h3 class="statistics__title">Statistics</h3>
+
+        <div class="custom-select">
+            <select>
+                <option value="0">Select month</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">Jule</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+        </div>
+    </div>
+
+    <table id="january" class="statistics-table statistics-table_active">
+        <tr>
+            <th>Coin</th>
+            <th>Deposit %</th>
+            <th>Bought Amount</th>
+            <th>Enter Price</th>
+            <th>Sold Amount</th>
+            <th>Sell Price</th>
+            <th>Profit %</th>
+            <th>Profit (USD)</th>
+        </tr>
+        <tr>
+            <td class="eth">ETH/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 124,53</td>
+            <td>$ 2581,71</td>
+            <td>$ 128.6</td>
+            <td class="profit">3.27</td>
+            <td>$ 81.71</td>
+        </tr>
+        <tr>
+            <td class="eth">ETH/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 125,1</td>
+            <td>$ 2561,95</td>
+            <td>$ 128,2</td>
+            <td class="profit">2,48</td>
+            <td>$ 61.95</td>
+        </tr>
+        <tr>
+            <td class="xrp">XRP/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 0,334</td>
+            <td>$ 2559,88</td>
+            <td>$ 0,342</td>
+            <td class="profit">2.4</td>
+            <td>$ 59.88</td>
+        </tr>
+        <tr>
+            <td class="xrp">XRP/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 0,3255</td>
+            <td>$ 2549,92</td>
+            <td>$ 0,332</td>
+            <td class="profit">2,00</td>
+            <td>$ 49,92</td>
+        </tr>
+        <tr>
+            <td class="btc">BTC/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 3711</td>
+            <td>$ 2542,44</td>
+            <td>$ 3774</td>
+            <td class="profit">1,697</td>
+            <td>$ 42,44</td>
+        </tr>
+        <tr>
+            <td class="btc">BTC/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 3546</td>
+            <td>$ 2532,43</td>
+            <td>$ 3592</td>
+            <td class="profit">1,297</td>
+            <td>$ 32,43</td>
+        </tr>
+        <tr>
+            <td class="xrp">XRP/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 0,313</td>
+            <td>$ 2555,91</td>
+            <td>$ 0,32</td>
+            <td class="profit">2,236</td>
+            <td>$ 55,91</td>
+        </tr>
+        <tr>
+            <td class="xrp">XRP/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 0,294</td>
+            <td>$ 2670,07</td>
+            <td>$ 0,314</td>
+            <td class="profit">6,80</td>
+            <td>$ 170,07</td>
+        </tr>
+        <tr>
+            <td class="xrp">XRP/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 0,3105</td>
+            <td>$ 2721,41</td>
+            <td>$ 0,338</td>
+            <td class="profit">8,86</td>
+            <td>$ 221,42</td>
+        </tr>
+        <tr>
+            <td class="eth">ETH/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 105,3</td>
+            <td>$ 2657,88</td>
+            <td>$ 111,95</td>
+            <td class="profit">6,32</td>
+            <td>$ 157,8</td>
+        </tr>
+        <tr>
+            <td>Total profit</td>
+            <td>25</td>
+            <td>$ 25000</td>
+            <td></td>
+            <td>$ 25933,61</td>
+            <td></td>
+            <td class="profit">3,73</td>
+            <td>$ 933,61</td>
+        </tr>
+    </table>
+
+    <table id="february" class="statistics-table">
+        <tr>
+            <th>Coin</th>
+            <th>Deposit %</th>
+            <th>Bought Amount</th>
+            <th>Enter Price</th>
+            <th>Sold Amount</th>
+            <th>Sell Price</th>
+            <th>Profit %</th>
+            <th>Profit (USD)</th>
+        </tr>
+        <tr>
+            <td class="eth">ETH/USD</td>
+            <td>5</td>
+            <td>$ 5000</td>
+            <td>$ 102,6</td>
+            <td>$ 5181,77</td>
+            <td>$ 106,33</td>
+            <td class="profit">3,64</td>
+            <td>$ 181,77</td>
+        </tr>
+        <tr>
+            <td class="btc">BTC/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 3532</td>
+            <td>$ 2609,00</td>
+            <td>$ 3686</td>
+            <td class="profit">4,36</td>
+            <td>$ 109,00</td>
+        </tr>
+        <tr>
+            <td class="eth">ETH/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 137,2</td>
+            <td>$ 2674,93</td>
+            <td>$ 146,8</td>
+            <td class="profit">7,00</td>
+            <td>$ 174,93</td>
+        </tr>
+        <tr>
+            <td class="btc">BTC/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 3871</td>
+            <td>$ 2549,73</td>
+            <td>$ 3948</td>
+            <td class="profit">1,99</td>
+            <td>$ 49,73</td>
+        </tr>
+        <tr>
+            <td class="xrp">XRP/USD</td>
+            <td>5</td>
+            <td>$ 5000</td>
+            <td>$ 0,314</td>
+            <td>$ 5286,62</td>
+            <td>$ 0,332</td>
+            <td class="profit">5,73</td>
+            <td>$ 286,62</td>
+        </tr>
+        <tr>
+            <td class="eth">ETH/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 174,22</td>
+            <td>$ 2419,35</td>
+            <td>$ 168,6</td>
+            <td class="profit profit_negative">3,22</td>
+            <td>$ 80,64</td>
+        </tr>
+        <tr>
+            <td class="xrp">XRP/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 0,3025</td>
+            <td>$ 2627,27</td>
+            <td>$ 0,318</td>
+            <td class="profit">5,09</td>
+            <td>$ 127,27</td>
+        </tr>
+        <tr>
+            <td class="xrp">XRP/USD</td>
+            <td>5</td>
+            <td>$ 5000</td>
+            <td>$ 0,314</td>
+            <td>$ 5350,32</td>
+            <td>$ 0,336</td>
+            <td class="profit">7,01</td>
+            <td>$ 350,32</td>
+        </tr>
+        <tr>
+            <td class="btc">BTC/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 3900</td>
+            <td>$ 2539,74</td>
+            <td>$ 3962</td>
+            <td class="profit">1,59</td>
+            <td>$ 39,74</td>
+        </tr>
+
+        <tr>
+            <td>Total profit</td>
+            <td>30</td>
+            <td>$ 30000</td>
+            <td></td>
+            <td>$ 31238,75</td>
+            <td></td>
+            <td class="profit">4,13</td>
+            <td>$ 1238,75</td>
+        </tr>
+    </table>
+
+    <table id="march" class="statistics-table">
+        <tr>
+            <th>Coin</th>
+            <th>Deposit %</th>
+            <th>Bought Amount</th>
+            <th>Enter Price</th>
+            <th>Sold Amount</th>
+            <th>Sell Price</th>
+            <th>Profit %</th>
+            <th>Profit (USD)</th>
+        </tr>
+        <tr>
+            <td class="xrp">XRP/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 0,31</td>
+            <td>$ 2580,64</td>
+            <td>$ 0,32</td>
+            <td class="profit">3,23</td>
+            <td>$ 80,65</td>
+        </tr>
+        <tr>
+            <td class="xrp">XRP/USD</td>
+            <td>5</td>
+            <td>$ 5000</td>
+            <td>$ 0,2955</td>
+            <td>$ 5423,01</td>
+            <td>$ 0,321</td>
+            <td class="profit">8,46</td>
+            <td>$ 423,01</td>
+        </tr>
+        <tr>
+            <td class="btc">BTC/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 3967</td>
+            <td>$ 2593,27</td>
+            <td>$ 4115</td>
+            <td class="profit">3,73</td>
+            <td>$ 93,27</td>
+        </tr>
+        <tr>
+            <td class="xrp">XRP/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 0,3175</td>
+            <td>$ 2582,68</td>
+            <td>$ 0,328</td>
+            <td class="profit">3,31</td>
+            <td>$ 82,68</td>
+        </tr>
+        <tr>
+            <td class="eth">ETH/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 143</td>
+            <td>$ 2562,94</td>
+            <td>$ 146,6</td>
+            <td class="profit">2,52</td>
+            <td>$ 62,94</td>
+        </tr>
+        <tr>
+            <td class="eth">ETH/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 133,75</td>
+            <td>$ 2609,35</td>
+            <td>$ 139,6</td>
+            <td class="profit">4,37</td>
+            <td>$ 109,35</td>
+        </tr>
+        <tr>
+            <td class="btc">BTC/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 4090</td>
+            <td>$ 2550,73</td>
+            <td>$ 4173</td>
+            <td class="profit">2,03</td>
+            <td>$ 50,73</td>
+        </tr>
+        <tr>
+            <td class="xrp">XRP/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 0,3046</td>
+            <td>$ 2634,60</td>
+            <td>$ 0,321</td>
+            <td class="profit">5,38</td>
+            <td>$ 134,60</td>
+        </tr>
+        <tr>
+            <td>Total profit</td>
+            <td>22,5</td>
+            <td>$ 22500</td>
+            <td></td>
+            <td>$ 23537,22</td>
+            <td></td>
+            <td class="profit">4,61</td>
+            <td>$ 1037,22</td>
+        </tr>
+    </table>
+
+    <table id="april" class="statistics-table">
+        <tr>
+            <th>Coin</th>
+            <th>Deposit %</th>
+            <th>Bought Amount</th>
+            <th>Enter Price</th>
+            <th>Sold Amount</th>
+            <th>Sell Price</th>
+            <th>Profit %</th>
+            <th>Profit (USD)</th>
+        </tr>
+        <tr>
+            <td class="xrp">XRP/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 0,317</td>
+            <td>$ 2641,96</td>
+            <td>$ 0,335</td>
+            <td class="profit">5,68</td>
+            <td>$ 141,96</td>
+        </tr>
+        <tr>
+            <td class="xrp">XRP/USD</td>
+            <td>5</td>
+            <td>$ 5000</td>
+            <td>$ 0,322</td>
+            <td>$ 5295,03</td>
+            <td>$ 0,341</td>
+            <td class="profit">5,90</td>
+            <td>$ 295,03</td>
+        </tr>
+        <tr>
+            <td class="xrp">XRP/USD</td>
+            <td>5</td>
+            <td>$ 5000</td>
+            <td>$ 0,357</td>
+            <td>$ 5210,08</td>
+            <td>$ 0,372</td>
+            <td class="profit">4,20</td>
+            <td>$ 210,08</td>
+        </tr>
+        <tr>
+            <td class="eth">ETH/USD</td>
+            <td>2,5</td>
+            <td>$ 2500</td>
+            <td>$ 174,8</td>
+            <td>$ 2457,09</td>
+            <td>$ 171,8</td>
+            <td class="profit profit_negative">1,71</td>
+            <td>$ 42,90</td>
+        </tr>
+        <tr>
+            <td class="btc">BTC/USD</td>
+            <td>3</td>
+            <td>$ 3000</td>
+            <td>$ 5030</td>
+            <td>$ 3116,30</td>
+            <td>$ 5225</td>
+            <td class="profit">3,88</td>
+            <td>$ 116,30</td>
+        </tr>
+        <tr>
+            <td class="xrp">XRP/USD</td>
+            <td>3</td>
+            <td>$ 3000</td>
+            <td>$ 0,319</td>
+            <td>$ 3230,41</td>
+            <td>$ 0,3435</td>
+            <td class="profit">7,68</td>
+            <td>$ 230,41</td>
+        </tr>
+        <tr>
+            <td class="xrp">XRP/USD</td>
+            <td>3</td>
+            <td>$ 3000</td>
+            <td>$ 0,284</td>
+            <td>$ 3142,61</td>
+            <td>$ 0,2975</td>
+            <td class="profit">4,75</td>
+            <td>$ 142,61</td>
+        </tr>
+        <tr>
+            <td>Total profit</td>
+            <td>24</td>
+            <td>$ 24000</td>
+            <td></td>
+            <td>$ 25093,5</td>
+            <td></td>
+            <td class="profit">4,56</td>
+            <td>$ 1093,48</td>
+        </tr>
+    </table>
+</div>
+
+{% endblock content %}

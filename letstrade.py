@@ -1,5 +1,4 @@
 import os
-from datetime import datetime
 
 from flask import request, render_template, abort, session, redirect, Response
 
@@ -60,6 +59,13 @@ def faq():
 def guides():
     if request.method == 'GET':
         return render_template('guides.html')
+    abort(405)
+
+
+@app.route('/statistics', methods=['GET'])
+def statistics():
+    if request.method == 'GET':
+        return render_template('statistics.html')
     abort(405)
 
 
