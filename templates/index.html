@@ -50,7 +50,7 @@
             <div class="currency-item__price-block">
                 <p class="currency-item__percent {{'currency-item__percent_negative' if data.BTC.negative}}">
                     ${{ data.BTC.difference }} ({{ data.BTC.percent }}%)</p>
-                <p class="currency-item__price">${{ data.BTC.price }}</p>
+                <p id="live_trades_btcusd" class="currency-item__price">${{ data.BTC.price }}</p>
             </div>
         </div>
 
@@ -61,9 +61,9 @@
                 <p class="currency-item__date">{{ data.ETH.date }}</p>
             </div>
             <div class="currency-item__price-block">
-                <p class="currency-item__percent {{'currency-item__percent_negative' if data.BTC.negative}}">
+                <p class="currency-item__percent {{'currency-item__percent_negative' if data.ETH.negative}}">
                     ${{ data.ETH.difference }} ({{ data.ETH.percent }}%)</p>
-                <p class="currency-item__price">${{ data.ETH.price }}</p>
+                <p id="live_trades_ethusd" class="currency-item__price">${{ data.ETH.price }}</p>
             </div>
         </div>
 
@@ -74,9 +74,9 @@
                 <p class="currency-item__date">{{ data.XRP.date }}</p>
             </div>
             <div class="currency-item__price-block">
-                <p class="currency-item__percent {{'currency-item__percent_negative' if data.BTC.negative}}">
+                <p class="currency-item__percent {{'currency-item__percent_negative' if data.XRP.negative}}">
                     ${{ data.XRP.difference }} ({{ data.XRP.percent }}%)</p>
-                <p class="currency-item__price">${{ data.XRP.price }}</p>
+                <p id="live_trades_xrpusd" class="currency-item__price">${{ data.XRP.price }}</p>
             </div>
         </div>
     </div>
@@ -223,10 +223,10 @@
             <ul class="privileges__list">
                 <li class="privileges__item">Daily market analytics</li>
                 <li class="privileges__item">Strict risk management strategy</li>
-                <li class="privileges__item">Up to 20 crypto trading signals for Bitcoin (BTC), Ethereum (ETH) and
-                    Ripple
-                    (XRP)
-                </li>
+                <li class="privileges__item">Up to 20 crypto trading signals for
+                    <br><span class="privileges__item_cur btc">Bitcoin</span>
+                    <span class="privileges__item_cur eth">Ethereum</span>
+                    <span class="privileges__item_cur xrp">Ripple</span></li>
                 <li class="privileges__item">Detailed and easy to use guides that will help you better navigate the
                     world
                     of cryptocurrencies
@@ -240,6 +240,7 @@
         <div class="packages">
             <div class="package">
                 <div class="package-details">
+                    <div class="package-details__ribbon">25% sale</div>
                     <div class="package-details__body">
                         <p class="package-details__title">1 Month</p>
                         <p class="package-details__subtitle">We accept only:</p>
@@ -355,7 +356,7 @@
 
 <div class="referral-wrapper">
     <div class="referral">
-        <p class="referral__text">Spread the deal with the referral link that you will get via Lets. Trade bot and get
+        <p class="referral__text">Spread the deal with the referral link that you will get via Lets.Trade bot and get
             <b class="referral__text_bold">%10 crypto back</b></p>
         <a class="referral__button" href="https://t.me/lets_trade_bot">Receive</a>
     </div>
@@ -413,7 +414,7 @@
 </div>
 
 <div class="partners">
-    <h3 class="partners__title">Our <b class="partners__title_bold">partners</b></h3>
+    <h3 class="partners__title">Solution <b class="partners__title_bold">partners</b></h3>
 
     <div class="partners__wrapper">
         <a href="https://bitstamp.net" target="_blank" class="partner">
@@ -430,7 +431,7 @@
         </a>
     </div>
 
-    <a href="https://shop.ledger.com/pages/ledger-nano-x?r=f6060a3fd3ed" class="partners__banner">
+    <a href="https://shop.ledger.com/pages/ledger-nano-x?r=f6060a3fd3ed" target="_blank" class="partners__banner">
         <img class="partners__banner-img"
              src="../static/img/partners-banner.jpg"
              alt="Ledger Nano X - The secure hardware wallet">

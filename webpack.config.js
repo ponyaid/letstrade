@@ -88,6 +88,10 @@ module.exports = {
             {
                 from: './src/video',
                 to: './video'
+            },
+            {
+                from: './src/pdf',
+                to: './pdf'
             }
         ])
     ]
