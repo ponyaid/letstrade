@@ -32,7 +32,10 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "@fortawesome/fontawesome-free": "^5.12.1",
+    "chart.js": "^2.9.3",
+    "chartist-plugin-tooltip": "0.0.11",
     "chartist-webpack": "^0.9.5-0",
+    "countup.js": "^2.0.4",
     "jquery": "^3.4.1"
   }
 }
