@@ -17,7 +17,9 @@
     {% if not session.terms %}
 
     <div class="session">
-
+        <div class="session__header">
+            <a href="/" class="logo session__logo"></a>
+        </div>
         <div class="session__container">
             <div class="policy">
                 <h2 class="policy__title">Terms of use</h2>
@@ -277,6 +279,30 @@
 
     {% endif %}
 
+    <div class="menu-popup">
+        <div class="menu-popup__body">
+            <a href="/" class="logo menu-popup__logo"></a>
+            <span class="menu-popup__close"></span>
+            <ul class="menu-popup__list">
+                <li><a class="menu-popup__list-item" href="/statistics">Statistics</a></li>
+                <li><a class="menu-popup__list-item" href="/#offers">Pricing</a></li>
+                <li><a class="menu-popup__list-item" href="/#team">Dream Team</a></li>
+                <li><a class="menu-popup__list-item" href="/guides">Guides</a></li>
+                <li><a class="menu-popup__list-item" href="/faq">FAQ</a></li>
+            </ul>
+            <div class="menu-popup__social-block">
+                <a class="social footer__social" href="https://twitter.com/LetsTrade_crypt"
+                   target="_blank"><i class="fab fa-twitter"></i></a>
+                <a class="social footer__social" href="https://t.me/lets_trade_bot"
+                   target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                <a class="social footer__social" href="https://www.instagram.com/letstrade_crypto/"
+                   target="_blank"><i class="fab fa-instagram"></i></a>
+                <a class="social footer__social" href="mailto:info@lets.trade"
+                   target="_blank"><i class="far fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+
     <header class="header">
         <a href="/" class="logo"></a>
         <ul class="nav header__nav">
@@ -286,7 +312,8 @@
             <li class="nav__item-wrapper"><a href="/guides" class="nav__item header__item">Guides</a></li>
             <li class="nav__item-wrapper"><a href="/faq" class="nav__item header__item">FAQ</a></li>
             <li class="nav__item-wrapper">
-                <div class="button-border header__button-border"><a href="/#tutorials" class="button">What are Crypto Signals?</a>
+                <div class="button-border header__button-border">
+                    <a href="/#tutorials" class="button header__button">What are Crypto Signals?</a>
                 </div>
             </li>
         </ul>
@@ -312,14 +339,36 @@
                 </div>
             </div>
             <ul class="nav footer__nav">
-                <li class="nav__item-wrapper"><a href="/statistics" class="nav__item footer__item">Statistics</a></li>
-                <li class="nav__item-wrapper"><a href="/#offers" class="nav__item footer__item">Pricing</a></li>
-                <li class="nav__item-wrapper"><a href="/#team" class="nav__item footer__item">Dream Team</a></li>
-                <li class="nav__item-wrapper"><a href="/guides" class="nav__item footer__item">Guides</a></li>
-                <li class="nav__item-wrapper"><a href="/faq" class="nav__item footer__item">FAQ</a></li>
-                <li class="nav__item-wrapper"><a href="/#tutorials" class="nav__item footer__item">What are Crypto Signals?</a>
+                <li class="nav__item-wrapper footer__item-wrapper">
+                    <a href="/statistics" class="nav__item footer__item">Statistics</a></li>
+                <li class="nav__item-wrapper footer__item-wrapper">
+                    <a href="/#offers" class="nav__item footer__item">Pricing</a></li>
+                <li class="nav__item-wrapper footer__item-wrapper">
+                    <a href="/#team" class="nav__item footer__item">Dream Team</a></li>
+                <li class="nav__item-wrapper footer__item-wrapper">
+                    <a href="/guides" class="nav__item footer__item">Guides</a></li>
+                <li class="nav__item-wrapper footer__item-wrapper">
+                    <a href="/faq" class="nav__item footer__item">FAQ</a></li>
+                <li class="nav__item-wrapper footer__item-wrapper">
+                    <a href="/#tutorials" class="nav__item footer__item">What are Crypto Signals?</a>
                 </li>
             </ul>
+            <div class="footer__social-block footer__social-block-mob">
+                <a class="social footer__social" href="https://twitter.com/LetsTrade_crypt"
+                   target="_blank"><i class="fab fa-twitter"></i></a>
+                <a class="social footer__social" href="https://t.me/lets_trade_bot"
+                   target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                <a class="social footer__social" href="https://www.instagram.com/letstrade_crypto/"
+                   target="_blank"><i class="fab fa-instagram"></i></a>
+                <a class="social footer__social" href="mailto:info@lets.trade"
+                   target="_blank"><i class="far fa-envelope"></i></a>
+            </div>
+            <div class="footer__links-mob">
+                <a class="footer__copyright-text footer__copyright-text_link"
+                   href="../static/pdf/Terms_of_Service_eng.pdf" target="_blank">Terms of Service</a>
+                <a class="footer__copyright-text footer__copyright-text_link"
+                   href="../static/pdf/PRIVACY_POLICY_eng.pdf" target="_blank">Privacy Policy</a>
+            </div>
         </div>
         <div class="footer__copyright">
             <p class="footer__copyright-text">© Lets.Trade, 2020, All Rights Reserved</p>

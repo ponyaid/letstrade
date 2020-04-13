@@ -8,15 +8,15 @@
 
         <div class="head__content">
             <h1 class="head__title">Cryptocurrency trading signals
-                <br>on Telegram with 25,29% yield and
-                <br><b class="head__title_bold">86% success</b> rate for Bitstamp exchange</h1>
+                <br class="head__title_br">on Telegram with 25,29% yield and
+                <br class="head__title_br"><b class="head__title_bold">86% success</b> rate for Bitstamp exchange</h1>
             <h2 class="head__subtitle">Uniting crypto-enthusiasts in our community to share our success, crypto trading
                 analytics and to study trading in the world</h2>
             <form class="form" id="index-form">
                 <label class="form__label" for="email">
                     <input class="form__input" name="email" type="text" placeholder="Enter your email" required>
                 </label>
-                <button class="form__button">Subscribe</button>
+                <button class="form__button"></button>
             </form>
         </div>
 
@@ -41,42 +41,54 @@
     </div>
 
     <div class="head__currency">
-        <div class="currency-item">
+        <div id="live_trades_btcusd" class="currency-item">
             <img class="currency-item__img" src="../static/img/bitcoin.png" alt="currency">
-            <div>
+            <div class="currency-item__title-block">
                 <p class="currency-item__title">Bitcoin <b class="currency-item__title_bold">BTC</b></p>
                 <p class="currency-item__date">{{ data.BTC.date }}</p>
             </div>
             <div class="currency-item__price-block">
-                <p class="currency-item__percent {{'currency-item__percent_negative' if data.BTC.negative}}">
-                    ${{ data.BTC.difference }} ({{ data.BTC.percent }}%)</p>
-                <p id="live_trades_btcusd" class="currency-item__price">${{ data.BTC.price }}</p>
+                <div class="currency-item__percent {{'currency-item__percent_negative' if data.BTC.negative}}">
+                    <div class="currency-item__title-mob">BTC/USD</div>
+                    <span class="currency-item__percent_span">
+                        ${{ data.BTC.difference }}</span> <span
+                        class="currency-item__percent_per">{{ data.BTC.percent }}%</span>
+                </div>
+                <p class="currency-item__price">${{ data.BTC.price }}</p>
             </div>
         </div>
 
-        <div class="currency-item">
+        <div id="live_trades_ethusd" class="currency-item">
             <img class="currency-item__img" src="../static/img/ethereum.png" alt="currency">
-            <div>
+            <div class="currency-item__title-block">
                 <p class="currency-item__title">Ethereum <b class="currency-item__title_bold">ETH</b></p>
                 <p class="currency-item__date">{{ data.ETH.date }}</p>
             </div>
             <div class="currency-item__price-block">
-                <p class="currency-item__percent {{'currency-item__percent_negative' if data.ETH.negative}}">
-                    ${{ data.ETH.difference }} ({{ data.ETH.percent }}%)</p>
-                <p id="live_trades_ethusd" class="currency-item__price">${{ data.ETH.price }}</p>
+                <div class="currency-item__percent {{'currency-item__percent_negative' if data.ETH.negative}}">
+                    <div class="currency-item__title-mob">ETH/USD</div>
+                    <span class="currency-item__percent_span">
+                        ${{ data.ETH.difference }}</span> <span
+                        class="currency-item__percent_per">{{ data.ETH.percent }}%</span>
+                </div>
+                <p class="currency-item__price">${{ data.ETH.price }}</p>
             </div>
         </div>
 
-        <div class="currency-item">
+        <div id="live_trades_xrpusd" class="currency-item">
             <img class="currency-item__img" src="../static/img/ripple.png" alt="currency">
-            <div>
+            <div class="currency-item__title-block">
                 <p class="currency-item__title">Ripple <b class="currency-item__title_bold">XRP</b></p>
                 <p class="currency-item__date">{{ data.XRP.date }}</p>
             </div>
             <div class="currency-item__price-block">
-                <p class="currency-item__percent {{'currency-item__percent_negative' if data.XRP.negative}}">
-                    ${{ data.XRP.difference }} ({{ data.XRP.percent }}%)</p>
-                <p id="live_trades_xrpusd" class="currency-item__price">${{ data.XRP.price }}</p>
+                <div class="currency-item__percent {{'currency-item__percent_negative' if data.XRP.negative}}">
+                    <div class="currency-item__title-mob">XRP/USD</div>
+                    <span class="currency-item__percent_span">
+                        ${{ data.XRP.difference }}</span> <span
+                        class="currency-item__percent_per">{{ data.XRP.percent }}%</span>
+                </div>
+                <p class="currency-item__price">${{ data.XRP.price }}</p>
             </div>
         </div>
     </div>
@@ -84,18 +96,29 @@
 
 
 <div id="tutorials" class="tutorials">
+    <div class="tutorials__title-mob">What are crypto signals?</div>
     <div class="tutorial">
-        <img class="tutorial__img" src="../static/img/tutorial1.png" alt="tutorial">
-        <a data-fancybox href="#myVideo" class="tutorial__button">What are crypto signals?</a>
+        <img class="tutorial__img" src="../static/img/tutorial1.jpg" alt="tutorial">
+        <a data-fancybox href="#myVideo" class="tutorial__button">
+            <span>What are crypto signals?</span></a>
     </div>
+    <div class="tutorials__title-mob">Trading success with the signals</div>
     <div class="tutorial">
-        <img class="tutorial__img" src="../static/img/tutorial2.png" alt="tutorial">
-        <a data-fancybox href="#myVideo" class="tutorial__button">Trading success with the signals</a>
+        <img class="tutorial__img" src="../static/img/tutorial2.jpg" alt="tutorial">
+        <a data-fancybox href="#myVideo" class="tutorial__button">
+            <span>Trading success with the signals</span></a>
     </div>
     <video controls id="myVideo" style="display:none;">
         <source src="../static/video/head.mp4" type="video/mp4">
         Your browser doesn't support HTML5 video tag.
     </video>
+</div>
+
+
+<div class="questions">
+    <h3 class="questions__title">Have more questions?</h3>
+    <p class="questions__text">Go to the FAQ page, there is a lot of useful information</p>
+    <a href="/faq" class="questions__button">FAQ</a>
 </div>
 
 
@@ -106,7 +129,7 @@
         the main deposit. </p>
 
     <div class="chart">
-        <a class="chart__link" href="/statistics">Statistics for 2019</a>
+        <a class="chart__link" href="/statistics"><b class="chart__link_bold">Statistics</b> for 2019</a>
         <canvas id="ct-chart" class="ct-chart"></canvas>
     </div>
 
@@ -131,6 +154,7 @@
 
 <div class="quote">
     <img class="quote__abstract" src="../static/img/abstract.svg" alt="">
+    <img class="quote__abstract quote__abstract_mob" src="../static/img/abstract-mob.svg" alt="">
     <div class="quote__body">
         <h3 class="quote__title">The bird in the hand is worth two in the bush.</h3>
         <p class="quote__text">Still, everyone can choose own balance between risk and profit.</p>
@@ -241,10 +265,14 @@
             <ul class="privileges__list">
                 <li class="privileges__item">Daily market analytics</li>
                 <li class="privileges__item">Strict risk management strategy</li>
-                <li class="privileges__item">Up to 20 crypto trading signals for
-                    <br><span class="privileges__item_cur btc">Bitcoin</span>
-                    <span class="privileges__item_cur eth">Ethereum</span>
-                    <span class="privileges__item_cur xrp">Ripple</span></li>
+                <li class="privileges__item">
+                    <div>
+                        <span>Up to 20 crypto trading signals for</span>
+                        <br><span class="privileges__item_cur btc">Bitcoin</span>
+                        <br class="privileges__br"><span class="privileges__item_cur eth">Ethereum</span>
+                        <br class="privileges__br"><span class="privileges__item_cur xrp">Ripple</span>
+                    </div>
+                </li>
                 <li class="privileges__item">Detailed and easy to use guides that will help you better navigate the
                     world
                     of cryptocurrencies
@@ -447,7 +475,8 @@
         <a href="https://localbitsoins.com" target="_blank" class="partner">
             <img class="partner__img" src="../static/img/localbitcoins-logo.png" alt="partner">
         </a>
-        <a href="https://coinpayments.net" target="_blank" class="partner">
+        <a href="https://www.coinpayments.net/index.php?ref=0df8bf0dbfb7a14c35d33e0f2bd3b61a" target="_blank"
+           class="partner">
             <img class="partner__img" src="../static/img/coinpaiments-logo.png" alt="partner">
         </a>
     </div>
@@ -455,6 +484,9 @@
     <a href="https://shop.ledger.com/pages/ledger-nano-x?r=f6060a3fd3ed" target="_blank" class="partners__banner">
         <img class="partners__banner-img"
              src="../static/img/partners-banner.jpg"
+             alt="Ledger Nano X - The secure hardware wallet">
+        <img class="partners__banner-img-mob"
+             src="../static/img/partners-banner-mob.jpg"
              alt="Ledger Nano X - The secure hardware wallet">
     </a>
 </div>

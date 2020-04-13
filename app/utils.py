@@ -22,12 +22,13 @@ def currency_request(currency):
 
 
 def format_currency(data):
+    negative = True if float(data['last']) - float(data['open']) < 0 else False
+    percent = float(data['last']) / float(data['open']) - 1
     data = {
         'price': '%s' % data['last'],
-        'difference': '%.2f' % abs(float(data['last']) - float(data['open'])),
-        'percent': '%.2f' % (
-                (float(data['last']) - float(data['open'])) * 100 / float(data['last'])),
-        'negative': True if float(data['last']) - float(data['open']) < 0 else False,
+        'difference': '%.2f' % (float(data['last']) * percent),
+        'percent': '%.2f' % ((float(data['last']) - float(data['open'])) * 100 / float(data['last'])),
+        'negative': negative,
         'date': datetime.utcnow().strftime('%b %d, %Y, %H:%M:%S')
     }
     return data
