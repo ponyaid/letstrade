@@ -129,24 +129,41 @@
         the main deposit. </p>
 
     <div class="chart">
+
+        <div class="tooltips">
+            <div class="tooltip">
+                <p class="tooltip__key">Bitcoin</p>
+                <p class="tooltip__value">20.00</p>
+            </div>
+            <div class="tooltip">
+                <p class="tooltip__key">Ethereum</p>
+                <p class="tooltip__value">30.00</p>
+            </div>
+            <div class="tooltip">
+                <p class="tooltip__key">Ripple</p>
+                <p class="tooltip__value">50.00</p>
+            </div>
+        </div>
+
         <a class="chart__link" href="/statistics"><b class="chart__link_bold">Statistics</b> for 2019</a>
         <canvas id="ct-chart" class="ct-chart"></canvas>
+        <canvas id="ct-chart-mob" class="ct-chart_mob"></canvas>
     </div>
 
     <div class="chart-xAxis">
         <div class="chart-xAxis__item"></div>
-        <div class="chart-xAxis__item">JAN</div>
-        <div class="chart-xAxis__item">FAB</div>
-        <div class="chart-xAxis__item">MAR</div>
-        <div class="chart-xAxis__item">APR</div>
-        <div class="chart-xAxis__item">MAY</div>
-        <div class="chart-xAxis__item">JUN</div>
-        <div class="chart-xAxis__item">JUL</div>
-        <div class="chart-xAxis__item">AUG</div>
-        <div class="chart-xAxis__item">SEP</div>
-        <div class="chart-xAxis__item">OCT</div>
-        <div class="chart-xAxis__item">NOV</div>
-        <div class="chart-xAxis__item">DEC</div>
+        <div class="chart-xAxis__item chart-xAxis__item_tab chart-xAxis__item_active">JAN</div>
+        <div class="chart-xAxis__item chart-xAxis__item_tab">FAB</div>
+        <div class="chart-xAxis__item chart-xAxis__item_tab">MAR</div>
+        <div class="chart-xAxis__item chart-xAxis__item_tab">APR</div>
+        <div class="chart-xAxis__item chart-xAxis__item_tab">MAY</div>
+        <div class="chart-xAxis__item chart-xAxis__item_tab">JUN</div>
+        <div class="chart-xAxis__item chart-xAxis__item_tab">JUL</div>
+        <div class="chart-xAxis__item chart-xAxis__item_tab">AUG</div>
+        <div class="chart-xAxis__item chart-xAxis__item_tab">SEP</div>
+        <div class="chart-xAxis__item chart-xAxis__item_tab">OCT</div>
+        <div class="chart-xAxis__item chart-xAxis__item_tab">NOV</div>
+        <div class="chart-xAxis__item chart-xAxis__item_tab">DEC</div>
         <div class="chart-xAxis__item"></div>
     </div>
 </div>
