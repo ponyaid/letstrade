@@ -19,14 +19,19 @@ pip install -r requirements.txt
 You must have postgres installed. You must also create a database and add the environment variables.
 
 ## Environment variables
+Create a .env file in the root of the project.
 For the application to work, you must add the following environment variables:
 
 ```
 ADMIN_EMAIL
 ADMIN_PASSWORD
+
 DATABASE_NAME
 DATABASE_USER
 DATABASE_PASS
+
+SENDER
+SENDER_PASS
 ```
 
 ## Running

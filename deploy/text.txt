@@ -1,3 +1,6 @@
+https://medium.com/ymedialabs-innovation/deploy-flask-app-with-nginx-using-gunicorn-and-supervisor-d7a93aa07c18
+
+
 1. раздел Install required packages из статьи
 
 2. далее делаем по readme
@@ -13,5 +16,16 @@
 4. далее раздел Use supervisor из статьи. пример конфига дам если потребуется. в нем запускается гуникорн
 
 5. далее раздел Setup nginx из статьи. пример конфига дам если понадобится, но там есть.
+
+
+
+SSL
+
+для установки letsencrypt можно руководствоваться этой статьей.
+https://blog.miguelgrinberg.com/post/running-your-flask-application-over-https
+
+с другими центрами сертификации должно быть +- аналогично.
+- создали сертификат и ключ
+- добавили пути к файлам в nginx конфигурацию
 
 
