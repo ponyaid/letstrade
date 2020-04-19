@@ -1,4 +1,5 @@
 import os
+import logging
 from threading import Thread
 
 from flask import request, render_template, abort, session, redirect, Response
@@ -17,10 +18,9 @@ app = create_app(Config)
 def send_email(msg):
     with app.app_context():
         try:
-            print('send email')
             mail.send(msg)
         except Exception as e:
-            print(e)
+            app.logger.error(e)
 
 
 @app.route('/get_session', methods=['GET'])
@@ -58,6 +58,7 @@ def index_form():
 
 @app.route('/', methods=['GET'])
 def index():
+    app.logger.debug('this is a DEBUG message')
     if request.method == 'GET':
         currency_data = dict()
         btc_data = currency_request('btc')
@@ -95,4 +96,7 @@ def statistics():
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    gunicorn_logger = logging.getLogger('gunicorn.error')
+    app.logger.handlers = gunicorn_logger.handlers
+    app.logger.setLevel(gunicorn_logger.level)
+    app.run()
