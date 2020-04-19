@@ -8,7 +8,24 @@ from app.utils import currency_request, format_currency
 from app.models import *
 from app.database import db
 
+
 app = create_app(Config)
+
+SENDER = 'notify.go.eco.grpup@gmail.com'
+SENDER_PASS = '$Joo3m21$J'
+
+app.config.update(dict(
+    MAIL_SERVER='smtp.gmail.com',
+    MAIL_PORT=587,
+    MAIL_USE_TLS=True,
+    MAIL_USE_SSL=False,
+    MAIL_DEBUG=False,
+    MAIL_USERNAME='%s' % SENDER,
+    MAIL_PASSWORD='%s' % SENDER_PASS,
+    MAIL_DEFAULT_SENDER='%s' % SENDER,
+    MAIL_MAX_EMAILS=None,
+    MAIL_ASCII_ATTACHMENTS=False,
+))
 
 
 @app.route('/get_session', methods=['GET'])
