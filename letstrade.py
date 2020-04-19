@@ -16,7 +16,11 @@ app = create_app(Config)
 
 def send_email(msg):
     with app.app_context():
-        mail.send(msg)
+        try:
+            print('send email')
+            mail.send(msg)
+        except Exception as e:
+            print(e)
 
 
 @app.route('/get_session', methods=['GET'])
