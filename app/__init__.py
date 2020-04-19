@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_security import SQLAlchemyUserDatastore, Security
+from flask_mail import Mail
 
 from config import Config
 from .database import db, migrate
@@ -7,10 +8,14 @@ from .admin import admin, ExtendedLoginForm
 from .models import *
 
 
+mail = Mail()
+
+
 def create_app(config=Config):
     app = Flask(__name__, template_folder='../templates', static_folder='../static')
     app.config.from_object(config)
     config.init_app(app)
+    mail.init_app(app)
     db.init_app(app)
     admin.init_app(app)
     migrate.init_app(app, db)

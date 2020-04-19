@@ -5,6 +5,8 @@ const OptimizeCssnanoPlugin = require('@intervolga/optimize-cssnano-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MinifyPlugin = require("babel-minify-webpack-plugin");
+
 
 module.exports = {
     entry: [
@@ -53,6 +55,9 @@ module.exports = {
         ]
     },
     plugins: [
+        new MinifyPlugin({}, {
+            comments: false,
+        }),
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
@@ -94,5 +99,5 @@ module.exports = {
                 to: './pdf'
             }
         ])
-    ]
+    ],
 };

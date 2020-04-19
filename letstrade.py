@@ -1,8 +1,10 @@
 import os
+from threading import Thread
 
 from flask import request, render_template, abort, session, redirect, Response
+from flask_mail import Message
 
-from app import create_app
+from app import create_app, mail
 from config import Config
 from app.utils import currency_request, format_currency
 from app.models import *
@@ -11,21 +13,10 @@ from app.database import db
 
 app = create_app(Config)
 
-SENDER = 'notify.go.eco.grpup@gmail.com'
-SENDER_PASS = '$Joo3m21$J'
 
-app.config.update(dict(
-    MAIL_SERVER='smtp.gmail.com',
-    MAIL_PORT=587,
-    MAIL_USE_TLS=True,
-    MAIL_USE_SSL=False,
-    MAIL_DEBUG=False,
-    MAIL_USERNAME='%s' % SENDER,
-    MAIL_PASSWORD='%s' % SENDER_PASS,
-    MAIL_DEFAULT_SENDER='%s' % SENDER,
-    MAIL_MAX_EMAILS=None,
-    MAIL_ASCII_ATTACHMENTS=False,
-))
+def send_email(msg):
+    with app.app_context():
+        mail.send(msg)
 
 
 @app.route('/get_session', methods=['GET'])
@@ -44,7 +35,20 @@ def index_form():
         lead = Lead(email=email)
         db.session.add(lead)
         db.session.commit()
+
+        msg = Message('LETS.TRADE',
+                      sender=app.config.get('SENDER'),
+                      recipients=[email])
+
+        body = 'Thank you for your request'
+
+        msg.body = '%s' % body
+        msg.html = "<b>%s</b>" % body
+
+        Thread(target=send_email, args=(msg,)).start()
+
         return Response(status=200)
+
     abort(405)
 
 
