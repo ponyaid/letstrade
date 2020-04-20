@@ -38,6 +38,10 @@
     <link rel="icon" href="favicon-48x48.png" sizes="48x48" type="image/png">
     <link rel="stylesheet" type="text/css" href="../static/css/style.bundle.css">
     <title>Lets.Trade</title>
+    {% if session.terms %}
+    <script src="//code.jivosite.com/widget/z6TYGQdF03" async></script>
+    {% endif %}
+
 </head>
 <body {% if not session.terms %} class="body-popup-active" {% endif %}>
 
