@@ -55,9 +55,9 @@ module.exports = {
         ]
     },
     plugins: [
-        new MinifyPlugin({}, {
-            comments: false,
-        }),
+        // new MinifyPlugin({}, {
+        //     comments: false,
+        // }),
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
