@@ -47,16 +47,16 @@
             <img class="currency-item__img" src="../static/img/bitcoin.png" alt="currency">
             <div class="currency-item__title-block">
                 <p class="currency-item__title">Bitcoin <b class="currency-item__title_bold">BTC</b></p>
-                <p class="currency-item__date">{{ data.BTC.date }}</p>
+                <p class="currency-item__date">{{ data.BTC.date if data.BTC }}</p>
             </div>
             <div class="currency-item__price-block">
-                <div class="currency-item__percent {{'currency-item__percent_negative' if data.BTC.negative}}">
+                <div class="currency-item__percent {{'currency-item__percent_negative' if data.BTC and data.BTC.negative}}">
                     <div class="currency-item__title-mob">BTC/USD</div>
                     <span class="currency-item__percent_span">
-                        ${{ data.BTC.difference }}</span> <span
-                        class="currency-item__percent_per">{{ data.BTC.percent }}%</span>
+                        ${{ data.BTC.difference if data.BTC }}</span> <span
+                        class="currency-item__percent_per">{{ data.BTC.percent if data.BTC }}%</span>
                 </div>
-                <p class="currency-item__price">${{ data.BTC.price }}</p>
+                <p class="currency-item__price">${{ data.BTC.price if data.BTC }}</p>
             </div>
         </div>
 
@@ -64,16 +64,16 @@
             <img class="currency-item__img" src="../static/img/ethereum.png" alt="currency">
             <div class="currency-item__title-block">
                 <p class="currency-item__title">Ethereum <b class="currency-item__title_bold">ETH</b></p>
-                <p class="currency-item__date">{{ data.ETH.date }}</p>
+                <p class="currency-item__date">{{ data.ETH.date if data.ETH }}</p>
             </div>
             <div class="currency-item__price-block">
-                <div class="currency-item__percent {{'currency-item__percent_negative' if data.ETH.negative}}">
+                <div class="currency-item__percent {{'currency-item__percent_negative' if data.ETH and data.ETH.negative}}">
                     <div class="currency-item__title-mob">ETH/USD</div>
                     <span class="currency-item__percent_span">
-                        ${{ data.ETH.difference }}</span> <span
-                        class="currency-item__percent_per">{{ data.ETH.percent }}%</span>
+                        ${{ data.ETH.difference if data.ETH }}</span> <span
+                        class="currency-item__percent_per">{{ data.ETH.percent if data.ETH }}%</span>
                 </div>
-                <p class="currency-item__price">${{ data.ETH.price }}</p>
+                <p class="currency-item__price">${{ data.ETH.price if data.ETH }}</p>
             </div>
         </div>
 
@@ -81,16 +81,16 @@
             <img class="currency-item__img" src="../static/img/ripple.png" alt="currency">
             <div class="currency-item__title-block">
                 <p class="currency-item__title">Ripple <b class="currency-item__title_bold">XRP</b></p>
-                <p class="currency-item__date">{{ data.XRP.date }}</p>
+                <p class="currency-item__date">{{ data.XRP.date if data.XRP }}</p>
             </div>
             <div class="currency-item__price-block">
-                <div class="currency-item__percent {{'currency-item__percent_negative' if data.XRP.negative}}">
+                <div class="currency-item__percent {{'currency-item__percent_negative' if data.XRP and data.XRP.negative}}">
                     <div class="currency-item__title-mob">XRP/USD</div>
                     <span class="currency-item__percent_span">
-                        ${{ data.XRP.difference }}</span> <span
-                        class="currency-item__percent_per">{{ data.XRP.percent }}%</span>
+                        ${{ data.XRP.difference if data.XRP }}</span> <span
+                        class="currency-item__percent_per">{{ data.XRP.percent if data.XRP }}%</span>
                 </div>
-                <p class="currency-item__price">${{ data.XRP.price }}</p>
+                <p class="currency-item__price">${{ data.XRP.price if data.XRP }}</p>
             </div>
         </div>
     </div>

@@ -16,7 +16,7 @@ def currency_request(currency):
         response = session.get(url=urljoin(URL, '%susd' % currency))
         data = json.loads(response.text)
         return data
-    except (ConnectionError, Timeout, TooManyRedirects) as e:
+    except (ConnectionError, Timeout, TooManyRedirects, json.decoder.JSONDecodeError) as e:
         print(e)
         return None
 

@@ -70,6 +70,7 @@ def index():
                 'ETH': format_currency(eth_data),
                 'XRP': format_currency(xrp_data),
             }
+        print('DDD')
         return render_template('index.html', data=currency_data)
     abort(405)
 
