@@ -11,7 +11,6 @@ from app.utils import currency_request, format_currency
 from app.models import *
 from app.database import db
 
-
 app = create_app(Config)
 
 
@@ -40,16 +39,17 @@ def index_form():
         db.session.add(lead)
         db.session.commit()
 
-        msg = Message('LETS.TRADE',
-                      sender=app.config.get('SENDER'),
-                      recipients=[email])
+        if app.config['SEND_MESSAGE']:
+            msg = Message('LETS.TRADE',
+                          sender=app.config.get('SENDER'),
+                          recipients=[email])
 
-        body = 'Thank you for your request'
+            with open('email.html', 'r') as f:
+                html = f.read()
 
-        msg.body = '%s' % body
-        msg.html = "<b>%s</b>" % body
+            msg.html = html
 
-        Thread(target=send_email, args=(msg,)).start()
+            Thread(target=send_email, args=(msg,)).start()
 
         return Response(status=200)
 

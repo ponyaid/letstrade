@@ -33,6 +33,8 @@ class Config:
     MAIL_MAX_EMAILS = None
     MAIL_ASCII_ATTACHMENTS = False
 
+    SEND_MESSAGE = bool(os.environ.get('SEND_MESSAGE'))
+
     @staticmethod
     def init_app(app):
         pass
