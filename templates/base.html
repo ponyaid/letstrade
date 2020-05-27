@@ -43,7 +43,14 @@
     <link rel="stylesheet" type="text/css" href="../static/css/style.bundle.css">
     <title>Lets.Trade</title>
     {% if session.terms %}
-    <script src="//code.jivosite.com/widget/z6TYGQdF03" async></script>
+    <script>
+        if (window.innerWidth > 640) {
+            let jivosite = document.createElement('script');
+            jivosite.src = '//code.jivosite.com/widget/z6TYGQdF03';
+            jivosite.setAttribute('async', 'async');
+            document.head.appendChild(jivosite)
+        }
+    </script>
     {% endif %}
 
 </head>

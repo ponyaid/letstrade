@@ -1,6 +1,7 @@
 import os
 import logging
 from threading import Thread
+from datetime import timedelta
 
 from flask import request, render_template, abort, session, redirect, Response
 from flask_mail import Message
@@ -10,6 +11,7 @@ from config import Config
 from app.utils import currency_request, format_currency
 from app.models import *
 from app.database import db
+
 
 app = create_app(Config)
 
@@ -26,6 +28,7 @@ def send_email(msg):
 def get_session():
     if request.method == 'GET':
         session.permanent = True
+        app.permanent_session_lifetime = timedelta(days=365)
         session['terms'] = os.urandom(24)
         return redirect(request.args.get('next'))
     abort(405)
