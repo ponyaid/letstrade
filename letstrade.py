@@ -1,7 +1,9 @@
 import os
+import base64
 import logging
 from threading import Thread
 from datetime import timedelta
+from urllib.parse import urljoin
 
 from flask import request, render_template, abort, session, redirect, Response
 from flask_mail import Message
@@ -50,7 +52,10 @@ def index_form():
             with open('email.html', 'r') as f:
                 html = f.read()
 
-            msg.html = html
+            host = request.url_root
+            enc_email = base64.b64encode(email.encode())
+            url = urljoin(host, 'unsubscribe/' + enc_email.decode())
+            msg.html = html.format(url=url)
 
             Thread(target=send_email, args=(msg,)).start()
 
@@ -73,7 +78,6 @@ def index():
                 'ETH': format_currency(eth_data),
                 'XRP': format_currency(xrp_data),
             }
-        print('DDD')
         return render_template('index.html', data=currency_data)
     abort(405)
 
@@ -97,6 +101,19 @@ def statistics():
     if request.method == 'GET':
         return render_template('statistics.html')
     abort(405)
+
+
+@app.route('/unsubscribe/<enc_email>', methods=['GET'])
+def unsubscribe(enc_email):
+    try:
+        email = base64.b64decode(enc_email.encode()).decode()
+    except base64.binascii.Error:
+        abort(404)
+
+    lead = Lead.query.filter_by(email=email).first()
+    db.session.delete(lead) if lead else None
+    db.session.commit()
+    return Response(response='Successful unsubscription', status=200)
 
 
 if __name__ == '__main__':
