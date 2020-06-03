@@ -107,7 +107,7 @@ def statistics():
 def unsubscribe(enc_email):
     try:
         email = base64.b64decode(enc_email.encode()).decode()
-    except base64.binascii.Error:
+    except (base64.binascii.Error, UnicodeDecodeError):
         abort(404)
 
     lead = Lead.query.filter_by(email=email).first()
