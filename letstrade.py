@@ -76,7 +76,7 @@ def index():
             currency_data = {
                 'BTC': format_currency(btc_data),
                 'ETH': format_currency(eth_data),
-                'XRP': format_currency(xrp_data),
+                'XRP': format_currency(xrp_data, True),
             }
         return render_template('index.html', data=currency_data)
     abort(405)
