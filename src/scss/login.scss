@@ -1,0 +1,62 @@
+.login {
+  width: 600px;
+  padding: 4.5rem 1.5rem;
+
+  &__title {
+    font-family: 'Gilroy';
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.41;
+    letter-spacing: 0.71px;
+    color: #fff;
+  }
+
+  @media (max-width: 648px) {
+    width: 100%;
+  }
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  padding: 1.5rem 0;
+
+  &__input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 14px;
+    box-shadow: 8px 6px 10px 0 rgba(5, 6, 4, 0.3);
+    background-color: #0e1112;
+    font-family: 'Gilroy';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+  }
+
+  &__checkbox {
+    margin-bottom: 1.5rem;
+  }
+
+  &__label {
+    font-size: 14px;
+    font-family: 'Gilroy';
+    color: rgba(255, 255, 255, .8);
+  }
+
+  &__button {
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    padding: 1em 1.5rem;
+    font-family: 'Gilroy';
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    color: #ffffff;
+    border-radius: 12px;
+    background-image: linear-gradient(to right, #80ec68, #159e49);
+  }
+}

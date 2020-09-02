@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 61.2 (101010) - https://sketch.com -->
+    <title>324D936A-AA66-48F4-8116-88AD2D451954</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#80EC68" offset="0%"></stop>
+            <stop stop-color="#159E49" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="web---visual" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="FAQ" transform="translate(-1213.000000, -604.000000)" fill="url(#linearGradient-1)">
+            <g id="Group" transform="translate(526.000000, 602.000000)">
+                <path d="M697,2 C697.552285,2 698,2.44771525 698,3 L698,11 L706,11 C706.552285,11 707,11.4477153 707,12 C707,12.5522847 706.552285,13 706,13 L698,13 L698,21 C698,21.5522847 697.552285,22 697,22 C696.447715,22 696,21.5522847 696,21 L696,13 L688,13 C687.447715,13 687,12.5522847 687,12 C687,11.4477153 687.447715,11 688,11 L696,11 L696,3 C696,2.44771525 696.447715,2 697,2 Z" id="ic-expand"></path>
+            </g>
+        </g>
+    </g>
+</svg>

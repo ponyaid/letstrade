@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="37px" height="36px" viewBox="0 0 37 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>facv</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="116.72854%" y1="0%" x2="13.135055%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F86B61" offset="0%"></stop>
+            <stop stop-color="#EE3932" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-2.46112987%" y1="88.290079%" x2="84.0332739%" y2="0%" id="linearGradient-2">
+            <stop stop-color="#80EC68" offset="0%"></stop>
+            <stop stop-color="#37D592" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing-Copy" transform="translate(-424.000000, -7248.000000)">
+            <g id="facv" transform="translate(424.000000, 7248.000000)">
+                <path d="M1.93886793,27.3176036 L1.939,27.3175266 L5.71967456,11.0945266 L14.0392012,11.0945266 L10.258,27.3175266 L21.0737792,27.3176036 L19.1349112,35.6371302 L0,35.6371302 L1.93886793,27.3176036 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+                <path d="M30.525,2.775 C30.525,4.81845357 32.1815464,6.475 34.225,6.475 L34.2872012,6.473 L29.4303254,27.3176036 L21.1107988,27.3176036 L24.8912012,11.094 L14.0392012,11.0945266 L15.9780691,2.775 L30.525,2.775 L30.525,2.775 Z" id="Combined-Shape" fill="url(#linearGradient-2)"></path>
+                <circle id="Oval" fill="#DB5143" cx="34.225" cy="2.775" r="2.775"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
