@@ -3,7 +3,7 @@ const path = require('path');
 const webpack = require('webpack');
 const OptimizeCssnanoPlugin = require('@intervolga/optimize-cssnano-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+// const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MinifyPlugin = require("babel-minify-webpack-plugin");
 
@@ -76,7 +76,7 @@ module.exports = {
                 }],
             },
         }),
-        new CleanWebpackPlugin(),
+        // new CleanWebpackPlugin(),
         new CopyWebpackPlugin([
             {
                 from: './src/fonts',
@@ -97,6 +97,14 @@ module.exports = {
             {
                 from: './src/pdf',
                 to: './pdf'
+            },
+            {
+                from: './src/*.txt',
+                to: './[name].[ext]'
+            },
+            {
+                from: './src/*.xml',
+                to: './[name].[ext]'
             }
         ])
     ],

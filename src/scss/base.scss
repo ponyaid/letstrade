@@ -42,164 +42,9 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
   align-items: center;
   min-height: 100vh;
   width: 100%;
-  background: #151a1b;
+  background: #000000;
 }
 
-.session {
-  z-index: 99999;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background-color: rgba(21, 26, 27, 0.8);
-
-  &__header {
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 64px;
-    position: absolute;
-    padding: 12px 1.5rem;
-    background-color: #0e1112;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-    display: none;
-
-    @media (max-width: 768px) {
-      display: block;
-    }
-  }
-
-  &__logo {
-    display: block !important;
-    height: 100% !important;
-  }
-
-  &__container {
-    height: 100%;
-    max-width: 600px;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-  }
-}
-
-.policy {
-  display: flex;
-  flex-flow: column;
-  padding-top: 6rem;
-  overflow: hidden;
-  height: calc(100vh - 5.625rem);
-
-  &__title {
-    font-size: 34px;
-    font-weight: 600;
-    letter-spacing: 0.71px;
-    color: #ffffff;
-
-    @media (max-width: 768px) {
-      font-size: 24px;
-      letter-spacing: 0.49px;
-    }
-  }
-
-  &__text {
-    font-weight: 500;
-    line-height: 1.88;
-    letter-spacing: 0.2px;
-    color: rgba(255, 255, 255, .8);
-    margin: 1rem 0;
-
-    @media (max-width: 768px) {
-      font-size: 14px;
-      line-height: 1.86;
-      letter-spacing: 0.18px;
-    }
-  }
-
-  &__ol {
-    height: 100%;
-    overflow: auto;
-    margin-top: 3rem;
-    padding-bottom: 4rem;
-    list-style-position: inside;
-    list-style-type: upper-roman;
-
-    @media (max-width: 768px) {
-      margin-top: 2rem;
-    }
-
-    &_outside {
-      margin-top: 1.5rem;
-      margin-bottom: 1.5rem;
-      list-style-position: outside;
-    }
-  }
-
-  &__li {
-    font-weight: 500;
-    line-height: 1.88;
-    letter-spacing: 0.2px;
-    color: rgba(255, 255, 255, .8);
-
-    &_bold {
-      font-weight: 600;
-      line-height: 1.5;
-      letter-spacing: 0.75px;
-      color: #fff;
-    }
-
-    &_pad {
-      margin-left: 1rem;
-      padding-left: 1.5rem;
-    }
-  }
-}
-
-.session-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 5.625rem;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.3);
-  background-color: #0e1112;
-
-  @media (max-width: 768px) {
-    height: auto;
-  }
-
-  &__content {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 0 calc((100% - 600px) / 2);
-
-    @media (max-width: 768px) {
-      padding: .5rem 1.5rem;
-    }
-  }
-
-  &__link {
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 1em 2rem;
-    border-radius: 5px;
-    background-image: linear-gradient(to right, #80ec68, #159e49);
-
-    @media (max-width: 768px) {
-      text-align: center;
-      width: 100%;
-    }
-  }
-}
 
 @keyframes navHoverAnimation {
   from {
@@ -216,7 +61,7 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 100%;
+  border-radius: 9px;
   font-size: 16px;
   color: #fff;
 
@@ -404,8 +249,8 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
   justify-content: space-between;
   align-items: center;
   padding: 0 4.5rem;
-  background-color: #0e1112;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  background-color: #000;
+  //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 
   @media (max-width: 1024px) {
     height: 4rem;
@@ -414,6 +259,7 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
   @media (max-width: 640px) {
     padding: 0 1.5rem;
     box-shadow: none;
+    background-color: #141417;
   }
 
   &__nav {
@@ -426,7 +272,7 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
 
   &__item {
     color: rgba(255, 255, 255, .8);
-    line-height: $height;
+    line-height: 2.4;
   }
 
   &__menu-btn {
@@ -450,11 +296,11 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
   }
 
   &__button-border {
-    background-image: linear-gradient(#0e1112, #0e1112),
+    background-image: linear-gradient(#000, #000),
     linear-gradient(90deg, rgba(255, 255, 255, .8), rgba(255, 255, 255, .8));
 
     &:hover {
-      background-image: linear-gradient(#0e1112, #0e1112), $gradient;
+      background-image: linear-gradient(#000, #000), $gradient;
     }
   }
 }
@@ -468,6 +314,11 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
   @media (max-width: 1024px) {
     height: 2.5rem;
   }
+
+  @media (max-width: 640px) {
+    width: 131px;
+    height: 24px;
+  }
 }
 
 .footer {
@@ -475,18 +326,18 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
   display: flex;
   flex-flow: column;
   align-items: center;
-  background: #0f0f0f;
+  background: linear-gradient(to right, #80ec68, #159e49) no-repeat center top / 100% 1px;
   margin-top: auto;
 
   &__body {
     width: 100%;
-    max-width: 1172px;
     display: flex;
     flex-flow: column;
+    max-width: 1254px;
     padding: 5rem 4.5rem;
 
     @media (max-width: 640px) {
-      padding: 3.5rem 1rem 1.5rem;
+      padding: 3.5rem 1rem 2.5rem;
     }
   }
 
@@ -495,6 +346,17 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 640px) {
+      justify-content: center;
+    }
+  }
+
+  &__logo {
+    @media (max-width: 640px) {
+      width: 128px;
+      height: 32px;
+    }
   }
 
   &__social-block {
@@ -509,6 +371,7 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
 
   &__social-block-mob {
     display: none;
+    justify-content: center;
 
     @media (max-width: 640px) {
       display: flex;
@@ -516,7 +379,7 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
   }
 
   &__nav {
-    margin-top: 5rem;
+    margin-top: 6rem;
     margin-left: -1rem;
     margin-right: -1rem;
     justify-content: flex-start;
@@ -524,10 +387,9 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
     height: auto;
 
     @media (max-width: 640px) {
-      margin: 3.5rem 0 0;
+      margin: 3.5rem 0 2rem;
       flex-flow: column;
-      align-items: flex-start;
-
+      align-items: center;
     }
   }
 
@@ -538,10 +400,16 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
   }
 
   &__item {
+    font-size: 20px;
+    font-weight: 500;
     line-height: 2.4rem;
+    letter-spacing: 0.25px;
 
     @media (max-width: 640px) {
+      font-size: 16px;
+      text-align: center;
       line-height: normal;
+      letter-spacing: normal;
       margin-bottom: 1.5rem;
     }
   }
@@ -553,7 +421,8 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
 
   &__links-mob {
     display: none;
-    padding-top: 4rem;
+    padding-top: 3.5rem;
+    justify-content: center;
 
     @media (max-width: 640px) {
       display: flex;
@@ -566,9 +435,8 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #0b0d0e;
-    padding-left: calc((100% - 1028px) / 2);
-    padding-right: calc((100% - 1028px) / 2);
+    padding-left: calc((100% - 1110px) / 2);
+    padding-right: calc((100% - 1110px) / 2);
 
     @media (max-width: 1172px) {
       padding-left: 4.5rem;
@@ -576,8 +444,11 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
     }
 
     @media (max-width: 640px) {
+      height: auto;
       padding-left: 1rem;
       padding-right: 1rem;
+      padding-bottom: 2rem;
+      justify-content: center;
     }
 
     &-links {
@@ -589,9 +460,13 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
     }
 
     &-text {
-      font-size: 12px;
+      font-size: 16px;
       font-weight: 500;
       color: rgba(255, 255, 255, .4);
+
+      @media (max-width: 640px) {
+        font-size: 14px;
+      }
 
       &_link {
         transition: color .2s ease;
@@ -602,7 +477,6 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
 
         &:hover {
           color: #ffffff;
-          text-decoration: underline;
         }
       }
     }

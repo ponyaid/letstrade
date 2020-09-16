@@ -5,7 +5,7 @@ from threading import Thread
 from datetime import timedelta
 from urllib.parse import urljoin
 
-from flask import request, render_template, abort, session, redirect, Response
+from flask import request, render_template, abort, session, redirect, Response, send_from_directory, make_response
 from flask_mail import Message
 
 from app import create_app, mail
@@ -78,7 +78,14 @@ def index():
                 'ETH': format_currency(eth_data),
                 'XRP': format_currency(xrp_data, True),
             }
-        return render_template('index.html', data=currency_data)
+
+        grows = Grow.query.order_by(Grow.year).all()
+
+        resp = make_response(render_template('index.html', data=currency_data, grows=grows))
+        resp.headers.add('Set-Cookie', 'SameSite=None; Secure')
+        # resp.set_cookie('SameSite', 'None', secure=True)
+        return resp
+
     abort(405)
 
 
@@ -105,6 +112,7 @@ def statistics():
 
 @app.route('/unsubscribe/<enc_email>', methods=['GET'])
 def unsubscribe(enc_email):
+    email = ''
     try:
         email = base64.b64decode(enc_email.encode()).decode()
     except (base64.binascii.Error, UnicodeDecodeError):
@@ -114,6 +122,12 @@ def unsubscribe(enc_email):
     db.session.delete(lead) if lead else None
     db.session.commit()
     return Response(response='Successful unsubscription', status=200)
+
+
+@app.route('/robots.txt')
+@app.route('/sitemap.xml')
+def static_from_root():
+    return send_from_directory(app.static_folder, request.path[1:])
 
 
 if __name__ == '__main__':

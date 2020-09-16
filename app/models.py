@@ -3,6 +3,17 @@ from flask_security import UserMixin, RoleMixin
 from .database import db
 
 
+class Grow(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    year = db.Column(db.Integer)
+    signals = db.Column(db.Integer)
+    rate = db.Column(db.Float)
+    profit = db.Column(db.Float)
+    profit_min = db.Column(db.Float)
+    profit_max = db.Column(db.Float)
+    yld = db.Column(db.Float, name='yield')
+
+
 class Lead(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(256), unique=True)

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="1672" viewBox="0 0 1440 1672">
+    <defs>
+        <linearGradient id="gmt7enwktc" x1="50%" x2="50%" y1="100%" y2="0%">
+            <stop offset="0%"/>
+            <stop offset="100%" stop-color="#062C14"/>
+        </linearGradient>
+        <linearGradient id="hug89zob7f" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#80EC68"/>
+            <stop offset="100%" stop-color="#159E49"/>
+        </linearGradient>
+        <path id="us24zbyb3a" d="M0 0H1440V1672H0z"/>
+        <path id="9gms3va5fe" d="M0 186.495c28.56-46.752 61.045-70.129 97.458-70.129 72.976 0 71.955 91.595 194.385 91.595 103.901 0 103.9 90.36 195.449 90.36 101.613 0 101.613-90.36 194.916-90.36C779.667 207.96 779.667 377 877.125 377s108.71-99.532 194.917-99.532c110.143 0 110.143-110.147 194.916-110.147C1370.971 167.321 1370.971 0 1461.875 0c97.922 0 71.902 186.495 194.917 186.495 130.24 0 85.987 90.973 194.916 90.973 100.221 0 100.221-64.13 194.917-64.13 120.049 0 84.217-89.504 194.917-89.504 25.328 0 57.814-22.417 97.458-67.252"/>
+        <filter id="sqosyftdcd" width="101.4%" height="108.2%" x="-.7%" y="-2.8%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="1" result="shadowSpreadOuter1"/>
+            <feOffset dy="5" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy="5" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.832960009 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g transform="translate(0 -2312) translate(0 2312)">
+                <mask id="5fxew9bdfb" fill="#fff">
+                    <use xlink:href="#us24zbyb3a"/>
+                </mask>
+                <g mask="url(#5fxew9bdfb)" opacity=".8">
+                    <g>
+                        <path fill="url(#gmt7enwktc)" d="M0 185.408c28.56-46.48 61.045-69.72 97.458-69.72 72.976 0 71.955 91.06 194.385 91.06 103.901 0 103.9 89.834 195.449 89.834 101.613 0 101.613-89.833 194.916-89.833 97.459 0 97.459 168.054 194.917 168.054s108.71-98.952 194.917-98.952c110.143 0 110.143-109.505 194.916-109.505C1370.971 166.346 1370.971 0 1461.875 0c97.922 0 71.902 185.408 194.917 185.408 130.24 0 85.987 90.443 194.916 90.443 100.221 0 100.221-63.757 194.917-63.757 120.049 0 84.217-88.982 194.917-88.982 25.328 0 57.814-22.286 97.458-66.86V1667H0" transform="translate(-31 5)"/>
+                        <g transform="translate(-31 5)">
+                            <use fill="#000" filter="url(#sqosyftdcd)" xlink:href="#9gms3va5fe"/>
+                            <use stroke="url(#hug89zob7f)" stroke-width="2" xlink:href="#9gms3va5fe"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

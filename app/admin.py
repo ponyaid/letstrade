@@ -11,7 +11,7 @@ from flask_security.forms import LoginForm, StringField, Required, BooleanField
 from wtforms.fields import PasswordField
 
 from .database import db
-from .models import User, Lead
+from .models import User, Lead, Grow
 
 
 class ExtendedLoginForm(LoginForm):
@@ -75,3 +75,4 @@ class HomeAdminView(AdminIndexView):
 admin = Admin(url='/', index_view=HomeAdminView(), template_mode='bootstrap3')
 admin.add_view(UserAdmin(User, db.session, name='Users'))
 admin.add_view(LeadAdmin(Lead, db.session, name='Leads'))
+admin.add_view(ModelViewMixin(Grow, db.session, name='Grows'))

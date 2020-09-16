@@ -1,15 +1,15 @@
-'use strict';
+'use strict'
 
 import '@fancyapps/fancybox'
-import 'slick-carousel/slick/slick.min'
+// import 'slick-carousel/slick/slick.min'
 
 import './faq'
 import './viewport'
 import './menuPopup'
 import './statistics'
-import './indexForm'
-import './indexOffers'
-import './indexVideo'
+import './indexTutorials'
+import './indexGrow'
+import './indexPlans'
+import './indexWe'
 import './indexPopup'
 import './indexCurrency'
-import './indexChart'

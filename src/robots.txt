@@ -1,0 +1,6 @@
+Sitemap: https://lets.trade/sitemap.xml
+
+User-agent: *
+Allow: /
+Disallow: /statistics/
+Disallow: /admin/
