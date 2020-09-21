@@ -103,7 +103,7 @@ def guides():
     abort(405)
 
 
-@app.route('/statistics', methods=['GET'])
+@app.route('/statistics2019', methods=['GET'])
 def statistics():
     if request.method == 'GET':
         return render_template('statistics.html')
@@ -134,4 +134,4 @@ if __name__ == '__main__':
     gunicorn_logger = logging.getLogger('gunicorn.error')
     app.logger.handlers = gunicorn_logger.handlers
     app.logger.setLevel(gunicorn_logger.level)
-    app.run()
+    app.run(port=4567)

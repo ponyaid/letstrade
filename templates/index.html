@@ -371,7 +371,7 @@
 </div>
 
 
-<div class="grow">
+<div id="grow" class="grow">
     <h2 class="grow__title">Our growing streak</h2>
     <div class="grow__tabs">
         {% for grow in grows %}
@@ -419,7 +419,7 @@
     </div>
 
     <div class="button-border grow__button-border">
-        <a href="/statistics" class="button grow__button">Full Report 2019</a>
+        <a href="/statistics2019" class="button grow__button">Full Report 2019</a>
     </div>
 </div>
 
@@ -598,7 +598,7 @@
 </div>
 
 
-<div class="plans">
+<div id="plans" class="plans">
     <h3 class="plans__title"><b class="plans__title_bold">Subscription</b> Plans</h3>
     <div class="plans__wrapper">
         <div class="plans__items">
@@ -627,7 +627,7 @@
                             <span class="plan__coin-tag plan__coin-tag_xrp">XRP</span>
                         </div>
                     </div>
-                    <a class="plan__btn" href="https://t.me/lets_trade_bot">Join via Telegram</a>
+                    <a class="plan__btn" href="https://t.me/lets_trade_bot">Acquire via Telegram</a>
                 </div>
             </div>
 
@@ -645,7 +645,7 @@
                             <span class="plan__coin-tag plan__coin-tag_xrp">XRP</span>
                         </div>
                     </div>
-                    <a class="plan__btn" href="https://t.me/lets_trade_bot">Join via Telegram</a>
+                    <a class="plan__btn" href="https://t.me/lets_trade_bot">Acquire via Telegram</a>
                 </div>
             </div>
 
@@ -663,7 +663,7 @@
                             <span class="plan__coin-tag plan__coin-tag_xrp">XRP</span>
                         </div>
                     </div>
-                    <a class="plan__btn" href="https://t.me/lets_trade_bot">Join via Telegram</a>
+                    <a class="plan__btn" href="https://t.me/lets_trade_bot">Acquire via Telegram</a>
                 </div>
             </div>
 
@@ -681,11 +681,11 @@
                             <span class="plan__coin-tag plan__coin-tag_xrp">XRP</span>
                         </div>
                     </div>
-                    <a class="plan__btn" href="https://t.me/lets_trade_bot">Join via Telegram</a>
+                    <a class="plan__btn" href="https://t.me/lets_trade_bot">Acquire via Telegram</a>
                 </div>
             </div>
 
-            <div class="plans__verified">
+            <a href="#" class="plans__verified">
                 <p>Verified by</p>
                 <picture>
                     <source type="image/webp" media="(min-width: 640px)"
@@ -698,13 +698,14 @@
                             srcset="../static/img/logo-CoinPayments@2x.webp">
                     <img class="plans__verified-img" src="../static/img/logo-coinpayments-2x.png" alt="CoinPayments">
                 </picture>
-            </div>
+            </a>
 
         </div>
         <div class="plans-details plans-details_free">
             <span class="plans-details__icon"></span>
             <p class="plans-details__title">Plan Includes</p>
             <ul class="plans-details__list">
+                <li class="plans-details__list-item">Personal Support</li>
                 <li class="plans-details__list-item">Daily market analytics</li>
                 <li class="plans-details__list-item">
                     <div>
@@ -1213,20 +1214,30 @@
                 over-the-counter trading of local currency for bitcoins.Users post advertisements on the website, where
                 they state exchange rates and payment methods for buying or selling bitcoins.</p>
         </a>
+        <a href="https://shop.ledger.com/pages/ledger-nano-x?r=f6060a3fd3ed" target="_blank" class="partner">
+            <picture>
+                <source type="image/png" media="(min-width: 641px)"
+                        srcset="../static/img/ledger-2x.png 1x, ../static/img/ledger-3x.png 2x">
+                <source type="image/png" media="(min-width: 0)" srcset="../static/img/ledger-mob.png">
+                <img class="partner__img" src="../static/img/ledger-2x.png" alt="partner">
+            </picture>
+            <p>Ledger is a fast paced, growing company developing security and infrastructure solutions for
+                cryptocurrencies</p>
+        </a>
     </div>
 
-    <a href="https://shop.ledger.com/pages/ledger-nano-x?r=f6060a3fd3ed" target="_blank" class="partners__banner">
-        <picture>
-            <source type="image/jpeg" media="(min-width: 1224px)"
-                    srcset="../static/img/partners-banner-2x.jpg 1x, ../static/img/partners-banner-3x.jpg 2x">
-            <source type="image/jpeg" media="(min-width: 768px)"
-                    srcset="../static/img/partners-banner.jpg 1x, ../static/img/partners-banner-2x.jpg 2x">
-            <source type="image/jpeg" media="(min-width: 0)"
-                    srcset="../static/img/partners-banner-mob.jpg">
-            <img class="partners__banner-img" src="../static/img/partners-banner.jpg"
-                 alt="Ledger Nano X - The secure hardware wallet">
-        </picture>
-    </a>
+    <!--    <a href="https://shop.ledger.com/pages/ledger-nano-x?r=f6060a3fd3ed" target="_blank" class="partners__banner">-->
+    <!--        <picture>-->
+    <!--            <source type="image/jpeg" media="(min-width: 1224px)"-->
+    <!--                    srcset="../static/img/partners-banner-2x.jpg 1x, ../static/img/partners-banner-3x.jpg 2x">-->
+    <!--            <source type="image/jpeg" media="(min-width: 768px)"-->
+    <!--                    srcset="../static/img/partners-banner.jpg 1x, ../static/img/partners-banner-2x.jpg 2x">-->
+    <!--            <source type="image/jpeg" media="(min-width: 0)"-->
+    <!--                    srcset="../static/img/partners-banner-mob.jpg">-->
+    <!--            <img class="partners__banner-img" src="../static/img/partners-banner.jpg"-->
+    <!--                 alt="Ledger Nano X - The secure hardware wallet">-->
+    <!--        </picture>-->
+    <!--    </a>-->
 </div>
 
 

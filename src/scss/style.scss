@@ -1,33 +1,49 @@
 @import "~@fancyapps/fancybox/dist/jquery.fancybox.min.css";
-@import "~@fortawesome/fontawesome-free/css/all.css";
+//@import "~@fortawesome/fontawesome-free/css/all.min.css";
 //@import "~chartist-webpack/dist/scss/chartist";
 //@import "~slick-carousel/slick/slick-theme.css";
 //@import "~slick-carousel/slick/slick.css";
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url(../fonts/999-Regular.ttf) format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Gilroy';
-  src: url(../fonts/999-Medium.ttf) format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Gilroy';
-  src: url(../fonts/999-SemiBold.ttf) format('truetype');
-  font-weight: 600;
-  font-style: normal;
+    font-family: 'Gilroy';
+    src: url(../fonts/999-Regular.eot);
+    src: local('Gilroy Regular'), local('Gilroy-Regular'),
+        url(../fonts/999-Regular.eot?#iefix) format('embedded-opentype'),
+        url(../fonts/999-Regular.woff) format('woff'),
+        url(../fonts/999-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'Gilroy';
-    src: url(../fonts/999-RegularItalic.ttf) format('truetype');
+    src: url(../fonts/999-Medium.eot);
+    src: local('Gilroy Medium'), local('Gilroy-Medium'),
+        url(../fonts/999-Medium.eot?#iefix) format('embedded-opentype'),
+        url(../fonts/999-Medium.woff) format('woff'),
+        url(../fonts/999-Medium.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url(../fonts/999-SemiBold.eot);
+    src: local('Gilroy SemiBold'), local('Gilroy-SemiBold'),
+        url(../fonts/999-SemiBold.eot?#iefix) format('embedded-opentype'),
+        url(../fonts/999-SemiBold.woff) format('woff'),
+        url(../fonts/999-SemiBold.ttf) format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url(../fonts/999-RegularItalic.eot);
+    src: local('Gilroy Regular Italic'), local('Gilroy-RegularItalic'),
+        url(../fonts/999-RegularItalic.eot?#iefix) format('embedded-opentype'),
+        url(../fonts/999-RegularItalic.woff) format('woff'),
+        url(../fonts/999-RegularItalic.ttf) format('truetype');
     font-weight: normal;
     font-style: italic;
 }
