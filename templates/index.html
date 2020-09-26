@@ -371,57 +371,57 @@
 </div>
 
 
-<div id="grow" class="grow">
-    <h2 class="grow__title">Our growing streak</h2>
-    <div class="grow__tabs">
-        {% for grow in grows %}
-        <button class="grow__tab {{ 'grow__tab_active' if loop.last }}">{{ grow.year }}</button>
-        {% endfor %}
-    </div>
+<!--<div id="grow" class="grow">-->
+<!--    <h2 class="grow__title">Our growing streak</h2>-->
+<!--    <div class="grow__tabs">-->
+<!--        {% for grow in grows %}-->
+<!--        <button class="grow__tab {{ 'grow__tab_active' if loop.last }}">{{ grow.year }}</button>-->
+<!--        {% endfor %}-->
+<!--    </div>-->
 
-    <div class="grow__body">
-        {% for grow in grows %}
-        <div class="grow__items {{ 'grow__items_active' if loop.last }}">
-            <div class="grow__item">
-                <div class="grow__item-bg grow__item-bg_first"></div>
-                <p class="grow__item-title">Quantity of signals</p>
-                <div class="grow__item-value"><p>{{ grow.signals }}</p></div>
-            </div>
+<!--    <div class="grow__body">-->
+<!--        {% for grow in grows %}-->
+<!--        <div class="grow__items {{ 'grow__items_active' if loop.last }}">-->
+<!--            <div class="grow__item">-->
+<!--                <div class="grow__item-bg grow__item-bg_first"></div>-->
+<!--                <p class="grow__item-title">Quantity of signals</p>-->
+<!--                <div class="grow__item-value"><p>{{ grow.signals }}</p></div>-->
+<!--            </div>-->
 
-            <div class="grow__item">
-                <div class="grow__item-bg grow__item-bg_second"></div>
-                <span class="grow__item-icon"></span>
-                <p class="grow__item-title">Success rate</p>
-                <div class="grow__item-value"><p>{{ grow.rate|round|int }}%</p></div>
-            </div>
+<!--            <div class="grow__item">-->
+<!--                <div class="grow__item-bg grow__item-bg_second"></div>-->
+<!--                <span class="grow__item-icon"></span>-->
+<!--                <p class="grow__item-title">Success rate</p>-->
+<!--                <div class="grow__item-value"><p>{{ grow.rate|round|int }}%</p></div>-->
+<!--            </div>-->
 
-            <div class="grow__item">
-                <div class="grow__item-bg"></div>
-                <p class="grow__item-title">Average profit per signal</p>
-                <div class="grow__item-value">
-                    <div class="grow__item-addition">
-                        <p>Min {{ "%.2f"|format(grow.profit_min) }}%</p>
-                        <p>Max {{ "%.2f"|format(grow.profit_max) }}%</p>
-                    </div>
-                    <p>{{ "%.1f"|format(grow.profit) }}%</p>
-                </div>
+<!--            <div class="grow__item">-->
+<!--                <div class="grow__item-bg"></div>-->
+<!--                <p class="grow__item-title">Average profit per signal</p>-->
+<!--                <div class="grow__item-value">-->
+<!--                    <div class="grow__item-addition">-->
+<!--                        <p>Min {{ "%.2f"|format(grow.profit_min) }}%</p>-->
+<!--                        <p>Max {{ "%.2f"|format(grow.profit_max) }}%</p>-->
+<!--                    </div>-->
+<!--                    <p>{{ "%.1f"|format(grow.profit) }}%</p>-->
+<!--                </div>-->
 
-            </div>
+<!--            </div>-->
 
-            <div class="grow__item">
-                <div class="grow__item-bg grow__item-bg_fourth"></div>
-                <p class="grow__item-title">Yield</p>
-                <div class="grow__item-value"><p>{{ "%.2f"|format(grow.yld) }}%</p></div>
-            </div>
-        </div>
+<!--            <div class="grow__item">-->
+<!--                <div class="grow__item-bg grow__item-bg_fourth"></div>-->
+<!--                <p class="grow__item-title">Yield</p>-->
+<!--                <div class="grow__item-value"><p>{{ "%.2f"|format(grow.yld) }}%</p></div>-->
+<!--            </div>-->
+<!--        </div>-->
 
-        {% endfor %}
-    </div>
+<!--        {% endfor %}-->
+<!--    </div>-->
 
-    <div class="button-border grow__button-border">
-        <a href="/statistics2019" class="button grow__button">Full Report 2019</a>
-    </div>
-</div>
+<!--    <div class="button-border grow__button-border">-->
+<!--        <a href="/statistics2019" class="button grow__button">Full Report 2019</a>-->
+<!--    </div>-->
+<!--</div>-->
 
 
 <!--<div class="questions">-->
@@ -488,6 +488,8 @@
 
 
 <div class="we-wrapper">
+    <img class="we-wrapper__bg" src="static/img/group-7.svg" alt="bg">
+    <img class="we-wrapper__bg_mob" src="static/img/group-7-mob.png" alt="bg">
     <div class="new-quote">
         <h4 class="new-quote__title">The bird in the hand is worth two <br>in the bush.</h4>
         <p class="new-quote__text">Still, everyone can choose own balance between risk and profit.</p>
@@ -595,21 +597,25 @@
             </div>
         </div>
     </div>
+    <span id="plans"></span>
 </div>
 
 
-<div id="plans" class="plans">
+<div class="plans">
     <h3 class="plans__title"><b class="plans__title_bold">Subscription</b> Plans</h3>
     <div class="plans__wrapper">
         <div class="plans__items">
 
             <div class="plan plan_active">
-                <div class="plan__bar">
+                <div class="plan__bar plan__bar_free">
                     <p class="plan__title">Basic</p>
                     <p class="plan__cost"><b class="plan__cost_bold">Free</b></p>
                 </div>
                 <div class="plan__body">
-                    <a class="plan__btn" href="https://t.me/lets_trade_bot">Join via Telegram</a>
+                    <div class="button-border plan__button-border">
+                        <a class="button plan__btn" href="https://t.me/lets_trade_bot">Join via Telegram</a>
+                    </div>
+
                 </div>
             </div>
 
@@ -685,7 +691,7 @@
                 </div>
             </div>
 
-            <a href="#" class="plans__verified">
+            <a href="https://www.coinpayments.net/" class="plans__verified">
                 <p>Verified by</p>
                 <picture>
                     <source type="image/webp" media="(min-width: 640px)"
@@ -718,7 +724,7 @@
                     </div>
 
                 </li>
-                <li class="plans-details__list-item">Strict risk managment strategy</li>
+                <li class="plans-details__list-item">Strict risk management strategy</li>
 
                 <li class="plans-details__list-item">Indications and recommendations for your portfolio</li>
                 <li class="plans-details__list-item">Insights about the expected market volatility and major
@@ -1151,16 +1157,16 @@
             </div>
 
             <div class="person">
-                <span class="person__img" id="person4"></span>
-                <p class="person__title">Financier</p>
+                <span class="person__img" id="person5"></span>
+                <p class="person__title">Researcher</p>
                 <div class="button-border person__button-border">
                     <button class="button person__button">Details</button>
                 </div>
             </div>
 
             <div class="person">
-                <span class="person__img" id="person5"></span>
-                <p class="person__title">Researcher</p>
+                <span class="person__img" id="person4"></span>
+                <p class="person__title">Financier</p>
                 <div class="button-border person__button-border">
                     <button class="button person__button">Details</button>
                 </div>

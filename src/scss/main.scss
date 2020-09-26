@@ -977,21 +977,44 @@
 }
 
 .we-wrapper {
+  position: relative;
   width: 100%;
   display: flex;
   flex-flow: column;
   align-items: center;
   padding-top: 6.5rem;
   padding-bottom: 6.5rem;
-  background: url(../img/group-7.svg) no-repeat center top 10.75rem / 100%;
-
-  @media (max-width: 1254px) {
-    background-position: center top 15.25rem;
-  }
+  //background: url(../img/group-7.svg) no-repeat center top / 100%;
 
   @media (max-width: 800px) {
-    padding: 6rem 1rem 6px .5rem;
-    background-position: center top 340px;
+    padding: 6rem 1rem 44px .5rem;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 10rem;
+    width: 100%;
+    height: 95%;
+
+    @media (max-width: 1254px) {
+      top: 5rem;
+    }
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__bg_mob {
+    display: none;
+    position: absolute;
+    top: 20rem;
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: 1024px) {
+      display: block;
+    }
   }
 }
 
@@ -1001,6 +1024,7 @@
   display: flex;
   flex-flow: column;
   align-items: center;
+  position: relative;
 
   @media (max-width: 1254px) {
     padding: 0 4.5rem 206px;
@@ -1059,6 +1083,7 @@
   display: flex;
   flex-flow: column;
   max-width: 1110px;
+  position: relative;
   background-size: 2px 100%;
   background-repeat: no-repeat;
   background-position: 19px 19px;
@@ -1288,6 +1313,7 @@
     line-height: 1.21;
     letter-spacing: 1.15px;
     margin-bottom: 5rem;
+    position: relative;
 
     @media (max-width: 1024px) {
       z-index: 1;
@@ -1302,7 +1328,7 @@
 
     @media (max-width: 640px) {
       max-width: 272px;
-      padding-left: 1rem;
+      padding-left: 1.5rem;
       margin-bottom: 2rem;
       font-size: 32px;
       line-height: 1.5;
@@ -1321,6 +1347,7 @@
   &__wrapper {
     width: 100%;
     display: flex;
+    align-items: flex-start;
 
     @media (max-width: 1024px) {
       position: relative;
@@ -1423,6 +1450,21 @@
         border-radius: 100%;
         border: 3px solid #34343c;
         background: #34343c;
+      }
+    }
+
+    &_free {
+      .plan__cost {
+        margin-left: auto;
+
+        &::before {
+          content: ''!important;
+          padding: 0!important;
+        }
+      }
+
+      &::after {
+        margin-left: 1.5rem;
       }
     }
   }
@@ -1555,6 +1597,15 @@
     }
   }
 
+  &__button-border {
+    margin-top: 1.5rem;
+    background-image: linear-gradient(#141417, #141417), linear-gradient(90deg, #80ec68, #159e49);
+
+    &:hover {
+      background-image: linear-gradient(#141417, #141417), linear-gradient(90deg, #80ec68, #159e49);
+    }
+  }
+
   &__btn {
     width: 100%;
     display: flex;
@@ -1577,6 +1628,12 @@
       margin-left: .5rem;
       background: url(../img/ic-telegram.svg) no-repeat center / contain;
     }
+  }
+
+  &__button-border &__btn {
+    margin: 0;
+    padding: 12px 2rem;
+    background: transparent;
   }
 
   &_active {
@@ -1641,6 +1698,7 @@
     }
 
     &:first-child.plan_active &__bar::after {
+      margin-left: auto;
       background: linear-gradient(to bottom, #80ec68 0%, #159e49);
     }
 
@@ -1655,9 +1713,9 @@
 .plans-details {
   position: relative;
   width: 100%;
-  padding: 2rem;
   max-width: 540px;
   border-radius: 14px;
+  padding: 2rem 2rem 2.5rem;
   background-color: #0e0e0e;
 
   @media (max-width: 1024px) {
@@ -1741,7 +1799,7 @@
       height: 1rem;
       min-width: 1rem;
       margin-top: 10px;
-      margin-right: 29px;
+      margin-right: 30px;
       background: url(../img/ic-chack.svg) no-repeat center / contain;
     }
 

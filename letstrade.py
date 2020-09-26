@@ -1,6 +1,7 @@
 import os
 import base64
 import logging
+from datetime import datetime
 from threading import Thread
 from datetime import timedelta
 from urllib.parse import urljoin
@@ -13,7 +14,6 @@ from config import Config
 from app.utils import currency_request, format_currency
 from app.models import *
 from app.database import db
-
 
 app = create_app(Config)
 
@@ -66,7 +66,8 @@ def index_form():
 
 @app.route('/', methods=['GET'])
 def index():
-    app.logger.debug('this is a DEBUG message')
+    time = datetime.now()
+
     if request.method == 'GET':
         currency_data = dict()
         btc_data = currency_request('btc')
@@ -84,6 +85,7 @@ def index():
         resp = make_response(render_template('index.html', data=currency_data, grows=grows))
         resp.headers.add('Set-Cookie', 'SameSite=None; Secure')
         # resp.set_cookie('SameSite', 'None', secure=True)
+        app.logger.info(datetime.now() - time)
         return resp
 
     abort(405)
@@ -130,8 +132,11 @@ def static_from_root():
     return send_from_directory(app.static_folder, request.path[1:])
 
 
-if __name__ == '__main__':
+if __name__ != '__main__':
     gunicorn_logger = logging.getLogger('gunicorn.error')
     app.logger.handlers = gunicorn_logger.handlers
     app.logger.setLevel(gunicorn_logger.level)
+
+
+if __name__ == '__main__':
     app.run(port=4567)

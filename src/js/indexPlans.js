@@ -4,6 +4,7 @@ const planDetails = document.querySelector('.plans-details')
 
 plans.forEach((elem, index) => {
     elem.addEventListener('click', () => {
+        window.location.href = '#plans'
         for (let iter in plans) {
             if (iter !== String(index)) {
                 plans[iter].classList.remove('plan_active')
