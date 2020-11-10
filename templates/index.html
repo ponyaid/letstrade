@@ -9,9 +9,12 @@
 
         <div class="head__content">
             <h1 class="head__title">Cryptocurrency Trading Company</h1>
+            <p class="head__description">Providing trading signals and analytics for Bitcoin, Ethereum, and Ripple.
+                <br> Earn less, but for sure, with our risk management strategy
+                <br> by spending less than 15 minutes a day.</p>
         </div>
 
-        <div class="head__benefits">
+        <!-- <div class="head__benefits">
             <div class="head__benefit">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 28 24">
                     <defs>
@@ -64,8 +67,8 @@
                     </g>
                 </svg>
                 <p>Long term portfolio</p>
-            </div>
-            <div class="head__benefit">
+            </div> -->
+        <!-- <div class="head__benefit">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18">
                     <defs>
                         <linearGradient id="yl81rzh83a" x1="0%" x2="100%" y1="50%" y2="50%">
@@ -234,15 +237,15 @@
                 </svg>
                 <p>Spend maximum 15 minutes a day</p>
             </div>
-        </div>
+        </div> -->
 
-        <div class="head__video-block">
+        <!-- <div class="head__video-block">
             <video class="head__video" controls autoplay muted loop playsinline webkit-playinginline>
                 <source src="../static/video/head.mp4" type="video/mp4">
             </video>
-        </div>
+        </div> -->
 
-        <div class="head__social-block">
+        <!-- <div class="head__social-block">
             <a class="social head__social" href="https://twitter.com/LetsTrade_crypt"
                target="_blank"><i class="fab fa-twitter"></i></a>
             <a class="social head__social" href="https://t.me/lets_trade_bot"
@@ -251,8 +254,18 @@
                target="_blank"><i class="fab fa-instagram"></i></a>
             <a class="social head__social" href="mailto:info@lets.trade"
                target="_blank"><i class="far fa-envelope"></i></a>
-        </div>
+        </div> -->
     </div>
+
+    <picture>
+        <source type="image/png" media="(min-width: 1024px)"
+            srcset="../static/img/artboard-2x.png 1x, ../static/img/artboard-3x.png 2x">
+        <source type="image/png" media="(min-width: 769px)"
+            srcset="../static/img/artboard.png 1x, ../static/img/artboard-2x.png 2x">
+        <source type="image/png" media="(min-width: 0)"
+            srcset="../static/img/i-phone-12-2x.png 1x, ../static/img/i-phone-12-3x.png 2x">
+        <img class="head__artboard" src="../static/img/artboard-2x.png" alt="artboard">
+    </picture>
 
     <div class="head__currency">
         <div id="live_trades_btcusd" class="currency-item">
@@ -262,7 +275,8 @@
                 <p class="currency-item__date">{{ data.BTC.date if data.BTC }}</p>
             </div>
             <div class="currency-item__price-block">
-                <div class="currency-item__percent {{'currency-item__percent_negative' if data.BTC and data.BTC.negative}}">
+                <div
+                    class="currency-item__percent {{'currency-item__percent_negative' if data.BTC and data.BTC.negative}}">
                     <div class="currency-item__title-mob">BTC/USD</div>
                     <span class="currency-item__percent_span">
                         ${{ data.BTC.difference if data.BTC }}</span> <span
@@ -279,7 +293,8 @@
                 <p class="currency-item__date">{{ data.ETH.date if data.ETH }}</p>
             </div>
             <div class="currency-item__price-block">
-                <div class="currency-item__percent {{'currency-item__percent_negative' if data.ETH and data.ETH.negative}}">
+                <div
+                    class="currency-item__percent {{'currency-item__percent_negative' if data.ETH and data.ETH.negative}}">
                     <div class="currency-item__title-mob">ETH/USD</div>
                     <span class="currency-item__percent_span">
                         ${{ data.ETH.difference if data.ETH }}</span> <span
@@ -296,7 +311,8 @@
                 <p class="currency-item__date">{{ data.XRP.date if data.XRP }}</p>
             </div>
             <div class="currency-item__price-block">
-                <div class="currency-item__percent {{'currency-item__percent_negative' if data.XRP and data.XRP.negative}}">
+                <div
+                    class="currency-item__percent {{'currency-item__percent_negative' if data.XRP and data.XRP.negative}}">
                     <div class="currency-item__title-mob">XRP/USD</div>
                     <span class="currency-item__percent_span">
                         ${{ data.XRP.difference if data.XRP }}</span> <span
@@ -313,16 +329,13 @@
     <div class="tutorials__items">
         <div class="tutorial tutorial_active">
             <picture>
-                <source type="image/jpeg" media="(min-width: 450px)"
-                        srcset="../static/img/tutorial1.jpg">
-                <source type="image/webp" media="(min-width: 0)"
-                        srcset="../static/img/tutorial1@2x.webp">
-                <source type="image/jpeg" media="(min-width: 0)"
-                        srcset="../static/img/tutorial1-min.jpg">
+                <source type="image/jpeg" media="(min-width: 450px)" srcset="../static/img/tutorial1.jpg">
+                <source type="image/webp" media="(min-width: 0)" srcset="../static/img/tutorial1@2x.webp">
+                <source type="image/jpeg" media="(min-width: 0)" srcset="../static/img/tutorial1-min.jpg">
                 <img class="tutorial__img" src="../static/img/tutorial1.jpg" alt="tutorial">
             </picture>
             <a data-fancybox class="tutorial__button"
-               href="https://www.youtube.com/watch?v=GZz3zExgrxA&amp;autoplay=1&amp;rel=0&amp;showinfo=0&amp;modestbranding=1">
+                href="https://www.youtube.com/watch?v=GZz3zExgrxA&amp;autoplay=1&amp;rel=0&amp;showinfo=0&amp;modestbranding=1">
                 <span>What are crypto signals?</span>
             </a>
         </div>
@@ -332,7 +345,7 @@
                 <img class="tutorial__img" src="../static/img/tutorial2.jpg" alt="tutorial">
             </picture>
             <a data-fancybox class="tutorial__button"
-               href="https://www.youtube.com/watch?v=EGHV1bVr0NI&amp;autoplay=1&amp;rel=0&amp;showinfo=0&amp;modestbranding=1">
+                href="https://www.youtube.com/watch?v=EGHV1bVr0NI&amp;autoplay=1&amp;rel=0&amp;showinfo=0&amp;modestbranding=1">
                 <span>Trading success with the signals</span></a>
         </div>
         <div class="tutorials__title-mob">Trading success with the signals</div>
@@ -344,10 +357,10 @@
         <div class="tutorials__tab tutorials__tab_active">
             <picture>
                 <source type="image/jpeg" media="(min-width: 1024px)"
-                        srcset="../static/img/tutorial1-tab-2x.jpg 1x, ../static/img/tutorial1-tab-3x.jpg 2x">
+                    srcset="../static/img/tutorial1-tab-2x.jpg 1x, ../static/img/tutorial1-tab-3x.jpg 2x">
                 <source media="" srcset="">
                 <source type="image/jpeg" media="(min-width: 0)"
-                        srcset="../static/img/tutorial1-tab-1x.jpg 1x, ../static/img/tutorial1-tab-2x.jpg 2x">
+                    srcset="../static/img/tutorial1-tab-1x.jpg 1x, ../static/img/tutorial1-tab-2x.jpg 2x">
                 <source media="" srcset="">
                 <img src="../static/img/tutorial1-tab-2x.jpg" alt="crypto signals">
             </picture>
@@ -357,10 +370,10 @@
         <div class="tutorials__tab">
             <picture>
                 <source type="image/jpeg" media="(min-width: 1024px)"
-                        srcset="../static/img/tutorial2-tab-2x.jpg 1x, ../static/img/tutorial2-tab-3x.jpg 2x">
+                    srcset="../static/img/tutorial2-tab-2x.jpg 1x, ../static/img/tutorial2-tab-3x.jpg 2x">
                 <source media="" srcset="">
                 <source type="image/jpeg" media="(min-width: 0)"
-                        srcset="../static/img/tutorial2-tab-1x.jpg 1x, ../static/img/tutorial2-tab-2x.jpg 2x">
+                    srcset="../static/img/tutorial2-tab-1x.jpg 1x, ../static/img/tutorial2-tab-2x.jpg 2x">
                 <source media="" srcset="">
                 <img src="../static/img/tutorial2-tab-2x.jpg" alt="crypto signals">
             </picture>
@@ -371,57 +384,63 @@
 </div>
 
 
-<!--<div id="grow" class="grow">-->
-<!--    <h2 class="grow__title">Our growing streak</h2>-->
-<!--    <div class="grow__tabs">-->
-<!--        {% for grow in grows %}-->
-<!--        <button class="grow__tab {{ 'grow__tab_active' if loop.last }}">{{ grow.year }}</button>-->
-<!--        {% endfor %}-->
-<!--    </div>-->
+<div id="grow" class="grow">
+    <h2 class="grow__title">Our growing streak</h2>
+    <div class="grow__tabs">
+        {% for grow in grows %}
+        <button class="grow__tab {{ 'grow__tab_active' if loop.last }}">{{ grow.year }}</button>
+        {% endfor %}
+    </div>
 
-<!--    <div class="grow__body">-->
-<!--        {% for grow in grows %}-->
-<!--        <div class="grow__items {{ 'grow__items_active' if loop.last }}">-->
-<!--            <div class="grow__item">-->
-<!--                <div class="grow__item-bg grow__item-bg_first"></div>-->
-<!--                <p class="grow__item-title">Quantity of signals</p>-->
-<!--                <div class="grow__item-value"><p>{{ grow.signals }}</p></div>-->
-<!--            </div>-->
+    <div class="grow__body">
+        {% for grow in grows %}
+        <div class="grow__items {{ 'grow__items_active' if loop.last }}">
+            <div class="grow__item">
+                <div class="grow__item-bg grow__item-bg_first"></div>
+                <p class="grow__item-title">Quantity of signals</p>
+                <div class="grow__item-value">
+                    <p>{{ grow.signals }}</p>
+                </div>
+            </div>
 
-<!--            <div class="grow__item">-->
-<!--                <div class="grow__item-bg grow__item-bg_second"></div>-->
-<!--                <span class="grow__item-icon"></span>-->
-<!--                <p class="grow__item-title">Success rate</p>-->
-<!--                <div class="grow__item-value"><p>{{ grow.rate|round|int }}%</p></div>-->
-<!--            </div>-->
+            <div class="grow__item">
+                <div class="grow__item-bg grow__item-bg_second"></div>
+                <span class="grow__item-icon"></span>
+                <p class="grow__item-title">Success rate</p>
+                <div class="grow__item-value">
+                    <p>{{ grow.rate|round|int }}%</p>
+                </div>
+            </div>
 
-<!--            <div class="grow__item">-->
-<!--                <div class="grow__item-bg"></div>-->
-<!--                <p class="grow__item-title">Average profit per signal</p>-->
-<!--                <div class="grow__item-value">-->
-<!--                    <div class="grow__item-addition">-->
-<!--                        <p>Min {{ "%.2f"|format(grow.profit_min) }}%</p>-->
-<!--                        <p>Max {{ "%.2f"|format(grow.profit_max) }}%</p>-->
-<!--                    </div>-->
-<!--                    <p>{{ "%.1f"|format(grow.profit) }}%</p>-->
-<!--                </div>-->
+            <div class="grow__item">
+                <div class="grow__item-bg"></div>
+                <p class="grow__item-title">Average profit per signal</p>
+                <div class="grow__item-value">
+                    <div class="grow__item-addition">
+                        <p>Min {{ "%.2f"|format(grow.profit_min) }}%</p>
+                        <p>Max {{ "%.2f"|format(grow.profit_max) }}%</p>
+                    </div>
+                    <p>{{ "%.1f"|format(grow.profit) }}%</p>
+                </div>
 
-<!--            </div>-->
+            </div>
 
-<!--            <div class="grow__item">-->
-<!--                <div class="grow__item-bg grow__item-bg_fourth"></div>-->
-<!--                <p class="grow__item-title">Yield</p>-->
-<!--                <div class="grow__item-value"><p>{{ "%.2f"|format(grow.yld) }}%</p></div>-->
-<!--            </div>-->
-<!--        </div>-->
+            <div class="grow__item">
+                <div class="grow__item-bg grow__item-bg_fourth"></div>
+                <p class="grow__item-title">Yield</p>
+                <div class="grow__item-value">
+                    <p>{{ "%.2f"|format(grow.yld) }}%</p>
+                </div>
+            </div>
+        </div>
 
-<!--        {% endfor %}-->
-<!--    </div>-->
+        {% endfor %}
+    </div>
 
-<!--    <div class="button-border grow__button-border">-->
-<!--        <a href="/statistics2019" class="button grow__button">Full Report 2019</a>-->
-<!--    </div>-->
-<!--</div>-->
+    <div class="button-border grow__button-border">
+        <a href="/statistics2019" class="button grow__button">Full Report 2019</a>
+    </div>
+</div>
 
 
 <!--<div class="questions">-->
@@ -695,13 +714,13 @@
                 <p>Verified by</p>
                 <picture>
                     <source type="image/webp" media="(min-width: 640px)"
-                            srcset="../static/img/logo-CoinPayments@2x.webp">
+                        srcset="../static/img/logo-CoinPayments@2x.webp">
                     <source type="image/png" media="(min-width: 1024px)"
-                            srcset="../static/img/logo-coinpayments-2x.png 1x, ../static/img/logo-coinpayments-3x.png 2x">
+                        srcset="../static/img/logo-coinpayments-2x.png 1x, ../static/img/logo-coinpayments-3x.png 2x">
                     <source type="image/png" media="(min-width: 640px)" srcset="../static/img/logo-coinpayments-2x.png">
                     <source type="image/png" media="(min-width: 0)" srcset="../static/img/logo-coinpayments.png">
                     <source type="image/webp" media="(min-width: 640px)"
-                            srcset="../static/img/logo-CoinPayments@2x.webp">
+                        srcset="../static/img/logo-CoinPayments@2x.webp">
                     <img class="plans__verified-img" src="../static/img/logo-coinpayments-2x.png" alt="CoinPayments">
                 </picture>
             </a>
@@ -735,8 +754,8 @@
                 </li>
             </ul>
             <div class="button-border plans-details__button-border">
-                <a href="https://t.me/lets_trade_bot" target="_blank"
-                   class="button plans-details__button">Join via Telegram</a>
+                <a href="https://t.me/lets_trade_bot" target="_blank" class="button plans-details__button">Join via
+                    Telegram</a>
             </div>
         </div>
     </div>
@@ -1182,7 +1201,7 @@
         <a href="https://bitstamp.net" target="_blank" class="partner">
             <picture>
                 <source type="image/png" media="(min-width: 641px)"
-                        srcset="../static/img/bitstamp-2x.png 1x, ../static/img/bitstamp-3x.png 2x">
+                    srcset="../static/img/bitstamp-2x.png 1x, ../static/img/bitstamp-3x.png 2x">
                 <source type="image/png" media="(min-width: 0)" srcset="../static/img/bitstamp-mob.png">
                 <img class="partner__img" src="../static/img/bitstamp-2x.png" alt="partner">
             </picture>
@@ -1192,7 +1211,7 @@
         <a href="https://binance.com" target="_blank" class="partner">
             <picture>
                 <source type="image/png" media="(min-width: 641px)"
-                        srcset="../static/img/binance-2x.png 1x, ../static/img/binance-3x.png 2x">
+                    srcset="../static/img/binance-2x.png 1x, ../static/img/binance-3x.png 2x">
                 <source type="image/png" media="(min-width: 0)" srcset="../static/img/binance-mob.png">
                 <img class="partner__img" src="../static/img/binance-2x.png" alt="partner">
             </picture>
@@ -1202,7 +1221,7 @@
         <a href="" target="_blank" class="partner">
             <picture>
                 <source type="image/png" media="(min-width: 641px)"
-                        srcset="../static/img/bitfinex-2x.png 1x, ../static/img/bitfinex-3x.png 2x">
+                    srcset="../static/img/bitfinex-2x.png 1x, ../static/img/bitfinex-3x.png 2x">
                 <source type="image/png" media="(min-width: 0)" srcset="../static/img/bitfinex.png">
                 <img class="partner__img" src="../static/img/bitfinex-2x.png" alt="partner">
             </picture>
@@ -1212,7 +1231,7 @@
         <a href="https://localbitsoins.com" target="_blank" class="partner">
             <picture>
                 <source type="image/png" media="(min-width: 641px)"
-                        srcset="../static/img/localbitcoins-2x.png 1x, ../static/img/localbitcoins-3x.png 2x">
+                    srcset="../static/img/localbitcoins-2x.png 1x, ../static/img/localbitcoins-3x.png 2x">
                 <source type="image/png" media="(min-width: 0)" srcset="../static/img/localbitcoins-mob.png">
                 <img class="partner__img" src="../static/img/localbitcoins-2x.png" alt="partner">
             </picture>
@@ -1223,7 +1242,7 @@
         <a href="https://shop.ledger.com/pages/ledger-nano-x?r=f6060a3fd3ed" target="_blank" class="partner">
             <picture>
                 <source type="image/png" media="(min-width: 641px)"
-                        srcset="../static/img/ledger-2x.png 1x, ../static/img/ledger-3x.png 2x">
+                    srcset="../static/img/ledger-2x.png 1x, ../static/img/ledger-3x.png 2x">
                 <source type="image/png" media="(min-width: 0)" srcset="../static/img/ledger-mob.png">
                 <img class="partner__img" src="../static/img/ledger-2x.png" alt="partner">
             </picture>
@@ -1249,8 +1268,8 @@
 
 <svg aria-hidden="true" focusable="false" style="height: 0; width: 0; opacity: 0;">
     <linearGradient id="my-cool-gradient" y2="100%" x2="0">
-        <stop offset="0%" stop-color="#43c056"/>
-        <stop offset="100%" stop-color="#1c2124"/>
+        <stop offset="0%" stop-color="#43c056" />
+        <stop offset="100%" stop-color="#1c2124" />
     </linearGradient>
 </svg>
 
