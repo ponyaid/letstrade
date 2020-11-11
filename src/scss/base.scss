@@ -1,4 +1,6 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   margin: 0;
   padding: 0;
   border: none;
@@ -8,27 +10,28 @@
   background: transparent;
 }
 
-input[type='text'] {
+input[type="text"] {
   //-webkit-border-radius: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-a, label {
+a,
+label {
   -webkit-tap-highlight-color: transparent;
 }
 
-html, body {
-  font-family: 'Gilroy';
+html,
+body {
+  font-family: "Gilroy";
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: none;
 }
 
-$gradient: linear-gradient(to right, #80EC68, #159E49);
-
+$gradient: linear-gradient(to right, #80ec68, #159e49);
 
 .body-popup-active {
   height: 100%;
@@ -44,7 +47,6 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
   width: 100%;
   background: #000000;
 }
-
 
 @keyframes navHoverAnimation {
   from {
@@ -94,7 +96,7 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
 
   &__logo {
     position: absolute;
-    top: .75rem;
+    top: 0.75rem;
     left: 4.5rem;
 
     @media (max-width: 640px) {
@@ -153,14 +155,13 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
   }
 
   &__social {
-    margin-right: .5rem;
-    margin-left: .5rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
     font-size: 21px;
     height: 2.5rem;
     width: 2.5rem;
   }
 }
-
 
 .nav {
   height: 100%;
@@ -204,7 +205,7 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
 
 .button-border {
   border: 1.5px solid transparent;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   background-image: linear-gradient(#161a1c, #161a1c), linear-gradient(90deg, #fff, #fff);
   background-origin: border-box;
   background-clip: content-box, border-box;
@@ -271,7 +272,7 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
   }
 
   &__item {
-    color: rgba(255, 255, 255, .8);
+    color: rgba(255, 255, 255, 0.8);
     line-height: 2.4;
   }
 
@@ -283,21 +284,41 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
     }
 
     &:before {
-      font-family: 'Font Awesome 5 Free';
+      font-family: "Font Awesome 5 Free";
       font-size: 1.5rem;
       color: #fff;
-      content: '\f0c9';
+      content: "\f0c9";
       font-weight: 900;
     }
   }
 
   &__button {
-    color: rgba(255, 255, 255, .8);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    text-align: right;
+    color: #ffffff;
+    line-height: 2.4;
+
+    &:hover {
+      animation-duration: 0.3s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      animation-name: navHoverAnimation;
+      background-image: linear-gradient(90deg, #80ec68, #159e49);
+      background-repeat: no-repeat;
+      background-position: 0 100%;
+    }
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
   }
 
   &__button-border {
     background-image: linear-gradient(#000, #000),
-    linear-gradient(90deg, rgba(255, 255, 255, .8), rgba(255, 255, 255, .8));
+      linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
 
     &:hover {
       background-image: linear-gradient(#000, #000), $gradient;
@@ -361,8 +382,8 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
 
   &__social-block {
     display: flex;
-    margin-left: -.5rem;
-    margin-right: -.5rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
 
     @media (max-width: 640px) {
       display: none;
@@ -415,8 +436,8 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
   }
 
   &__social {
-    margin-right: .5rem;
-    margin-left: .5rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
   }
 
   &__links-mob {
@@ -462,14 +483,14 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
     &-text {
       font-size: 16px;
       font-weight: 500;
-      color: rgba(255, 255, 255, .4);
+      color: rgba(255, 255, 255, 0.4);
 
       @media (max-width: 640px) {
         font-size: 14px;
       }
 
       &_link {
-        transition: color .2s ease;
+        transition: color 0.2s ease;
 
         & + & {
           margin-left: 2rem;
@@ -494,7 +515,6 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
   }
 }
 
-
 .alert-wrapper {
   z-index: 999;
   position: fixed;
@@ -515,7 +535,7 @@ $gradient: linear-gradient(to right, #80EC68, #159E49);
   padding: 2rem 1.5rem 1.5rem;
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
-  background-color: rgba(14, 17, 18, .8);
+  background-color: rgba(14, 17, 18, 0.8);
 
   @media (max-width: 640px) {
     padding: 1rem;

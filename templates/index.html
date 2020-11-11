@@ -415,7 +415,7 @@
             <div class="grow__item">
                 <div class="grow__item-bg"></div>
                 <p class="grow__item-title">Average profit per signal</p>
-                <div class="grow__item-value">
+                <div class="grow__item-value grow__item-value_align-end">
                     <div class="grow__item-addition">
                         <p>Min {{ "%.2f"|format(grow.profit_min) }}%</p>
                         <p>Max {{ "%.2f"|format(grow.profit_max) }}%</p>
@@ -1065,6 +1065,32 @@
 <div class="team-popup-wrapper">
     <div class="team-popup">
         <span class="team-popup__close"></span>
+        <h3 class="team-popup__h3">Researcher</h3>
+        <div class="team-popup__body">
+            <div class="team-popup__item">
+                <p class="team-popup__title">Experience</p>
+                <p class="team-popup__text">6 years</p>
+            </div>
+            <div class="team-popup__item">
+                <p class="team-popup__title">Expertise</p>
+                <p class="team-popup__text">Crypto market research</p>
+            </div>
+            <div class="team-popup__item">
+                <p class="team-popup__title">Team role</p>
+                <p class="team-popup__text">Searches and analyses the information from well-known
+                    and very specific sources</p>
+            </div>
+            <div class="team-popup__item">
+                <p class="team-popup__title">Details</p>
+                <p class="team-popup__text">Knows everything about everyone</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="team-popup-wrapper">
+    <div class="team-popup">
+        <span class="team-popup__close"></span>
         <h3 class="team-popup__h3">Cyber Guy</h3>
         <div class="team-popup__body">
             <div class="team-popup__item">
@@ -1117,32 +1143,6 @@
     </div>
 </div>
 
-<div class="team-popup-wrapper">
-    <div class="team-popup">
-        <span class="team-popup__close"></span>
-        <h3 class="team-popup__h3">Researcher</h3>
-        <div class="team-popup__body">
-            <div class="team-popup__item">
-                <p class="team-popup__title">Experience</p>
-                <p class="team-popup__text">6 years</p>
-            </div>
-            <div class="team-popup__item">
-                <p class="team-popup__title">Expertise</p>
-                <p class="team-popup__text">Crypto market research</p>
-            </div>
-            <div class="team-popup__item">
-                <p class="team-popup__title">Team role</p>
-                <p class="team-popup__text">Searches and analyses the information from well-known
-                    and very specific sources</p>
-            </div>
-            <div class="team-popup__item">
-                <p class="team-popup__title">Details</p>
-                <p class="team-popup__text">Knows everything about everyone</p>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 <div id="team" class="team">
     <h3 class="team__title">Dream Team</h3>
@@ -1168,21 +1168,19 @@
 
         <div class="team__persons-wrapper">
             <div class="person">
-                <span class="person__img" id="person3"></span>
-                <p class="person__title">Cyber Guy</p>
-                <div class="button-border person__button-border">
-                    <button class="button person__button">Details</button>
-                </div>
-            </div>
-
-            <div class="person">
                 <span class="person__img" id="person5"></span>
                 <p class="person__title">Researcher</p>
                 <div class="button-border person__button-border">
                     <button class="button person__button">Details</button>
                 </div>
             </div>
-
+            <div class="person">
+                <span class="person__img" id="person3"></span>
+                <p class="person__title">Cyber Guy</p>
+                <div class="button-border person__button-border">
+                    <button class="button person__button">Details</button>
+                </div>
+            </div>
             <div class="person">
                 <span class="person__img" id="person4"></span>
                 <p class="person__title">Financier</p>
@@ -1208,25 +1206,24 @@
             <p>Bitstamp is a bitcoin exchange based in Luxembourg. The company was founded as a European-focused
                 alternative to then-dominant bitcoin exchange Mt. Gox.</p>
         </a>
-        <a href="https://binance.com" target="_blank" class="partner">
+        <a href="https://www.kraken.com" target="_blank" class="partner">
             <picture>
                 <source type="image/png" media="(min-width: 641px)"
-                    srcset="../static/img/binance-2x.png 1x, ../static/img/binance-3x.png 2x">
+                    srcset="../static/img/logo-kraken@2x-min.png 1x, ../static/img/logo-kraken@3x-min.png 2x">
                 <source type="image/png" media="(min-width: 0)" srcset="../static/img/binance-mob.png">
-                <img class="partner__img" src="../static/img/binance-2x.png" alt="partner">
+                <img class="partner__img" src="../static/img/logo-kraken@2x-min.png" alt="partner">
             </picture>
-            <p>Binance cryptocurrency exchange - They operate the worlds biggest bitcoin exchange and altcoin crypto
-                exchange in the world by volume.</p>
+            <p>The exchange provides cryptocurrency to fiat trading, and provides price information to Bloomberg
+                Terminal.</p>
         </a>
-        <a href="" target="_blank" class="partner">
+        <a href="https://www.huobi.com" target="_blank" class="partner">
             <picture>
                 <source type="image/png" media="(min-width: 641px)"
-                    srcset="../static/img/bitfinex-2x.png 1x, ../static/img/bitfinex-3x.png 2x">
+                    srcset="../static/img/logo-hobi@2x-min.png 1x, ../static/img/logo-hobi@3x-min.png 2x">
                 <source type="image/png" media="(min-width: 0)" srcset="../static/img/bitfinex.png">
-                <img class="partner__img" src="../static/img/bitfinex-2x.png" alt="partner">
+                <img class="partner__img" src="../static/img/logo-hobi@2x-min.png" alt="partner">
             </picture>
-            <p>Bitfinex is the longest-running and most liquid major cryptocurrency exchange which is headquartered in
-                Hong Kong and registered in the British Virgin Islands.</p>
+            <p>Huobi is a Singapore-based cryptocurrency exchange.</p>
         </a>
         <a href="https://localbitsoins.com" target="_blank" class="partner">
             <picture>

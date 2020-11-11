@@ -8,6 +8,7 @@ rolls.forEach((elem, index) => {
                 rolls[iter].classList.remove('roll_active')
             } else {
                 rolls[iter].classList.add('roll_active')
+                rolls[iter].scrollIntoView({block: "center", behavior: "smooth"});
             }
         }
     })
