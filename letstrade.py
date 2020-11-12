@@ -83,7 +83,7 @@ def index():
         grows = Grow.query.order_by(Grow.year).all()
 
         resp = make_response(render_template('index.html', data=currency_data, grows=grows))
-        resp.headers.add('Set-Cookie', 'SameSite=None; Secure')
+        # resp.headers.add('Set-Cookie', 'SameSite=None; Secure')
         # resp.set_cookie('SameSite', 'None', secure=True)
         app.logger.info(datetime.now() - time)
         return resp
@@ -139,4 +139,4 @@ if __name__ != '__main__':
 
 
 if __name__ == '__main__':
-    app.run(port=4567)
+    app.run()

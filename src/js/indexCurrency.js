@@ -37,9 +37,9 @@ function getDate() {
         hour: 'numeric',
         minute: 'numeric',
         second: 'numeric',
-        hour12: false
+        // hour12: false
     };
-    return gmt.toLocaleDateString('en-US', opt)
+    return gmt.toLocaleDateString('en-GB', opt)
 }
 
 

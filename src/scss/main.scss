@@ -572,7 +572,7 @@
   width: 100%;
   display: flex;
   max-width: 1254px;
-  padding: 5.5rem 4.5rem;
+  padding: 5.5rem 4.5rem 0;
 
   @media (max-width: 640px) {
     padding: 4.5rem 1rem;
@@ -763,7 +763,7 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-  padding: 2.5rem 4.5rem;
+  padding: 8rem 4.5rem;
 
   @media (max-width: 768px) {
     padding: 0 1rem;

@@ -1,13 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="255" height="138" viewBox="0 0 255 138">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="255px" height="138px" viewBox="0 0 255 138" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>img-yield@2x</title>
     <defs>
-        <linearGradient id="48i9ivwpya" x1="0%" x2="100%" y1="65.62%" y2="50%">
-            <stop offset="0%" stop-color="#80EC68"/>
-            <stop offset="100%" stop-color="#159E49"/>
+        <linearGradient x1="0%" y1="65.6204369%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#80EC68" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#159E49" offset="100%"></stop>
         </linearGradient>
     </defs>
-    <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-        <g stroke="url(#48i9ivwpya)" stroke-width="1.4" transform="translate(-1020 -1754)">
-            <path d="M-8 186L24.281 136.971 64.633 154.73 94.263 112.5 149.409 141.4 177.585 103.623 209.355 126.613 255 39" transform="translate(1020 1716)"/>
+    <g id="web---new" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="LT---main-page" transform="translate(-1020.000000, -2348.000000)" stroke="url(#linearGradient-1)" stroke-width="1.4">
+            <g id="img-yield" transform="translate(1020.000000, 2310.000000)">
+                <polyline points="-8 186 24.2812978 136.971357 64.6329201 154.729772 94.2629812 112.5 149.408827 141.399802 177.585484 103.622678 209.355372 126.613442 255 39"></polyline>
+            </g>
         </g>
     </g>
 </svg>
