@@ -24,7 +24,7 @@ menuPopup.addEventListener('click', evt => {
 });
 
 menuPopup.addEventListener('click', (e) => {
-    if (e.target.tagName !== 'P') {
+    if (e.target.tagName !== 'A') {
         menuPopup.classList.remove('menu-popup_active');
         showScroll()
     }
