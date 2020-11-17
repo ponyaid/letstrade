@@ -1349,6 +1349,14 @@
     padding-right: 0;
     padding-bottom: 5rem;
     overflow-x: hidden;
+    position: relative;
+  }
+
+  &__anc {
+    @media (max-width: 1024px) {
+      position: absolute;
+      top: 120px;
+    }
   }
 
   &__title {

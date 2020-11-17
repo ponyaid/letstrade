@@ -1,10 +1,13 @@
 const plans = Array.from(document.getElementsByClassName('plan'))
 const planDetails = document.querySelector('.plans-details')
+const plansAnc = document.querySelector('.plans__anc')
 
 
 plans.forEach((elem, index) => {
     elem.addEventListener('click', () => {
-        planDetails.scrollIntoView({ block: "start", behavior: "smooth" });
+        if (!window.matchMedia("(max-width: 1024px)").matches) {
+            planDetails.scrollIntoView({ block: "start", behavior: "smooth" });
+        }
         for (let iter in plans) {
             if (iter !== String(index)) {
                 plans[iter].classList.remove('plan_active')
@@ -26,6 +29,7 @@ function currentSlide() {
     for (let iter in slides) {
         if (slides[iter].classList.contains('slick-current')) {
             slides[iter].firstElementChild.classList.add('plan_active')
+            plansAnc.scrollIntoView({ block: "start", behavior: "smooth" });
 
             if (slides[iter].firstElementChild.classList.contains('plan_green')) {
                 planDetails.classList.add('plans-details_free') 
@@ -54,7 +58,7 @@ function getSlick(x) {
                     breakpoint: 768,
                     settings: {
                         slidesToShow: 1,
-                        centerPadding: '32px',
+                        centerPadding: '48px',
                     }
                 },
             ]
