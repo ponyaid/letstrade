@@ -97,9 +97,11 @@
       margin-bottom: 0.5rem;
     }
 
-    &_br {
-      @media (max-width: 1128px) {
-        display: none;
+    br {
+      display: none;
+
+      @media (max-width: 768px) {
+        display: initial;
       }
     }
 
