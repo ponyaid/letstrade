@@ -26,7 +26,6 @@ function currentSlide() {
     for (let iter in slides) {
         if (slides[iter].classList.contains('slick-current')) {
             slides[iter].firstElementChild.classList.add('plan_active')
-            slides[iter].scrollTop -= 50
 
             if (slides[iter].firstElementChild.classList.contains('plan_green')) {
                 planDetails.classList.add('plans-details_free') 
@@ -55,7 +54,7 @@ function getSlick(x) {
                     breakpoint: 768,
                     settings: {
                         slidesToShow: 1,
-                        centerPadding: '60px',
+                        centerPadding: '32px',
                     }
                 },
             ]
