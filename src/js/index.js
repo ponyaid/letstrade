@@ -1,7 +1,7 @@
 'use strict'
 
 import '@fancyapps/fancybox'
-// import 'slick-carousel/slick/slick.min'
+import 'slick-carousel/slick/slick.min'
 
 import './faq'
 import './viewport'

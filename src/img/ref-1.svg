@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="124" height="97" viewBox="0 0 124 97">
+    <defs>
+        <linearGradient id="egvndu9tha" x1="116.729%" x2="13.135%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#F86B61"/>
+            <stop offset="100%" stop-color="#EE3932"/>
+        </linearGradient>
+        <linearGradient id="mm06w39khb" x1="-2.461%" x2="84.033%" y1="88.29%" y2="0%">
+            <stop offset="0%" stop-color="#80EC68"/>
+            <stop offset="100%" stop-color="#37D592"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g transform="translate(-231 -5768) translate(231 5768)">
+                    <path fill="url(#egvndu9tha)" d="M15.375 12.15l-4.142 17.766h11.845l-2.123 9.11H0L6.264 12.15h9.11z"/>
+                    <path fill="url(#mm06w39khb)" d="M33.428 3.039c0 2.238 1.814 4.052 4.052 4.052l.069-.003-5.32 22.828h-9.11l4.14-17.767H15.375l2.123-9.11h15.93z"/>
+                    <circle cx="37.48" cy="3.039" r="3.039" fill="#DB5143"/>
+                </g>
+                <g fill-rule="nonzero">
+                    <path fill="#29B6F6" stroke="#FFF" stroke-width="1.678" d="M20 0C8.954 0 0 8.954 0 20s8.954 20 20 20 20-8.954 20-20S31.046 0 20 0z" transform="translate(-231 -5768) translate(231 5768) translate(83 56)"/>
+                    <path fill="#FFF" d="M28.35 12.448l-3.144 16.05s-.135.733-1.045.733c-.483 0-.732-.23-.732-.23l-6.81-5.65-3.33-1.68-4.276-1.136s-.761-.22-.761-.85c0-.524.783-.774.783-.774l17.887-7.106c0-.001.547-.197.945-.197.245 0 .525.105.525.42 0 .21-.042.42-.042.42z" transform="translate(-231 -5768) translate(231 5768) translate(83 56)"/>
+                    <path fill="#B0BEC5" d="M19.16 25.459l-2.874 2.831s-.125.097-.292.1c-.058.002-.12-.007-.184-.035l.809-5.006 2.542 2.11z" transform="translate(-231 -5768) translate(231 5768) translate(83 56)"/>
+                    <path fill="#CFD8DC" d="M24.949 15.13c-.142-.185-.404-.219-.589-.079l-11.073 6.627s1.767 4.945 2.036 5.8c.27.857.487.878.487.878l.809-5.006 8.25-7.633c.185-.14.22-.403.08-.587z" transform="translate(-231 -5768) translate(231 5768) translate(83 56)"/>
+                </g>
+                <g stroke="#FFF" stroke-width="1.5">
+                    <path d="M5 0L5 10M0 5L10 5" transform="translate(-231 -5768) translate(231 5768) translate(57 43)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

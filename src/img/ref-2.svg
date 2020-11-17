@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="223" height="98" viewBox="0 0 223 98">
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g transform="translate(-466 -5767) translate(467 5768)">
+                    <rect width="178" height="38" x=".5" fill="#000" stroke="#FFF" stroke-opacity=".2" stroke-width="1.5" rx="8"/>
+                    <text fill="#FFF" font-family="AppleColorEmoji, Apple Color Emoji" font-size="14" letter-spacing=".8">
+                        <tspan x="19.5" y="28">🤝</tspan> <tspan x="34.258" y="30.5" font-family="Gilroy-SemiBold, Gilroy" font-weight="500"> Referal Program</tspan>
+                    </text>
+                </g>
+                <g transform="translate(-466 -5767) translate(467 5768) translate(54 58)">
+                    <rect width="166" height="38" x=".5" fill="#000" stroke="#FFF" stroke-opacity=".2" stroke-width="1.5" rx="8"/>
+                    <text fill="#FFF" font-family="AppleColorEmoji, Apple Color Emoji" font-size="14" letter-spacing=".8">
+                        <tspan x="19.5" y="28">💸</tspan> <tspan x="34.258" y="30.5" font-family="Gilroy-SemiBold, Gilroy" font-weight="500"> Invite a Friend</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

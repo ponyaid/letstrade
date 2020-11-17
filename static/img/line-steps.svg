@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1110px" height="24px" viewBox="0 0 1110 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>line-steps</title>
+    <defs>
+        <linearGradient x1="100%" y1="49.9998377%" x2="0%" y2="50.0001623%" id="linearGradient-1">
+            <stop stop-color="#34B552" stop-opacity="0" offset="0.0136582168%"></stop>
+            <stop stop-color="#27AB4E" offset="24.4372815%"></stop>
+            <stop stop-color="#1DA44B" offset="78.1058785%"></stop>
+            <stop stop-color="#159E49" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="3.061617e-15%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#80EC68" offset="0%"></stop>
+            <stop stop-color="#159E49" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="web---new" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LT---main-page" transform="translate(-165.000000, -6036.000000)">
+            <g id="line-steps" transform="translate(165.000000, 6036.000000)">
+                <rect id="Rectangle" fill="url(#linearGradient-1)" x="0" y="11" width="1110" height="2"></rect>
+                <circle id="Oval" stroke="#0F0F17" stroke-width="2" fill="url(#linearGradient-2)" cx="128" cy="12" r="11"></circle>
+                <circle id="Oval-Copy-3" stroke="#0F0F17" stroke-width="2" fill="url(#linearGradient-2)" cx="414" cy="12" r="11"></circle>
+                <circle id="Oval-Copy-4" stroke="#0F0F17" stroke-width="2" fill="url(#linearGradient-2)" cx="698" cy="12" r="11"></circle>
+                <circle id="Oval-Copy-5" stroke="#0F0F17" stroke-width="2" fill="url(#linearGradient-2)" cx="983" cy="12" r="11"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

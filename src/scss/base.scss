@@ -263,6 +263,12 @@ $gradient: linear-gradient(to right, #80ec68, #159e49);
     background-color: #141417;
   }
 
+  &__logo {
+    @media (max-width: 1024px) {
+      background-image: url(../img/logo-lt.svg)!important;
+    }
+  }
+
   &__nav {
     margin-right: -1rem;
 
