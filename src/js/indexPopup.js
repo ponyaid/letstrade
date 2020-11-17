@@ -23,6 +23,12 @@ menuPopup.addEventListener('click', evt => {
     }
 });
 
+menuPopup.addEventListener('click', (e) => {
+    if (e.target.tagName !== 'P') {
+        menuPopup.classList.remove('menu-popup_active');
+    }
+});
+
 
 
 benefits.forEach((element, index) => {

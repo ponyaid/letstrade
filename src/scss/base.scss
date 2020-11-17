@@ -96,11 +96,11 @@ $gradient: linear-gradient(to right, #80ec68, #159e49);
 
   &__logo {
     position: absolute;
-    top: 0.75rem;
+    top: 22px;
     left: 4.5rem;
+    background: url(../img/logo-lt.svg) no-repeat!important;
 
     @media (max-width: 640px) {
-      top: 12px;
       left: 1.5rem;
     }
   }
