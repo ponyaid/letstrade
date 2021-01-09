@@ -98,7 +98,7 @@ $gradient: linear-gradient(to right, #80ec68, #159e49);
     position: absolute;
     top: 22px;
     left: 4.5rem;
-    background: url(../img/logo-lt.svg) no-repeat!important;
+    background: url(../img/logo-lt.svg) no-repeat !important;
 
     @media (max-width: 640px) {
       left: 1.5rem;
@@ -265,7 +265,7 @@ $gradient: linear-gradient(to right, #80ec68, #159e49);
 
   &__logo {
     @media (max-width: 1024px) {
-      background-image: url(../img/logo-lt.svg)!important;
+      background-image: url(../img/logo-lt.svg) !important;
     }
   }
 
@@ -299,23 +299,41 @@ $gradient: linear-gradient(to right, #80ec68, #159e49);
   }
 
   &__button {
+    display: flex;
+    align-items: center;
+    color: #fff;
     font-size: 16px;
-    font-weight: 500;
-    line-height: 1.25;
-    text-align: right;
-    color: #ffffff;
-    line-height: 2.4;
+    font-weight: 600;
+    line-height: 1.75;
+    letter-spacing: 0.91px;
+    padding: 12px 30px;
+    border-radius: 12px;
+    box-shadow: inset 0 0 24px 0 #1b9ddf;
+    border: 1.5px solid #1b9ddf;
 
-    &:hover {
-      animation-duration: 0.3s;
-      animation-timing-function: ease-in-out;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
-      animation-name: navHoverAnimation;
-      background-image: linear-gradient(90deg, #80ec68, #159e49);
-      background-repeat: no-repeat;
-      background-position: 0 100%;
+    &_mob {
+      margin-bottom: 1.5rem;
+      display: block !important;
     }
+
+    &::after {
+      content: "";
+      width: 26px;
+      height: 26px;
+      margin-left: 0.5rem;
+      background: url(../img/ic-telegram.svg) no-repeat center;
+    }
+
+    // &:hover {
+    //   animation-duration: 0.3s;
+    //   animation-timing-function: ease-in-out;
+    //   animation-iteration-count: 1;
+    //   animation-fill-mode: forwards;
+    //   animation-name: navHoverAnimation;
+    //   background-image: linear-gradient(90deg, #80ec68, #159e49);
+    //   background-repeat: no-repeat;
+    //   background-position: 0 100%;
+    // }
 
     @media (max-width: 1024px) {
       display: none;

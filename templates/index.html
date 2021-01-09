@@ -8,10 +8,11 @@
     <div class="head__body">
 
         <div class="head__content">
-            <h1 class="head__title">Cryptocurrency<br>Trading Company</h1>
+            <h1 class="head__title">Cryptocurrency&nbsp;<br>Trading Company</h1>
             <p class="head__description">Providing trading signals and analytics for Bitcoin, Ethereum, and Ripple.
-                <br> Earn less, but for sure, with our risk management strategy
-                <br> by spending less than 15 minutes a day.</p>
+                <br>Maximize your gains by minimizing your risks
+                <br>by spending less than 15 minutes a day.
+            </p>
         </div>
 
         <!-- <div class="head__benefits">
@@ -279,8 +280,8 @@
                     class="currency-item__percent {{'currency-item__percent_negative' if data.BTC and data.BTC.negative}}">
                     <div class="currency-item__title-mob">BTC/USD</div>
                     <span class="currency-item__percent_span">
-                        ${{ data.BTC.difference if data.BTC }}</span> <span
-                        class="currency-item__percent_per">{{ data.BTC.percent if data.BTC }}%</span>
+                        ${{ data.BTC.difference if data.BTC }}</span> <span class="currency-item__percent_per">{{
+                        data.BTC.percent if data.BTC }}%</span>
                 </div>
                 <p class="currency-item__price">${{ data.BTC.price if data.BTC }}</p>
             </div>
@@ -297,8 +298,8 @@
                     class="currency-item__percent {{'currency-item__percent_negative' if data.ETH and data.ETH.negative}}">
                     <div class="currency-item__title-mob">ETH/USD</div>
                     <span class="currency-item__percent_span">
-                        ${{ data.ETH.difference if data.ETH }}</span> <span
-                        class="currency-item__percent_per">{{ data.ETH.percent if data.ETH }}%</span>
+                        ${{ data.ETH.difference if data.ETH }}</span> <span class="currency-item__percent_per">{{
+                        data.ETH.percent if data.ETH }}%</span>
                 </div>
                 <p class="currency-item__price">${{ data.ETH.price if data.ETH }}</p>
             </div>
@@ -315,8 +316,8 @@
                     class="currency-item__percent {{'currency-item__percent_negative' if data.XRP and data.XRP.negative}}">
                     <div class="currency-item__title-mob">XRP/USD</div>
                     <span class="currency-item__percent_span">
-                        ${{ data.XRP.difference if data.XRP }}</span> <span
-                        class="currency-item__percent_per">{{ data.XRP.percent if data.XRP }}%</span>
+                        ${{ data.XRP.difference if data.XRP }}</span> <span class="currency-item__percent_per">{{
+                        data.XRP.percent if data.XRP }}%</span>
                 </div>
                 <p class="currency-item__price">${{ data.XRP.price if data.XRP }}</p>
             </div>
@@ -329,6 +330,15 @@
     <div class="tutorials__items">
         <div class="tutorial tutorial_active">
             <picture>
+                <img class="tutorial__img" src="../static/img/tutorial2.jpg" alt="tutorial">
+            </picture>
+            <a data-fancybox class="tutorial__button"
+                href="https://www.youtube.com/watch?v=EGHV1bVr0NI&amp;autoplay=1&amp;rel=0&amp;showinfo=0&amp;modestbranding=1">
+                <span>What we do!</span></a>
+        </div>
+        <div class="tutorials__title-mob">What we do!</div>
+        <div class="tutorial">
+            <picture>
                 <source type="image/jpeg" media="(min-width: 450px)" srcset="../static/img/tutorial1.jpg">
                 <source type="image/webp" media="(min-width: 0)" srcset="../static/img/tutorial1@2x.webp">
                 <source type="image/jpeg" media="(min-width: 0)" srcset="../static/img/tutorial1-min.jpg">
@@ -340,34 +350,11 @@
             </a>
         </div>
         <div class="tutorials__title-mob">What are crypto trading signals?</div>
-        <div class="tutorial">
-            <picture>
-                <img class="tutorial__img" src="../static/img/tutorial2.jpg" alt="tutorial">
-            </picture>
-            <a data-fancybox class="tutorial__button"
-                href="https://www.youtube.com/watch?v=EGHV1bVr0NI&amp;autoplay=1&amp;rel=0&amp;showinfo=0&amp;modestbranding=1">
-                <span>What we do!</span></a>
-        </div>
-        <div class="tutorials__title-mob">What we do!</div>
-
     </div>
 
     <div class="tutorials__tabs">
 
         <div class="tutorials__tab tutorials__tab_active">
-            <picture>
-                <source type="image/jpeg" media="(min-width: 1024px)"
-                    srcset="../static/img/tutorial1-tab-2x.jpg 1x, ../static/img/tutorial1-tab-3x.jpg 2x">
-                <source media="" srcset="">
-                <source type="image/jpeg" media="(min-width: 0)"
-                    srcset="../static/img/tutorial1-tab-1x.jpg 1x, ../static/img/tutorial1-tab-2x.jpg 2x">
-                <source media="" srcset="">
-                <img src="../static/img/tutorial1-tab-2x.jpg" alt="crypto signals">
-            </picture>
-            <h3>What are crypto trading signals?</h3>
-        </div>
-
-        <div class="tutorials__tab">
             <picture>
                 <source type="image/jpeg" media="(min-width: 1024px)"
                     srcset="../static/img/tutorial2-tab-2x.jpg 1x, ../static/img/tutorial2-tab-3x.jpg 2x">
@@ -378,6 +365,19 @@
                 <img src="../static/img/tutorial2-tab-2x.jpg" alt="crypto signals">
             </picture>
             <h3>What we do!</h3>
+        </div>
+
+        <div class="tutorials__tab">
+            <picture>
+                <source type="image/jpeg" media="(min-width: 1024px)"
+                    srcset="../static/img/tutorial1-tab-2x.jpg 1x, ../static/img/tutorial1-tab-3x.jpg 2x">
+                <source media="" srcset="">
+                <source type="image/jpeg" media="(min-width: 0)"
+                    srcset="../static/img/tutorial1-tab-1x.jpg 1x, ../static/img/tutorial1-tab-2x.jpg 2x">
+                <source media="" srcset="">
+                <img src="../static/img/tutorial1-tab-2x.jpg" alt="crypto signals">
+            </picture>
+            <h3>What are crypto trading signals?</h3>
         </div>
     </div>
 </div>
@@ -1056,11 +1056,11 @@
             </object>
             <p class="ref__item-title">Join Lets.Trade Telegram bot</p>
         </div>
-        <div class="ref__item">
+        <a class="ref__item" href="https://t.me/lets_trade_bot" target="_blank">
             <object class="ref__item-img" type="image/png" data="../static/img/ref-2.png">
             </object>
             <p class="ref__item-title">Tap the Referral Program button and grab referral link</p>
-        </div>
+        </a>
         <div class="ref__item">
             <object class="ref__item-img" type="image/svg+xml" data="../static/img/ref-3.svg">
                 <img src="../static/img/ref-3.png">
@@ -1085,7 +1085,8 @@
             <div class="team-popup__item">
                 <p class="team-popup__title">Experience</p>
                 <p class="team-popup__text">16 years in investments
-                    <br>4 years in crypto trading</p>
+                    <br>4 years in crypto trading
+                </p>
             </div>
             <div class="team-popup__item">
                 <p class="team-popup__title">Expertise</p>
@@ -1161,7 +1162,8 @@
                 <p class="team-popup__title">Experience</p>
                 <p class="team-popup__text">12 years in IT
                     <br>3 years in crypto analytical
-                    <br>tools development</p>
+                    <br>tools development
+                </p>
             </div>
             <div class="team-popup__item">
                 <p class="team-popup__title">Expertise</p>
@@ -1188,7 +1190,8 @@
             <div class="team-popup__item">
                 <p class="team-popup__title">Experience</p>
                 <p class="team-popup__text">6 years in investment banking
-                    <br>2 year in crypto trading</p>
+                    <br>2 year in crypto trading
+                </p>
             </div>
             <div class="team-popup__item">
                 <p class="team-popup__title">Expertise</p>
