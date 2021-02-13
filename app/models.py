@@ -1,6 +1,14 @@
+from datetime import datetime
 from flask_security import UserMixin, RoleMixin
 
 from .database import db
+
+
+class Question(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    create = db.Column(db.DateTime, default=datetime.utcnow)
+    title = db.Column(db.String())
+    body = db.Column(db.String())
 
 
 class Grow(db.Model):

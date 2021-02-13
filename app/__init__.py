@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_security import SQLAlchemyUserDatastore, Security
 from flask_mail import Mail
+from flask_pagedown import PageDown
 
 from config import Config
 from .database import db, migrate
@@ -9,6 +10,7 @@ from .models import *
 
 
 mail = Mail()
+pagedown = PageDown()
 
 
 def create_app(config=Config):
@@ -18,6 +20,7 @@ def create_app(config=Config):
     mail.init_app(app)
     db.init_app(app)
     admin.init_app(app)
+    pagedown.init_app(app)
     migrate.init_app(app, db)
     user_datastore = SQLAlchemyUserDatastore(db, User, Role)
     Security(app, datastore=user_datastore, login_form=ExtendedLoginForm)

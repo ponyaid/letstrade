@@ -1,6 +1,7 @@
 import os
 import base64
 import logging
+import markdown
 from datetime import datetime
 from threading import Thread
 from datetime import timedelta
@@ -82,7 +83,8 @@ def index():
 
         grows = Grow.query.order_by(Grow.year).all()
 
-        resp = make_response(render_template('index.html', data=currency_data, grows=grows))
+        resp = make_response(render_template(
+            'index.html', data=currency_data, grows=grows))
         # resp.headers.add('Set-Cookie', 'SameSite=None; Secure')
         # resp.set_cookie('SameSite', 'None', secure=True)
         app.logger.info(datetime.now() - time)
@@ -94,7 +96,15 @@ def index():
 @app.route('/faq', methods=['GET'])
 def faq():
     if request.method == 'GET':
-        return render_template('faq.html')
+
+        questions = Question.query.order_by(Question.create).all()
+
+        for question in questions:
+            question.body = markdown.markdown(question.body)
+
+        resp = make_response(render_template('faq.html', questions=questions))
+
+        return resp
     abort(405)
 
 
