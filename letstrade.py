@@ -117,9 +117,10 @@ def guides():
 
 @app.route('/statistics2019', methods=['GET'])
 def statistics():
-    if request.method == 'GET':
-        return render_template('statistics.html')
-    abort(405)
+    # if request.method == 'GET':
+    #     return render_template('statistics.html')
+    # abort(405)
+    abort(404)
 
 
 @app.route('/unsubscribe/<enc_email>', methods=['GET'])
