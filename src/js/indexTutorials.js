@@ -7,8 +7,10 @@ tutorialTabs.forEach((elem, index) => {
         for (let iter in tutorials) {
             if (iter !== String(index)) {
                 tutorials[iter].classList.remove('tutorial_active')
+                tutorials[iter].querySelector('video').pause()
             } else {
                 tutorials[iter].classList.add('tutorial_active')
+                tutorials[iter].querySelector('video').play()
             }
         }
         for (let iter in tutorialTabs) {

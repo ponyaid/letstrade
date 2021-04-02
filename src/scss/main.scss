@@ -661,8 +661,14 @@
   display: none;
   position: relative;
   width: 100%;
-  height: 357px;
+  // height: 357px;
   border-radius: 14px;
+  overflow: hidden;
+
+  video {
+    width: 100%;
+    // height: 100%;
+  }
 
   &_active {
     display: block;
@@ -1456,10 +1462,10 @@
 
   &__verified {
     display: flex;
-    padding-top: 2.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 1.5rem;
+    // padding-bottom: 0.5rem;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.25;
@@ -1472,6 +1478,7 @@
 
     &_mob {
       display: none;
+      justify-content: center;
       @media (max-width: 1024px) {
         display: flex;
       }
@@ -1872,7 +1879,7 @@
   &__list-item {
     display: flex;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 500;
     line-height: 1.8;
     letter-spacing: 0.25px;
@@ -1881,6 +1888,21 @@
       font-size: 16px;
       line-height: 1.5;
       letter-spacing: 0.91px;
+    }
+
+    &_list {
+      span {
+        display: flex;
+
+        &::before {
+          content: "";
+          height: 1rem;
+          min-width: 1rem;
+          margin-top: 10px;
+          margin-right: 30px;
+          background: url(../img/ic-chack.svg) no-repeat center / contain;
+        }
+      }
     }
 
     .plan__coin-tags {
@@ -1906,7 +1928,7 @@
     }
   }
 
-  &_free &__list-item:not(:nth-child(2))::before {
+  &_free &__list-item_not-present::before {
     background: url(../img/ic-not-present.svg) no-repeat center / contain;
   }
 
@@ -2905,7 +2927,7 @@
 
   @media (max-width: 640px) {
     padding-top: 12px;
-    padding-bottom: 0;
+    // padding-bottom: 0;
   }
 
   &__title {
@@ -3359,7 +3381,7 @@
   letter-spacing: 0.91px;
 
   p {
-    @media (min-width: 641px) {
+    @media (min-width: 0px) {
       display: none;
     }
   }
@@ -3374,7 +3396,7 @@
     height: auto;
     margin: 0 0 4rem;
     flex-flow: column;
-    align-items: flex-start;
+    // align-items: flex-start;
   }
 
   &__img {
@@ -3383,14 +3405,20 @@
 
     @media (max-width: 640px) {
       width: auto;
-      height: 1.5rem;
+      height: 2rem;
       margin-bottom: 1.5rem;
+    }
+  }
+
+  &:nth-child(2) &__img {
+    @media (max-width: 640px) {
+      height: 1.5rem;
     }
   }
 
   &:nth-child(4) &__img {
     @media (max-width: 640px) {
-      height: 2rem;
+      height: 2.5rem;
     }
   }
 }
