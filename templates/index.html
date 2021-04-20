@@ -3,8 +3,6 @@
 {% block content %}
 
 <div class="head">
-
-
     <div class="head__body">
 
         <div class="head__content">
@@ -385,7 +383,7 @@
 </div>
 
 
-<div id="grow" class="grow">
+<!-- <div id="grow" class="grow">
     <h2 class="grow__title">Our growing streak</h2>
     <div class="grow__tabs">
         {% for grow in grows %}
@@ -438,11 +436,289 @@
         {% endfor %}
     </div>
 
-    <!-- <div class="button-border grow__button-border">
+    <div class="button-border grow__button-border">
         <a href="/statistics2019" class="button grow__button">Full Report 2019</a>
-    </div> -->
-</div>
+    </div>
+</div> -->
 
+<section class="terms">
+    <div class="term term_short">
+        <div class="term__content">
+            <div class="term__content-wrap">
+                <h3 class="term__title">Short-term</h3>
+                <p class="term__desc">This dynamic strategy suits those who trade on a short time frame and need to
+                    withdraw
+                    funds at least once a quarter.</p>
+                <ul class="term__list">
+                    <li>You regularly withdraw your profits</li>
+                    <li>You are trading for a short period of time</li>
+                    <li>You prefer to keep most of your funds in USDT</li>
+                </ul>
+            </div>
+            <img class="term__pic" src="../static/img/terms-1.svg" alt="pic">
+        </div>
+        <div class="dynamic">
+            <div class="dynamic__wrap">
+                <div class="dynamic__tabs">
+                    {% for year, _ in shorts.items() %}
+                    <p class="dynamic__tab {{ 'dynamic__tab_active' if loop.last }}">{{ year }}</p>
+                    {% endfor %}
+                </div>
+                {% for year, details in shorts.items() %}
+                <div class="dynamic__content {{ 'dynamic__content_active' if loop.last }}">
+                    <div class="dynamic__item">
+                        <div class="dynamic__head">
+                            <p class="dynamic__title">Number of trades</p>
+                            <p class="dynamic__total">{{details.number.values()|sum|int}}</p>
+                        </div>
+                        <div class="dynamic__details">
+                            {% for key, value in details.number.items() %}
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>{{key}}</p>
+                                    <p>{{value|int}}</p>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="dynamic__item">
+                        <div class="dynamic__head">
+                            <p class="dynamic__title">Average profit per trade</p>
+                            <p class="dynamic__total">
+                                {{"%.2f"|format(details.average.values()|sum / details.average|length)}}%
+                            </p>
+                        </div>
+                        <div class="dynamic__details">
+                            {% for key, value in details.average.items() %}
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>{{key}}</p>
+                                    <p>{{"%.2f"|format(value)}}%</p>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="dynamic__item">
+                        <div class="dynamic__head">
+                            <p class="dynamic__title">Yield</p>
+                            <p class="dynamic__total">
+                                {{"%.2f"|format(details.yld.values()|sum)}}%
+                            </p>
+                        </div>
+                        <div class="dynamic__details">
+                            {% for key, value in details.yld.items() %}
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>{{key}}</p>
+                                    <p>{{"%.2f"|format(value)}}%</p>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="term term_medium">
+        <div class="term__content">
+            <div class="term__content-wrap">
+                <h3 class="term__title">Medium-term</h3>
+                <p class="term__desc">We have successfully applied this strategy for the 3rd year in a row. Suitable for
+                    investors who sometimes need access to cash.</p>
+                <ul class="term__list">
+                    <li>Balanced risks</li>
+                    <li>Medium-term strategy</li>
+                    <li>You prefer the middle ground</li>
+                </ul>
+            </div>
+            <img class="term__pic" src="../static/img/terms-2.svg" alt="pic">
+        </div>
+        <div class="dynamic">
+            <div class="dynamic__wrap">
+                <div class="dynamic__tabs">
+                    {% for year, _ in mediums.items() %}
+                    <p class="dynamic__tab {{ 'dynamic__tab_active' if loop.last }}">{{ year }}</p>
+                    {% endfor %}
+                </div>
+                {% for year, details in mediums.items() %}
+                <div class="dynamic__content {{ 'dynamic__content_active' if loop.last }}">
+                    <div class="dynamic__item">
+                        <div class="dynamic__head">
+                            <p class="dynamic__title">Number of trades</p>
+                            <p class="dynamic__total">{{details.number.values()|sum|int}}</p>
+                        </div>
+                        <div class="dynamic__details">
+                            {% for key, value in details.number.items() %}
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>{{key}}</p>
+                                    <p>{{value|int}}</p>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="dynamic__item">
+                        <div class="dynamic__head">
+                            <p class="dynamic__title">Average profit per trade</p>
+                            <p class="dynamic__total">
+                                {{"%.2f"|format(details.average.values()|sum / details.average|length)}}%
+                            </p>
+                        </div>
+                        <div class="dynamic__details">
+                            {% for key, value in details.average.items() %}
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>{{key}}</p>
+                                    <p>{{"%.2f"|format(value)}}%</p>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="dynamic__item">
+                        <div class="dynamic__head">
+                            <p class="dynamic__title">Yield</p>
+                            <p class="dynamic__total">
+                                {{"%.2f"|format(details.yld.values()|sum)}}%
+                            </p>
+                        </div>
+                        <div class="dynamic__details">
+                            {% for key, value in details.yld.items() %}
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>{{key}}</p>
+                                    <p>{{"%.2f"|format(value)}}%</p>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="term term_long">
+        <div class="term__content">
+            <div class="term__content-wrap">
+                <h3 class="term__title">Long-term</h3>
+                <p class="term__desc">An investment strategy that helps you build a portfolio of top coins at
+                    competitive prices. Most of the profits are reinvested back into the assets.</p>
+                <ul class="term__list">
+                    <li>A small number of trades</li>
+                    <li>Your goal is to have a lot of coins, not USDT</li>
+                    <li>A long-term strategy for those who do not need frequent profit-taking</li>
+                </ul>
+            </div>
+            <img class="term__pic" src="../static/img/terms-3.svg" alt="pic">
+        </div>
+        <div class="dynamic">
+            <div class="dynamic__wrap">
+                <div class="dynamic__tabs">
+                    {% for year, _ in longs.items() %}
+                    <p class="dynamic__tab {{ 'dynamic__tab_active' if loop.last }}">{{ year }}</p>
+                    {% endfor %}
+                </div>
+                {% for year, details in longs.items() %}
+                <div class="dynamic__content {{ 'dynamic__content_active' if loop.last }}">
+                    <div class="dynamic__item">
+                        <div class="dynamic__head">
+                            <p class="dynamic__title">Number of trades</p>
+                            <p class="dynamic__total">{{details.number.values()|sum|int}}</p>
+                        </div>
+                        <div class="dynamic__details">
+                            {% for key, value in details.number.items() %}
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>{{key}}</p>
+                                    <p>{{value|int}}</p>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="dynamic__item">
+                        <div class="dynamic__head">
+                            <p class="dynamic__title">Average profit per trade</p>
+                            <p class="dynamic__total">
+                                {{"%.2f"|format(details.average.values()|sum / details.average|length)}}%
+                            </p>
+                        </div>
+                        <div class="dynamic__details">
+                            {% for key, value in details.average.items() %}
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>{{key}}</p>
+                                    <p>{{"%.2f"|format(value)}}%</p>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="dynamic__item">
+                        <div class="dynamic__head">
+                            <p class="dynamic__title">Yield</p>
+                            <p class="dynamic__total">
+                                {{"%.2f"|format(details.yld.values()|sum)}}%
+                            </p>
+                        </div>
+                        <div class="dynamic__details">
+                            {% for key, value in details.yld.items() %}
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>{{key}}</p>
+                                    <p>{{"%.2f"|format(value)}}%</p>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
 
 <!--<div class="questions">-->
 <!--    <h3 class="questions__title">Have more questions?</h3>-->
@@ -558,7 +834,8 @@
                     <h4 class="roll__title">Strive to</h4>
                     <ul class="roll__list">
                         <li class="roll__list-item">Keep up to date with what is happening on the crypto market</li>
-                        <li class="roll__list-item">Understand the essence of events, price, and capital movements</li>
+                        <li class="roll__list-item">Understand the essence of events, price, and capital movements
+                        </li>
                         <li class="roll__list-item">Increase your capital steadily</li>
                         <li class="roll__list-item">Learn the subtleties of crypto trading</li>
                         <li class="roll__list-item">Reach the level of a professional crypto trader</li>
@@ -568,7 +845,8 @@
                 <div class="roll">
                     <h4 class="roll__title">Want to avoid</h4>
                     <ul class="roll__list">
-                        <li class="roll__list-item">Loss of money due to a lack of understanding of the real processes
+                        <li class="roll__list-item">Loss of money due to a lack of understanding of the real
+                            processes
                             in the market
                         </li>
                         <li class="roll__list-item">Traps of major players</li>
@@ -637,7 +915,8 @@
                         </div>
                         <div class="plan__body">
                             <div class="button-border plan__button-border">
-                                <a class="button plan__btn" href="https://t.me/lets_trade_bot" target="_blank">Join via
+                                <a class="button plan__btn" href="https://t.me/lets_trade_bot" target="_blank">Join
+                                    via
                                     Telegram</a>
                             </div>
                         </div>
@@ -1141,7 +1420,8 @@
             </div>
             <div class="team-popup__item">
                 <p class="team-popup__title">Details</p>
-                <p class="team-popup__text">Has an actual license from the financial regulator; asset under management
+                <p class="team-popup__text">Has an actual license from the financial regulator; asset under
+                    management
                     over 25m$; experienced on NYSE and CME;</p>
             </div>
         </div>
@@ -1221,7 +1501,8 @@
             </div>
             <div class="team-popup__item">
                 <p class="team-popup__title">Details</p>
-                <p class="team-popup__text">True crypto-cyber guy creating trading bots and experienced in international
+                <p class="team-popup__text">True crypto-cyber guy creating trading bots and experienced in
+                    international
                     IT companies </p>
             </div>
         </div>
@@ -1249,7 +1530,8 @@
             </div>
             <div class="team-popup__item">
                 <p class="team-popup__title">Details</p>
-                <p class="team-popup__text">Has been engaged in the analytical department and performed audits for BNP
+                <p class="team-popup__text">Has been engaged in the analytical department and performed audits for
+                    BNP
                     Paribas Group</p>
             </div>
         </div>
@@ -1317,7 +1599,8 @@
                 <img class="partner__img" src="../static/img/bitstamp-2x.png" alt="partner">
             </picture>
             <p>Bitstamp acts under the UK legislation and has approved safety by over 3 million traders. It also has
-                available BTC, ETH, XRP, LTC and BTH for trading now, along with EUR and USD. It’s simple and secure.
+                available BTC, ETH, XRP, LTC and BTH for trading now, along with EUR and USD. It’s simple and
+                secure.
             </p>
         </a>
         <a href="https://www.kraken.com" target="_blank" class="partner">
@@ -1346,8 +1629,10 @@
                 <source type="image/png" media="(min-width: 0)" srcset="../static/img/localbitcoins-mob.png">
                 <img class="partner__img" src="../static/img/localbitcoins-2x.png" alt="partner">
             </picture>
-            <p>LocalBitcoins is a peer to peer bitcoin marketplace based in Helsinki, Finland. Its service facilitates
-                over-the-counter trading of local currency for bitcoins.Users post advertisements on the website, where
+            <p>LocalBitcoins is a peer to peer bitcoin marketplace based in Helsinki, Finland. Its service
+                facilitates
+                over-the-counter trading of local currency for bitcoins.Users post advertisements on the website,
+                where
                 they state exchange rates and payment methods for buying or selling bitcoins.</p>
         </a>
         <a href="https://shop.ledger.com/pages/ledger-nano-x?r=f6060a3fd3ed" target="_blank" class="partner">

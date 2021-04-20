@@ -2,6 +2,7 @@ import os
 import base64
 import logging
 import markdown
+import collections
 from datetime import datetime
 from threading import Thread
 from datetime import timedelta
@@ -16,7 +17,29 @@ from app.utils import currency_request, format_currency
 from app.models import *
 from app.database import db
 
+
 app = create_app(Config)
+
+
+def format_terms(queries):
+    items = {}
+    for query in queries:
+        if query.year not in items.keys():
+            items[query.year] = {
+                'average': {query.currency: query.average},
+                'number': {query.currency: query.number},
+                'yld': {query.currency: query.yld}
+            }
+        else:
+            items[query.year]['average'].update(
+                {query.currency: query.average})
+            items[query.year]['number'].update(
+                {query.currency: query.number})
+            items[query.year]['yld'].update(
+                {query.currency: query.yld})
+
+    od = collections.OrderedDict(sorted(items.items()))
+    return od
 
 
 def send_email(msg):
@@ -83,8 +106,23 @@ def index():
 
         grows = Grow.query.order_by(Grow.year).all()
 
+        short_query = Short.query.all()
+        medium_query = Medium.query.all()
+        long_query = Long.query.all()
+
+        shorts = format_terms(short_query)
+        mediums = format_terms(medium_query)
+        longs = format_terms(long_query)
+
         resp = make_response(render_template(
-            'index.html', data=currency_data, grows=grows))
+            'index.html',
+            data=currency_data,
+            grows=grows,
+            shorts=shorts,
+            mediums=mediums,
+            longs=longs
+        )
+        )
         # resp.headers.add('Set-Cookie', 'SameSite=None; Secure')
         # resp.set_cookie('SameSite', 'None', secure=True)
         app.logger.info(datetime.now() - time)

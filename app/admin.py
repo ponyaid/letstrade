@@ -10,7 +10,7 @@ from flask_security.forms import LoginForm, StringField, Required, BooleanField
 from wtforms.fields import PasswordField, TextAreaField
 
 from .database import db
-from .models import User, Lead, Grow, Question
+from .models import *
 
 
 class ExtendedLoginForm(LoginForm):
@@ -32,6 +32,7 @@ class QuestionAdmin(ModelViewMixin):
     column_descriptions = dict(
         body='<a href="https://daringfireball.net/projects/markdown/syntax" target="_blank">Markdown Syntax</a>'
     )
+
     def scaffold_form(self):
         form_class = super(QuestionAdmin, self).scaffold_form()
         form_class.body = TextAreaField('Quistion body')
@@ -87,5 +88,8 @@ class HomeAdminView(AdminIndexView):
 admin = Admin(url='/', index_view=HomeAdminView(), template_mode='bootstrap3')
 admin.add_view(UserAdmin(User, db.session, name='Users'))
 admin.add_view(LeadAdmin(Lead, db.session, name='Leads'))
-admin.add_view(ModelViewMixin(Grow, db.session, name='Grows'))
+# admin.add_view(ModelViewMixin(Grow, db.session, name='Grows'))
+admin.add_view(ModelViewMixin(Short, db.session, name='Shorts'))
+admin.add_view(ModelViewMixin(Medium, db.session, name='Mediums'))
+admin.add_view(ModelViewMixin(Long, db.session, name='Longs'))
 admin.add_view(QuestionAdmin(Question, db.session, name='FAQ'))

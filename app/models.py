@@ -30,11 +30,42 @@ class Lead(db.Model):
         return '%s' % self.email
 
 
-# Flask Security #
+# NEW MODELS 18.04.2021 #
 
+
+class Short(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    year = db.Column(db.Integer)
+    currency = db.Column(db.String)
+    number = db.Column(db.Float)
+    average = db.Column(db.Float)
+    yld = db.Column(db.Float, name='yield')
+
+
+class Medium(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    year = db.Column(db.Integer)
+    currency = db.Column(db.String)
+    number = db.Column(db.Float)
+    average = db.Column(db.Float)
+    yld = db.Column(db.Float, name='yield')
+
+
+class Long(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    year = db.Column(db.Integer)
+    currency = db.Column(db.String)
+    number = db.Column(db.Float)
+    average = db.Column(db.Float)
+    yld = db.Column(db.Float, name='yield')
+
+
+# Flask Security #
 roles_users = db.Table('role_users',
-                       db.Column('user_id', db.Integer, db.ForeignKey('user.id')),
-                       db.Column('role_id', db.Integer, db.ForeignKey('role.id'))
+                       db.Column('user_id', db.Integer,
+                                 db.ForeignKey('user.id')),
+                       db.Column('role_id', db.Integer,
+                                 db.ForeignKey('role.id'))
                        )
 
 
