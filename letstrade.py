@@ -106,13 +106,13 @@ def index():
 
         grows = Grow.query.order_by(Grow.year).all()
 
-        short_query = Short.query.all()
-        medium_query = Medium.query.all()
-        long_query = Long.query.all()
+        shorts = Short.query.order_by(Short.year).all()
+        mediums = Medium.query.order_by(Medium.year).all()
+        longs = Long.query.order_by(Long.year).all()
 
-        shorts = format_terms(short_query)
-        mediums = format_terms(medium_query)
-        longs = format_terms(long_query)
+        # shorts = format_terms(short_query)
+        # mediums = format_terms(medium_query)
+        # longs = format_terms(long_query)
 
         resp = make_response(render_template(
             'index.html',

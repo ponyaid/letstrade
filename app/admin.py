@@ -27,6 +27,26 @@ class ModelViewMixin(ModelView):
         return redirect(url_for('security.login', next=request.url))
 
 
+class TermsAdmin(ModelViewMixin):
+    column_list = [
+        'year',
+        'number',
+        'n_btc',
+        'n_eth',
+        'n_xrp',
+        'average',
+        'a_btc',
+        'a_eth',
+        'a_xrp',
+        'yld',
+        'y_btc',
+        'y_eth',
+        'y_xrp'
+    ]
+
+    form_columns = column_list
+
+
 class QuestionAdmin(ModelViewMixin):
     column_default_sort = 'create'
     column_descriptions = dict(
@@ -89,7 +109,7 @@ admin = Admin(url='/', index_view=HomeAdminView(), template_mode='bootstrap3')
 admin.add_view(UserAdmin(User, db.session, name='Users'))
 admin.add_view(LeadAdmin(Lead, db.session, name='Leads'))
 # admin.add_view(ModelViewMixin(Grow, db.session, name='Grows'))
-admin.add_view(ModelViewMixin(Short, db.session, name='Shorts'))
-admin.add_view(ModelViewMixin(Medium, db.session, name='Mediums'))
-admin.add_view(ModelViewMixin(Long, db.session, name='Longs'))
+admin.add_view(TermsAdmin(Short, db.session, name='Shorts'))
+admin.add_view(TermsAdmin(Medium, db.session, name='Mediums'))
+admin.add_view(TermsAdmin(Long, db.session, name='Longs'))
 admin.add_view(QuestionAdmin(Question, db.session, name='FAQ'))

@@ -460,73 +460,117 @@
         <div class="dynamic">
             <div class="dynamic__wrap">
                 <div class="dynamic__tabs">
-                    {% for year, _ in shorts.items() %}
-                    <p class="dynamic__tab {{ 'dynamic__tab_active' if loop.last }}">{{ year }}</p>
+                    {% for short in shorts %}
+                    <p class="dynamic__tab {{ 'dynamic__tab_active' if loop.last }}">{{ short.year }}</p>
                     {% endfor %}
                 </div>
-                {% for year, details in shorts.items() %}
+                {% for short in shorts %}
                 <div class="dynamic__content {{ 'dynamic__content_active' if loop.last }}">
                     <div class="dynamic__item">
                         <div class="dynamic__head">
                             <p class="dynamic__title">Number of trades</p>
-                            <p class="dynamic__total">{{details.number.values()|sum|int}}</p>
+                            <p class="dynamic__total">{{short.number|int}}</p>
                         </div>
                         <div class="dynamic__details">
-                            {% for key, value in details.number.items() %}
                             <div class="dynamic__detail">
                                 <div class="dynamic__range-wrap">
                                     <span class="dynamic__range"></span>
                                 </div>
                                 <div class="dynamic__detail-text">
-                                    <p>{{key}}</p>
-                                    <p>{{value|int}}</p>
+                                    <p>BTC</p>
+                                    <p>{{short.n_btc|int}}</p>
                                 </div>
                             </div>
-                            {% endfor %}
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>ETH</p>
+                                    <p>{{short.n_eth|int}}</p>
+                                </div>
+                            </div>
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>XRP</p>
+                                    <p>{{short.n_xrp|int}}</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="dynamic__item">
                         <div class="dynamic__head">
                             <p class="dynamic__title">Average profit per trade</p>
-                            <p class="dynamic__total">
-                                {{"%.2f"|format(details.average.values()|sum / details.average|length)}}%
-                            </p>
+                            <p class="dynamic__total">{{"%.2f"|format(short.average)}}%</p>
                         </div>
                         <div class="dynamic__details">
-                            {% for key, value in details.average.items() %}
                             <div class="dynamic__detail">
                                 <div class="dynamic__range-wrap">
                                     <span class="dynamic__range"></span>
                                 </div>
                                 <div class="dynamic__detail-text">
-                                    <p>{{key}}</p>
-                                    <p>{{"%.2f"|format(value)}}%</p>
+                                    <p>BTC</p>
+                                    <p>{{"%.2f"|format(short.a_btc)}}%</p>
                                 </div>
                             </div>
-                            {% endfor %}
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>ETH</p>
+                                    <p>{{"%.2f"|format(short.a_eth)}}%</p>
+                                </div>
+                            </div>
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>XRP</p>
+                                    <p>{{"%.2f"|format(short.a_xrp)}}%</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="dynamic__item">
                         <div class="dynamic__head">
                             <p class="dynamic__title">Yield</p>
-                            <p class="dynamic__total">
-                                {{"%.2f"|format(details.yld.values()|sum)}}%
-                            </p>
+                            <p class="dynamic__total">{{"%.2f"|format(short.yld)}}%</p>
                         </div>
                         <div class="dynamic__details">
-                            {% for key, value in details.yld.items() %}
                             <div class="dynamic__detail">
                                 <div class="dynamic__range-wrap">
                                     <span class="dynamic__range"></span>
                                 </div>
                                 <div class="dynamic__detail-text">
-                                    <p>{{key}}</p>
-                                    <p>{{"%.2f"|format(value)}}%</p>
+                                    <p>BTC</p>
+                                    <p>{{"%.2f"|format(short.y_btc)}}%</p>
                                 </div>
                             </div>
-                            {% endfor %}
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>ETH</p>
+                                    <p>{{"%.2f"|format(short.y_eth)}}%</p>
+                                </div>
+                            </div>
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>XRP</p>
+                                    <p>{{"%.2f"|format(short.y_xrp)}}%</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -552,73 +596,117 @@
         <div class="dynamic">
             <div class="dynamic__wrap">
                 <div class="dynamic__tabs">
-                    {% for year, _ in mediums.items() %}
-                    <p class="dynamic__tab {{ 'dynamic__tab_active' if loop.last }}">{{ year }}</p>
+                    {% for medium in mediums %}
+                    <p class="dynamic__tab {{ 'dynamic__tab_active' if loop.last }}">{{ medium.year }}</p>
                     {% endfor %}
                 </div>
-                {% for year, details in mediums.items() %}
+                {% for medium in mediums %}
                 <div class="dynamic__content {{ 'dynamic__content_active' if loop.last }}">
                     <div class="dynamic__item">
                         <div class="dynamic__head">
                             <p class="dynamic__title">Number of trades</p>
-                            <p class="dynamic__total">{{details.number.values()|sum|int}}</p>
+                            <p class="dynamic__total">{{medium.number|int}}</p>
                         </div>
                         <div class="dynamic__details">
-                            {% for key, value in details.number.items() %}
                             <div class="dynamic__detail">
                                 <div class="dynamic__range-wrap">
                                     <span class="dynamic__range"></span>
                                 </div>
                                 <div class="dynamic__detail-text">
-                                    <p>{{key}}</p>
-                                    <p>{{value|int}}</p>
+                                    <p>BTC</p>
+                                    <p>{{medium.n_btc|int}}</p>
                                 </div>
                             </div>
-                            {% endfor %}
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>ETH</p>
+                                    <p>{{medium.n_eth|int}}</p>
+                                </div>
+                            </div>
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>XRP</p>
+                                    <p>{{medium.n_xrp|int}}</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="dynamic__item">
                         <div class="dynamic__head">
                             <p class="dynamic__title">Average profit per trade</p>
-                            <p class="dynamic__total">
-                                {{"%.2f"|format(details.average.values()|sum / details.average|length)}}%
-                            </p>
+                            <p class="dynamic__total">{{"%.2f"|format(medium.average)}}%</p>
                         </div>
                         <div class="dynamic__details">
-                            {% for key, value in details.average.items() %}
                             <div class="dynamic__detail">
                                 <div class="dynamic__range-wrap">
                                     <span class="dynamic__range"></span>
                                 </div>
                                 <div class="dynamic__detail-text">
-                                    <p>{{key}}</p>
-                                    <p>{{"%.2f"|format(value)}}%</p>
+                                    <p>BTC</p>
+                                    <p>{{"%.2f"|format(medium.a_btc)}}%</p>
                                 </div>
                             </div>
-                            {% endfor %}
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>ETH</p>
+                                    <p>{{"%.2f"|format(medium.a_eth)}}%</p>
+                                </div>
+                            </div>
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>XRP</p>
+                                    <p>{{"%.2f"|format(medium.a_xrp)}}%</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="dynamic__item">
                         <div class="dynamic__head">
                             <p class="dynamic__title">Yield</p>
-                            <p class="dynamic__total">
-                                {{"%.2f"|format(details.yld.values()|sum)}}%
-                            </p>
+                            <p class="dynamic__total">{{"%.2f"|format(medium.yld)}}%</p>
                         </div>
                         <div class="dynamic__details">
-                            {% for key, value in details.yld.items() %}
                             <div class="dynamic__detail">
                                 <div class="dynamic__range-wrap">
                                     <span class="dynamic__range"></span>
                                 </div>
                                 <div class="dynamic__detail-text">
-                                    <p>{{key}}</p>
-                                    <p>{{"%.2f"|format(value)}}%</p>
+                                    <p>BTC</p>
+                                    <p>{{"%.2f"|format(medium.y_btc)}}%</p>
                                 </div>
                             </div>
-                            {% endfor %}
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>ETH</p>
+                                    <p>{{"%.2f"|format(medium.y_eth)}}%</p>
+                                </div>
+                            </div>
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>XRP</p>
+                                    <p>{{"%.2f"|format(medium.y_xrp)}}%</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -644,73 +732,117 @@
         <div class="dynamic">
             <div class="dynamic__wrap">
                 <div class="dynamic__tabs">
-                    {% for year, _ in longs.items() %}
-                    <p class="dynamic__tab {{ 'dynamic__tab_active' if loop.last }}">{{ year }}</p>
+                    {% for long in longs %}
+                    <p class="dynamic__tab {{ 'dynamic__tab_active' if loop.last }}">{{ long.year }}</p>
                     {% endfor %}
                 </div>
-                {% for year, details in longs.items() %}
+                {% for long in longs %}
                 <div class="dynamic__content {{ 'dynamic__content_active' if loop.last }}">
                     <div class="dynamic__item">
                         <div class="dynamic__head">
                             <p class="dynamic__title">Number of trades</p>
-                            <p class="dynamic__total">{{details.number.values()|sum|int}}</p>
+                            <p class="dynamic__total">{{long.number|int}}</p>
                         </div>
                         <div class="dynamic__details">
-                            {% for key, value in details.number.items() %}
                             <div class="dynamic__detail">
                                 <div class="dynamic__range-wrap">
                                     <span class="dynamic__range"></span>
                                 </div>
                                 <div class="dynamic__detail-text">
-                                    <p>{{key}}</p>
-                                    <p>{{value|int}}</p>
+                                    <p>BTC</p>
+                                    <p>{{long.n_btc|int}}</p>
                                 </div>
                             </div>
-                            {% endfor %}
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>ETH</p>
+                                    <p>{{long.n_eth|int}}</p>
+                                </div>
+                            </div>
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>XRP</p>
+                                    <p>{{long.n_xrp|int}}</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="dynamic__item">
                         <div class="dynamic__head">
                             <p class="dynamic__title">Average profit per trade</p>
-                            <p class="dynamic__total">
-                                {{"%.2f"|format(details.average.values()|sum / details.average|length)}}%
-                            </p>
+                            <p class="dynamic__total"> {{"%.2f"|format(long.average)}}%</p>
                         </div>
                         <div class="dynamic__details">
-                            {% for key, value in details.average.items() %}
                             <div class="dynamic__detail">
                                 <div class="dynamic__range-wrap">
                                     <span class="dynamic__range"></span>
                                 </div>
                                 <div class="dynamic__detail-text">
-                                    <p>{{key}}</p>
-                                    <p>{{"%.2f"|format(value)}}%</p>
+                                    <p>BTC</p>
+                                    <p>{{"%.2f"|format(long.a_btc)}}%</p>
                                 </div>
                             </div>
-                            {% endfor %}
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>ETH</p>
+                                    <p>{{"%.2f"|format(long.a_eth)}}%</p>
+                                </div>
+                            </div>
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>XRP</p>
+                                    <p>{{"%.2f"|format(long.a_xrp)}}%</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="dynamic__item">
                         <div class="dynamic__head">
                             <p class="dynamic__title">Yield</p>
-                            <p class="dynamic__total">
-                                {{"%.2f"|format(details.yld.values()|sum)}}%
-                            </p>
+                            <p class="dynamic__total">{{"%.2f"|format(long.yld)}}%</p>
                         </div>
                         <div class="dynamic__details">
-                            {% for key, value in details.yld.items() %}
                             <div class="dynamic__detail">
                                 <div class="dynamic__range-wrap">
                                     <span class="dynamic__range"></span>
                                 </div>
                                 <div class="dynamic__detail-text">
-                                    <p>{{key}}</p>
-                                    <p>{{"%.2f"|format(value)}}%</p>
+                                    <p>BTC</p>
+                                    <p>{{"%.2f"|format(long.y_btc)}}%</p>
                                 </div>
                             </div>
-                            {% endfor %}
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>ETH</p>
+                                    <p>{{"%.2f"|format(long.y_eth)}}%</p>
+                                </div>
+                            </div>
+                            <div class="dynamic__detail">
+                                <div class="dynamic__range-wrap">
+                                    <span class="dynamic__range"></span>
+                                </div>
+                                <div class="dynamic__detail-text">
+                                    <p>XRP</p>
+                                    <p>{{"%.2f"|format(long.y_xrp)}}%</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
