@@ -1,0 +1,9 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="ic-chack" fill-rule="evenodd" clip-rule="evenodd" d="M6.3113 16C6.8742 16 7.33475 15.7193 7.65885 15.193L15.6077 2.38596C15.8124 2.05263 16 1.66667 16 1.29825C16 0.508772 15.3348 0 14.6183 0C14.1748 0 13.7484 0.263158 13.4414 0.789474L6.24307 12.6316L2.54158 7.73684C2.16631 7.24561 1.79104 7.05263 1.33049 7.05263C0.597015 7.05263 0 7.66667 0 8.4386C0 8.80702 0.153518 9.17544 0.392324 9.50877L4.87846 15.193C5.33902 15.7544 5.76546 16 6.3113 16Z" fill="url(#paint0_linear)"/>
+<defs>
+<linearGradient id="paint0_linear" x1="8" y1="0" x2="8" y2="16" gradientUnits="userSpaceOnUse">
+<stop offset="0.171875" stop-color="#FF0110"/>
+<stop offset="0.854167" stop-color="#A5000A"/>
+</linearGradient>
+</defs>
+</svg>

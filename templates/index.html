@@ -460,9 +460,11 @@
         <div class="dynamic">
             <div class="dynamic__wrap">
                 <div class="dynamic__tabs">
-                    {% for short in shorts %}
-                    <p class="dynamic__tab {{ 'dynamic__tab_active' if loop.last }}">{{ short.year }}</p>
-                    {% endfor %}
+                    <div class="dynamic__tabs-wrap">
+                        {% for short in shorts %}
+                        <p class="dynamic__tab {{ 'dynamic__tab_active' if loop.last }}">{{ short.year }}</p>
+                        {% endfor %}
+                    </div>
                 </div>
                 {% for short in shorts %}
                 <div class="dynamic__content {{ 'dynamic__content_active' if loop.last }}">
@@ -471,7 +473,7 @@
                             <p class="dynamic__title">Number of trades</p>
                             <p class="dynamic__total">{{short.number|int}}</p>
                         </div>
-                        <div class="dynamic__details">
+                        <div class="dynamic__details dynamic__details_numbers">
                             <div class="dynamic__detail">
                                 <div class="dynamic__range-wrap">
                                     <span class="dynamic__range"></span>
@@ -507,7 +509,7 @@
                             <p class="dynamic__title">Average profit per trade</p>
                             <p class="dynamic__total">{{"%.2f"|format(short.average)}}%</p>
                         </div>
-                        <div class="dynamic__details">
+                        <div class="dynamic__details dynamic__details_average">
                             <div class="dynamic__detail">
                                 <div class="dynamic__range-wrap">
                                     <span class="dynamic__range"></span>
@@ -543,7 +545,7 @@
                             <p class="dynamic__title">Yield</p>
                             <p class="dynamic__total">{{"%.2f"|format(short.yld)}}%</p>
                         </div>
-                        <div class="dynamic__details">
+                        <div class="dynamic__details dynamic__details_yield">
                             <div class="dynamic__detail">
                                 <div class="dynamic__range-wrap">
                                     <span class="dynamic__range"></span>
@@ -596,9 +598,11 @@
         <div class="dynamic">
             <div class="dynamic__wrap">
                 <div class="dynamic__tabs">
-                    {% for medium in mediums %}
-                    <p class="dynamic__tab {{ 'dynamic__tab_active' if loop.last }}">{{ medium.year }}</p>
-                    {% endfor %}
+                    <div class="dynamic__tabs-wrap">
+                        {% for medium in mediums %}
+                        <p class="dynamic__tab {{ 'dynamic__tab_active' if loop.last }}">{{ medium.year }}</p>
+                        {% endfor %}
+                    </div>
                 </div>
                 {% for medium in mediums %}
                 <div class="dynamic__content {{ 'dynamic__content_active' if loop.last }}">
@@ -607,7 +611,7 @@
                             <p class="dynamic__title">Number of trades</p>
                             <p class="dynamic__total">{{medium.number|int}}</p>
                         </div>
-                        <div class="dynamic__details">
+                        <div class="dynamic__details dynamic__details_numbers">
                             <div class="dynamic__detail">
                                 <div class="dynamic__range-wrap">
                                     <span class="dynamic__range"></span>
@@ -643,7 +647,7 @@
                             <p class="dynamic__title">Average profit per trade</p>
                             <p class="dynamic__total">{{"%.2f"|format(medium.average)}}%</p>
                         </div>
-                        <div class="dynamic__details">
+                        <div class="dynamic__details dynamic__details_average">
                             <div class="dynamic__detail">
                                 <div class="dynamic__range-wrap">
                                     <span class="dynamic__range"></span>
@@ -679,7 +683,7 @@
                             <p class="dynamic__title">Yield</p>
                             <p class="dynamic__total">{{"%.2f"|format(medium.yld)}}%</p>
                         </div>
-                        <div class="dynamic__details">
+                        <div class="dynamic__details dynamic__details_yield">
                             <div class="dynamic__detail">
                                 <div class="dynamic__range-wrap">
                                     <span class="dynamic__range"></span>
@@ -732,9 +736,11 @@
         <div class="dynamic">
             <div class="dynamic__wrap">
                 <div class="dynamic__tabs">
-                    {% for long in longs %}
-                    <p class="dynamic__tab {{ 'dynamic__tab_active' if loop.last }}">{{ long.year }}</p>
-                    {% endfor %}
+                    <div class="dynamic__tabs-wrap">
+                        {% for long in longs %}
+                        <p class="dynamic__tab {{ 'dynamic__tab_active' if loop.last }}">{{ long.year }}</p>
+                        {% endfor %}
+                    </div>
                 </div>
                 {% for long in longs %}
                 <div class="dynamic__content {{ 'dynamic__content_active' if loop.last }}">
@@ -743,7 +749,7 @@
                             <p class="dynamic__title">Number of trades</p>
                             <p class="dynamic__total">{{long.number|int}}</p>
                         </div>
-                        <div class="dynamic__details">
+                        <div class="dynamic__details dynamic__details_numbers">
                             <div class="dynamic__detail">
                                 <div class="dynamic__range-wrap">
                                     <span class="dynamic__range"></span>
@@ -779,7 +785,7 @@
                             <p class="dynamic__title">Average profit per trade</p>
                             <p class="dynamic__total"> {{"%.2f"|format(long.average)}}%</p>
                         </div>
-                        <div class="dynamic__details">
+                        <div class="dynamic__details dynamic__details_average">
                             <div class="dynamic__detail">
                                 <div class="dynamic__range-wrap">
                                     <span class="dynamic__range"></span>
@@ -815,7 +821,7 @@
                             <p class="dynamic__title">Yield</p>
                             <p class="dynamic__total">{{"%.2f"|format(long.yld)}}%</p>
                         </div>
-                        <div class="dynamic__details">
+                        <div class="dynamic__details dynamic__details_yield">
                             <div class="dynamic__detail">
                                 <div class="dynamic__range-wrap">
                                     <span class="dynamic__range"></span>
@@ -916,7 +922,7 @@
 
 
 <div class="we-wrapper">
-    <img class="we-wrapper__bg" src="static/img/group-7.svg" alt="bg">
+    <img class="we-wrapper__bg" src="static/img/quote-bg.svg" alt="bg">
     <img class="we-wrapper__bg_mob" src="static/img/group-7-mob.png" alt="bg">
     <div class="new-quote">
         <h4 class="new-quote__title">A bird in the hand is worth two <br>in the bush.</h4>
@@ -924,7 +930,7 @@
     </div>
 
     <div class="we" id="we-are-for">
-        <div class="we__body">
+        <div class="we__body we__body_red">
             <div class="we__left">
                 <h2 class="we__title">We are for</h2>
             </div>
@@ -957,7 +963,7 @@
             </div>
         </div>
 
-        <div class="we__body">
+        <div class="we__body we__body_green">
             <div class="we__left">
                 <h2 class="we__title">If you</h2>
             </div>
@@ -990,7 +996,7 @@
             </div>
         </div>
 
-        <div class="we__body">
+        <div class="we__body we__body_purpur">
             <div class="we__left">
                 <h2 class="we__title">Benefits</h2>
             </div>
@@ -1043,14 +1049,11 @@
                     <div class="plan plan_green plan_active">
                         <div class="plan__bar plan__bar_free">
                             <p class="plan__title">Basic</p>
-                            <p class="plan__cost"><b class="plan__cost_bold">Free</b></p>
+                            <p class="plan__cost"><b class="plan__cost">Free</b></p>
                         </div>
                         <div class="plan__body">
-                            <div class="button-border plan__button-border">
-                                <a class="button plan__btn" href="https://t.me/lets_trade_bot" target="_blank">Join
-                                    via
-                                    Telegram</a>
-                            </div>
+                            <a class="plan__btn plan__btn_free" href="https://t.me/lets_trade_bot" target="_blank">
+                                Join via Telegram</a>
                         </div>
                     </div>
                 </div>
@@ -1231,10 +1234,12 @@
                     </a>
                 </li>
             </ul>
-            <div class="button-border plans-details__button-border">
+            <a href="https://t.me/lets_trade_bot" target="_blank" class="plans-details__button-mob">
+                Join via Telegram</a>
+            <!-- <div class="button-border plans-details__button-border">
                 <a href="https://t.me/lets_trade_bot" target="_blank" class="button plans-details__button">Join via
                     Telegram</a>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -1505,32 +1510,33 @@
 </div> -->
 
 <div class="ref">
-    <h2 class="ref__title">Referral Program</h2>
-    <div class="ref__items">
-        <div class="ref__item">
-            <object class="ref__item-img" type="image/svg+xml" data="../static/img/ref-1.svg">
-                <img src="../static/img/ref-1.png" alt="pic">
-            </object>
-            <p class="ref__item-title">Join Lets.Trade Telegram bot</p>
-        </div>
-        <a class="ref__item" href="https://t.me/lets_trade_bot" target="_blank">
-            <object class="ref__item-img" type="image/png" data="../static/img/ref-2.png">
-            </object>
-            <p class="ref__item-title">Tap the Referral Program button and grab referral link</p>
-        </a>
-        <div class="ref__item">
-            <object class="ref__item-img" type="image/svg+xml" data="../static/img/ref-3.svg">
-                <img src="../static/img/ref-3.png" alt="pic">
-            </object>
-            <p class="ref__item-title">Promote the link on your website or social media </p>
-        </div>
-        <div class="ref__item">
-            <object class="ref__item-img" type="image/png" data="../static/img/ref-4.png"></object>
-            <p class="ref__item-title">Earn %10 from each subscription</p>
+    <h2 class="ref__title"><span>Referral</span> Program</h2>
+    <div class="ref__items-wrap">
+        <div class="ref__items">
+            <div class="ref__item">
+                <object class="ref__item-img" type="image/png" data="../static/img/ref-1-new.svg">
+                    <img src="../static/img/ref-1.png" alt="pic">
+                </object>
+                <p class="ref__item-title">Join Lets.Trade Telegram bot</p>
+            </div>
+            <a class="ref__item" href="https://t.me/lets_trade_bot" target="_blank">
+                <object class="ref__item-img" type="image/png" data="../static/img/ref-2-new.svg"></object>
+                <p class="ref__item-title">Tap the Referral button and grab referral link</p>
+            </a>
+            <div class="ref__item">
+                <object class="ref__item-img" type="image/png" data="../static/img/ref-3-new.svg">
+                    <img src="../static/img/ref-3.png" alt="pic">
+                </object>
+                <p class="ref__item-title">Promote the link on your website or social media </p>
+            </div>
+            <div class="ref__item">
+                <object class="ref__item-img" type="image/png" data="../static/img/ref-4-new.svg"></object>
+                <p class="ref__item-title">Earn %10 from each subscription</p>
+            </div>
         </div>
     </div>
-    <div class="ref__line"></div>
-    <a class="referral__button ref__button" href="https://t.me/lets_trade_bot">Join via Telegram</a>
+    <!-- <div class="ref__line"></div> -->
+    <!-- <a class="referral__button ref__button" href="https://t.me/lets_trade_bot">Join via Telegram</a> -->
 </div>
 
 
@@ -1720,7 +1726,7 @@
 </div> -->
 
 <div class="partners">
-    <h3 class="partners__title">Solution Partners</h3>
+    <h3 class="partners__title">We Recommend</h3>
 
     <div class="partners__wrapper">
         <a href="https://bitstamp.net" target="_blank" class="partner">
@@ -1745,7 +1751,7 @@
             <p>The exchange provides cryptocurrency to fiat trading, and provides price information to Bloomberg
                 Terminal.</p>
         </a>
-        <a href="https://www.huobi.com" target="_blank" class="partner">
+        <a href="https://www.huobi.com/en-us/topic/invited/?invite_code=js69a" target="_blank" class="partner">
             <picture>
                 <source type="image/png" media="(min-width: 641px)"
                     srcset="../static/img/logo-hobi@2x-min.png 1x, ../static/img/logo-hobi@3x-min.png 2x">
@@ -1767,15 +1773,15 @@
                 where
                 they state exchange rates and payment methods for buying or selling bitcoins.</p>
         </a>
-        <a href="https://shop.ledger.com/pages/ledger-nano-x?r=f6060a3fd3ed" target="_blank" class="partner">
+        <a href="https://www.binance.com/en/register?ref=RFACSEQF" target="_blank" class="partner">
             <picture>
                 <source type="image/png" media="(min-width: 641px)"
-                    srcset="../static/img/ledger-2x.png 1x, ../static/img/ledger-3x.png 2x">
-                <source type="image/png" media="(min-width: 0)" srcset="../static/img/ledger-mob.png">
-                <img class="partner__img" src="../static/img/ledger-2x.png" alt="partner">
+                    srcset="../static/img/binance-pic.png 1x, ../static/img/binance-pic.png 2x">
+                <source type="image/png" media="(min-width: 0)" srcset="../static/img/binance-pic.png">
+                <img class="partner__img" src="../static/img/binance-pic.png" alt="partner">
             </picture>
-            <p>Ledger is a fast paced, growing company developing security and infrastructure solutions for
-                cryptocurrencies</p>
+            <!-- <p>Ledger is a fast paced, growing company developing security and infrastructure solutions for
+                cryptocurrencies</p> -->
         </a>
     </div>
 
