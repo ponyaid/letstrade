@@ -1223,17 +1223,6 @@
     flex-flow: column;
     max-width: 540px;
 
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      -webkit-mask-size: cover;
-      mask-size: cover;
-
-      -webkit-mask-image: url(../img/short-term-bg.svg);
-      mask-image: url(../img/short-term-bg.svg);
-    }
-
     @media (max-width: 1254px) {
       max-width: none;
       padding-left: 5.5rem;
