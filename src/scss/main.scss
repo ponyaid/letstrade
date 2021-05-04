@@ -1187,6 +1187,10 @@
       .roll__list-item:before {
         background-image: linear-gradient(to bottom, #80ec68 0%, #159e49);
       }
+
+      .roll {
+        background-image: url(../img/medium-term-bg.svg);
+      }
     }
 
     &_purpur {
@@ -1196,6 +1200,10 @@
       .roll__title:after,
       .roll__list-item:before {
         background-image: linear-gradient(180deg, #62e7ff 22.4%, #de15c5 79.17%);
+      }
+
+      .roll {
+        background-image: url(../img/long-term-bg.svg);
       }
     }
 
@@ -1290,6 +1298,10 @@
   border-radius: 14px;
   padding: 2rem 2rem 2.5rem;
   background-color: #0e0e0e;
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: calc(100% - 10px) auto;
+  background-image: url(../img/short-term-bg.svg);
 
   @media (max-width: 640px) {
     padding: 1.5rem 1rem 1.5rem 1.5rem;
