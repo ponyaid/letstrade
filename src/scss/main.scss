@@ -2056,10 +2056,10 @@
     .plans-details__button-mob {
       background: linear-gradient(180deg, #ff0110 17.19%, #a5000a 85.42%);
     }
-    // .plans-details__list-item:before,
-    // .plans-details__list-item_list span:before {
-    //   background: url(../img/ic-chack-red.svg) no-repeat center / contain;
-    // }
+    .plans-details__list-item:before,
+    .plans-details__list-item_list span:before {
+      background: url(../img/ic-chack.svg) no-repeat center / contain;
+    }
   }
 
   &_free &__list-item_not-present::before {
